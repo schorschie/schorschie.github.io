@@ -1,1 +1,34 @@
-Hello World
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Covid-19 cases in Germany</title>
+</head>
+<body>
+<h1>Covid-19 Cases in Germany</h1>
+
+<h2>Prediction</h2>
+
+<p>I'm trying to predict the amount of hospital treatment needed to deal with the corona crisis in
+germany, so that people understand, why this drastic measures are necessary.</p>
+
+<p>The numbers are from a wikipedia article <a href="https://de.wikipedia.org/wiki/COVID-19-Fälle_in_Deutschland">
+COVID-19 Fälle in Deutschland</a>.
+
+<p>In the first step I fit a logistic curve to the current progression of infected cases and a
+maximum value of 70% of Germany.</p>
+
+The idea to use a logistic curve came from this 3Blue1Brown <a href="https://www.youtube.com/watch?v=Kas0tIxDvrg&t=473s">video</a>.
+
+Second step I estimate, that 1 % of the people need intensive care for 4 days and sum up
+these cases.
+
+<h2>Contribute</h2>
+<ul>
+<li>Feel free to comment or contribute. I would like to access the data from some online source and 
+not from my offline csv file.</li>
+<li>Is there a source for the amount of people in intensive care? 1% and 3 days is just a guess.</li>
+
+<img src="200314_corona.png" alt="Logistic curve of corona virus progression">
+</body>
+</html>
