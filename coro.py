@@ -99,7 +99,7 @@ not from my offline csv file.</li>
 <img src="%s" alt="Logistic curve of corona virus progression">
 
 <h2>Impressum</h2>
-<p>Verantwortlich für den Inhalt dieser Seite:</p>
+<p>Verantwortlich f&uuml;r den Inhalt dieser Seite:</p>
 Grzegorz Lippe<br/>
 Eugen-Hafner-Str. 10<br/>
 73431 Aalen<br/>
