@@ -97,6 +97,15 @@ not from my offline csv file.</li>
 <li>Is there a source for the amount of people in intensive care? 1%% and 3 days is just a guess.</li>
 
 <img src="%s" alt="Logistic curve of corona virus progression">
+
+<h2>Impressum</h2>
+<p>Verantwortlich für den Inhalt dieser Seite:</p>
+Grzegorz Lippe<br/>
+Eugen-Hafner-Str. 10<br/>
+73431 Aalen<br/>
+
+<p>E-Mail: <a href="mailto:Grzegorz.Lippe@googlemail.com?subject=schorschie.github.io">Grzegorz.Lippe@googlemail.com</a></p>
+
 </body>
 </html>
 """ % (time.strftime('%y%m%d_corona.png'))
