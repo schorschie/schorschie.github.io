@@ -67,7 +67,7 @@ def get_plot(data, pred, safepath):
     return ax
 
 def write_index(safepath='index.html'):
-    string = """
+    string =u"""
 <!DOCTYPE html>
 <html>
 <head>
@@ -82,7 +82,7 @@ def write_index(safepath='index.html'):
 Germany, so that people understand, why this drastic measures are necessary.</p>
 
 <p>The numbers are from a wikipedia article <a href="https://de.wikipedia.org/wiki/COVID-19-Fälle_in_Deutschland">
-COVID-19 Fälle in Deutschland</a>.
+COVID-19 F&auml;lle in Deutschland</a>.
 
 <p>In the first step I fit a logistic curve to the current progression of infected cases and a
 maximum value of 70%% of Germany. The idea to use a logistic curve came from this
