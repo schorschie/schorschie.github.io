@@ -87,7 +87,7 @@ COVID-19 F&auml;lle in Deutschland</a>.
 <p>In the first step I fit a logistic curve to the current progression of infected cases and a
 maximum value of 70%% of Germany. The idea to use a logistic curve came from this
 <a href="https://www.youtube.com/watch?v=Kas0tIxDvrg&t=473s">3Blue1Brown video</a>.
-Second step I estimate, that 1 %% of the people need intensive care for 4 days and sum up
+Second step I estimate, that 1 %% of the people need intensive care for 3 days and sum up
 these cases.</p>
 
 <h2>Contribute</h2>
