@@ -52,7 +52,7 @@ def get_plot(data, pred, safepath):
     ax.plot(pred.index, pred['Prediction'], label='Prediction', color='red')
     ax.plot(pred.index, pred['Cumulated Care Prediction'],
             label='If %d%% need respiration for %d days' % (P_I, N_D), color='blue')
-    ax.plot([pred.index[0], pred.index[-1]], [N_R, N_R], label='Number of respiratory beds in Germany')
+#    ax.plot([pred.index[0], pred.index[-1]], [N_R, N_R], label='Number of respiratory beds in Germany')
     ax.plot(pd.to_datetime(today), PREDICTION, marker='v', color='green', markersize=12,
             label='Prediction for %s' % (time.strftime('%d. %b %y')))
     ax.annotate('%d' %(PREDICTION), (pd.to_datetime(today), PREDICTION),
@@ -96,7 +96,7 @@ these cases.</p>
 not from my offline csv file.</li>
 <li>Is there a source for the amount of people in intensive care? 1%% and 3 days is just a guess.</li>
 
-<img src="%s" alt="Logistic curve of corona virus progression">
+<img width=90%% height=auto src="%s" alt="Logistic curve of corona virus progression">
 
 <h2>Impressum</h2>
 <p>Verantwortlich f&uuml;r den Inhalt dieser Seite:</p>
