@@ -11,6 +11,10 @@
 
 <p>I'm trying to predict the amount of hospital treatment needed to deal with the corona crisis in
 Germany, so that people understand, why this drastic measures are necessary.</p>
+I do not do this to stress you, but to <em>increase the understanding</em> for the drastic measures taken now 
+by the German goverment.
+
+<h2>Disclaimer</h2>
 
 <p>The numbers are from a wikipedia article <a href="https://de.wikipedia.org/wiki/COVID-19-Fälle_in_Deutschland">
 COVID-19 F&auml;lle in Deutschland</a>.
@@ -18,17 +22,33 @@ COVID-19 F&auml;lle in Deutschland</a>.
 <p>In the first step I fit a logistic curve to the current progression of infected cases and a
 maximum value of 70% of Germany. The idea to use a logistic curve came from this
 <a href="https://www.youtube.com/watch?v=Kas0tIxDvrg&t=473s">3Blue1Brown video</a>.
-Second step I estimate, that 1 % of the people need intensive care for 4 days and sum up
+Second step I estimate, that 1 % of the people need intensive care for 3 days and sum up
 these cases.</p>
+
+<p>So as you may have guessed until now, the following plot isn't scientific from any point of view.
+It is just a curve fit with two parameters, and I'm even hiding the R<sup>2</sup> value.</p>
+
+<p>For more scientific data rely on:</p>
+<ul>
+<li><a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/nCoV.html">Rober Koch Institut</a></li>
+<li><a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">Johns Hopkins University</a></li>
+<li><a href="https://www.worldometers.info/coronavirus/country/germany/">Worldometer.info</a></li>
+</ul>
+<p>They are better in every aspect, except they don't try to predict the epidemic curve.</p>
 
 <h2>Contribute</h2>
 <ul>
 <li>Feel free to comment or contribute. I would like to access the data from some online source and 
 not from my offline csv file.</li>
 <li>Is there a source for the amount of people in intensive care? 1% and 3 days is just a guess.</li>
+</ul>
 
 <img width=90% height=auto src="200315_corona.png" alt="Logistic curve of corona virus progression">
 
+<blockquote>
+<p><em>Remember:</em> All models are wrong.
+(<a href="https://en.wikipedia.org/wiki/All_models_are_wrong">George Box</a>)</p>
+</blockquote>
 <h2>Impressum</h2>
 <p>Verantwortlich f&uuml;r den Inhalt dieser Seite:</p>
 Grzegorz Lippe<br/>

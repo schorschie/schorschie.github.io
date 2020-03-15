@@ -48,13 +48,13 @@ def get_plot(data, pred, safepath):
     PREDICTION = np.ceil(pred.loc[today]['Prediction'])
     _, ax = plt.subplots(figsize=(13,7))
     ax.plot(data.index, data['Infected'], marker='x', linestyle='', label='Infected [wikipedia]', color='red')
-    ax.plot(data.index, data['Deceased'], marker='o', linestyle='', label='Deceased [wikipedia]', color='black')
+#    ax.plot(data.index, data['Deceased'], marker='o', linestyle='', label='Deceased [wikipedia]', color='black')
     ax.plot(pred.index, pred['Prediction'], label='Prediction', color='red')
     ax.plot(pred.index, pred['Cumulated Care Prediction'],
             label='If %d%% need respiration for %d days' % (P_I, N_D), color='blue')
 #    ax.plot([pred.index[0], pred.index[-1]], [N_R, N_R], label='Number of respiratory beds in Germany')
     ax.plot(pd.to_datetime(today), PREDICTION, marker='v', color='green', markersize=12,
-            label='Prediction for %s' % (time.strftime('%d. %b %y')))
+            label='Prediction for %s' % (time.strftime('%d. %b %Y')))
     ax.annotate('%d' %(PREDICTION), (pd.to_datetime(today), PREDICTION),
                 textcoords="offset points", rotation=45,
                 xytext=(1, 10))
@@ -80,6 +80,10 @@ def write_index(safepath='index.html'):
 
 <p>I'm trying to predict the amount of hospital treatment needed to deal with the corona crisis in
 Germany, so that people understand, why this drastic measures are necessary.</p>
+I do not do this to stress you, but to <em>increase the understanding</em> for the drastic measures taken now 
+by the German goverment.
+
+<h2>Disclaimer</h2>
 
 <p>The numbers are from a wikipedia article <a href="https://de.wikipedia.org/wiki/COVID-19-Fälle_in_Deutschland">
 COVID-19 F&auml;lle in Deutschland</a>.
@@ -90,14 +94,30 @@ maximum value of 70%% of Germany. The idea to use a logistic curve came from thi
 Second step I estimate, that 1 %% of the people need intensive care for 3 days and sum up
 these cases.</p>
 
+<p>So as you may have guessed until now, the following plot isn't scientific from any point of view.
+It is just a curve fit with two parameters, and I'm even hiding the R<sup>2</sup> value.</p>
+
+<p>For more scientific data rely on:</p>
+<ul>
+<li><a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/nCoV.html">Rober Koch Institut</a></li>
+<li><a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">Johns Hopkins University</a></li>
+<li><a href="https://www.worldometers.info/coronavirus/country/germany/">Worldometer.info</a></li>
+</ul>
+<p>They are better in every aspect, except they don't try to predict the epidemic curve.</p>
+
 <h2>Contribute</h2>
 <ul>
 <li>Feel free to comment or contribute. I would like to access the data from some online source and 
 not from my offline csv file.</li>
 <li>Is there a source for the amount of people in intensive care? 1%% and 3 days is just a guess.</li>
+</ul>
 
 <img width=90%% height=auto src="%s" alt="Logistic curve of corona virus progression">
 
+<blockquote>
+<p><em>Remember:</em> All models are wrong.
+(<a href="https://en.wikipedia.org/wiki/All_models_are_wrong">George Box</a>)</p>
+</blockquote>
 <h2>Impressum</h2>
 <p>Verantwortlich f&uuml;r den Inhalt dieser Seite:</p>
 Grzegorz Lippe<br/>
@@ -106,6 +126,10 @@ Eugen-Hafner-Str. 10<br/>
 
 <p>E-Mail: <a href="mailto:Grzegorz.Lippe@googlemail.com?subject=schorschie.github.io">Grzegorz.Lippe@googlemail.com</a></p>
 
+<h3>Resources</h3>
+
+<p>This site is hosted by github. I used python with pandas, numpy, matplotlib, statmodels and scipy for the commputation.
+Output ist html and png.</p>
 </body>
 </html>
 """ % (time.strftime('%y%m%d_corona.png'))
