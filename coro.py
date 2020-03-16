@@ -9,10 +9,13 @@ from matplotlib.dates import MO
 import statsmodels.api as sm
 from scipy import optimize as op
 
-P_I = 1 # percent of corona infected need intensive care
-N_R = 28e3 # number of respiratory capacities in germany
-N_B = 120e3 # number of hospital beds in germany
-N_D = 3 # number of days on a respirator
+
+PREDICTIONS = [{'days': 3,
+                'percentage': 1,
+                'key': 'If 1 % need 3 days of care'}]
+PREDICTIONS.append({'days': 15,
+                    'percentage': 10,
+                    'key': 'If 10 % need 15 days of care'})
 
 
 def logistic_function(x, k, x_0):
@@ -38,8 +41,11 @@ def get_prediction(data, N=70):
     pred = pd.DataFrame(data={'Prediction': f},
                         index=pd.date_range(start=data.index[0], periods=N[1]-N[0], freq='d'))
     new_infected_prediction = np.hstack([pred['Prediction'][0], np.diff(pred['Prediction'])])
-    pred['Intensive Care Prediction'] = np.ceil(new_infected_prediction * P_I/100)
-    pred['Cumulated Care Prediction'] = pred['Intensive Care Prediction'].rolling('%dd' % (N_D)).sum()
+    for prediction in PREDICTIONS:
+        prediction_key = prediction['key']
+        pred[prediction_key] = np.ceil(new_infected_prediction * prediction['percentage']/100)
+        pred[prediction_key] = pred[prediction_key].rolling('%dd' % (prediction['days'])).sum()
+
 
     return pred
 
@@ -47,12 +53,12 @@ def get_plot(data, pred, safepath):
     today = time.strftime('%Y-%m-%d')
     PREDICTION = np.ceil(pred.loc[today]['Prediction'])
     _, ax = plt.subplots(figsize=(13,7))
-    ax.plot(data.index, data['Infected'], marker='x', linestyle='', label='Infected [wikipedia]', color='red')
-#    ax.plot(data.index, data['Deceased'], marker='o', linestyle='', label='Deceased [wikipedia]', color='black')
-    ax.plot(pred.index, pred['Prediction'], label='Prediction', color='red')
-    ax.plot(pred.index, pred['Cumulated Care Prediction'],
-            label='If %d%% need respiration for %d days' % (P_I, N_D), color='blue')
-#    ax.plot([pred.index[0], pred.index[-1]], [N_R, N_R], label='Number of respiratory beds in Germany')
+    data['Infected'].plot(ax=ax, marker='x', linestyle='', label='Infected [wikipedia]', color='red')
+    pred['Prediction'].plot(ax=ax, label='Prediction', color='red')
+    for prediction in PREDICTIONS:
+        prediction_key = prediction['key']
+        pred[prediction_key].plot(label=prediction_key, linestyle=':')
+
     ax.plot(pd.to_datetime(today), PREDICTION, marker='v', color='green', markersize=12,
             label='Prediction for %s' % (time.strftime('%d. %b %Y')))
     ax.annotate('%d' %(PREDICTION), (pd.to_datetime(today), PREDICTION),
@@ -99,7 +105,7 @@ It is just a curve fit with two parameters, and I'm even hiding the R<sup>2</sup
 
 <p>For more scientific data rely on:</p>
 <ul>
-<li><a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/nCoV.html">Rober Koch Institut</a></li>
+<li><a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/nCoV.html">Robert Koch Institut</a></li>
 <li><a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">Johns Hopkins University</a></li>
 <li><a href="https://www.worldometers.info/coronavirus/country/germany/">Worldometer.info</a></li>
 </ul>
@@ -142,4 +148,4 @@ data = get_data()
 pred = get_prediction(data=data, N=80)
 get_plot(data=data, pred=pred, safepath=time.strftime('%y%m%d_corona.png'))
 write_index()
-# plt.show()
+plt.show()
