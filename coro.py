@@ -128,7 +128,7 @@ Eugen-Hafner-Str. 10<br/>
 
 <h3>Resources</h3>
 
-<p>This site is hosted by github. I used python with pandas, numpy, matplotlib, statmodels and scipy for the commputation.
+<p>This site is hosted by github. I use python with pandas, numpy, matplotlib, statmodels and scipy for the commputation.
 Output ist html and png.</p>
 </body>
 </html>
