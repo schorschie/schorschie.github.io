@@ -72,8 +72,10 @@ def write_index(safepath='index.html'):
 <html>
 <head>
 <title>Covid-19 cases in Germany</title>
+<link rel="stylesheet", href="coro.css">
 </head>
 <body>
+<div id="centerContainer">
 <h1>Covid-19 Cases in Germany</h1>
 
 <h2>Prediction</h2>
@@ -130,6 +132,7 @@ Eugen-Hafner-Str. 10<br/>
 
 <p>This site is hosted by github. I use python with pandas, numpy, matplotlib, statmodels and scipy for the commputation.
 Output ist html and png.</p>
+</div>
 </body>
 </html>
 """ % (time.strftime('%y%m%d_corona.png'))
