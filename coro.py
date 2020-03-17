@@ -4,7 +4,6 @@ import time
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.dates as mdates
 from matplotlib.dates import MO
 import statsmodels.api as sm
 from scipy import optimize as op
@@ -29,7 +28,7 @@ def logistic_function(x, k, x_0):
 def get_data():
     data = pd.read_csv('covid-19_germany.csv', index_col=0, parse_dates=True)
     data['Delta Infected'] = data['Infected'].diff()
-    data['Delta Infected'][0] = data['Infected'][0]
+    data.loc[data.index[0], 'Delta Infected'] = data['Infected'][0]
     return data
 
 def get_prediction(data, N=70):
@@ -88,7 +87,8 @@ def write_index(safepath='index.html'):
 <h2>Prediction</h2>
 
 <p>I'm trying to predict the amount of hospital treatment needed to deal with the corona crisis in
-Germany, so that people understand, why this drastic measures are necessary.</p>
+Germany, so that people understand, why this drastic measures are necessary. I hope we will se a decrease of the 
+curve in the near future.</p>
 I do not do this to stress you, but to <em>increase the understanding</em> for the drastic measures taken now 
 by the German goverment.
 
@@ -106,7 +106,7 @@ these cases.</p>
 <p>So as you may have guessed until now, the following plot isn't scientific from any point of view.
 It is just a curve fit with two parameters, and I'm even hiding the R<sup>2</sup> value.</p>
 
-<p>For more scientific data rely on:</p>
+<p>For more scientific data rely on the pro's:</p>
 <ul>
 <li><a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/nCoV.html">Robert Koch Institut</a></li>
 <li><a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">Johns Hopkins University</a></li>
@@ -137,7 +137,7 @@ Eugen-Hafner-Str. 10<br/>
 
 <h3>Resources</h3>
 
-<p>This site is hosted by github. I use python with pandas, numpy, matplotlib, statmodels and scipy for the commputation.
+<p>This site is hosted by github. I use python with pandas, numpy, matplotlib, statmodels and scipy for the computation
 Output ist html and png.</p>
 </div>
 </body>
