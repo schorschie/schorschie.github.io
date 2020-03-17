@@ -59,8 +59,9 @@ def get_plot(data, pred, safepath):
         prediction_key = prediction['key']
         pred[prediction_key].plot(label=prediction_key, linestyle=':')
 
-    ax.plot(pd.to_datetime(today), PREDICTION, marker='v', color='green', markersize=12,
-            label='Prediction for %s' % (time.strftime('%d. %b %Y')))
+    prediction_dummy = pd.DataFrame(data=PREDICTION, columns=['Prediction for %s' % (today)],
+                                    index=[pd.to_datetime(today)])
+    prediction_dummy.plot(ax=ax, marker='v', color='green', markersize=12)
     ax.annotate('%d' %(PREDICTION), (pd.to_datetime(today), PREDICTION),
                 textcoords="offset points", rotation=45,
                 xytext=(1, 10))
@@ -95,7 +96,7 @@ by the German goverment.
 COVID-19 F&auml;lle in Deutschland</a>.
 
 <p>In the first step I fit a logistic curve to the current progression of infected cases and a
-maximum value of 70%% of Germany. The idea to use a logistic curve came from this
+maximum value of 70%% of the population in Germany. The idea to use a logistic curve came from this
 <a href="https://www.youtube.com/watch?v=Kas0tIxDvrg&t=473s">3Blue1Brown video</a>.
 Second step I estimate, that 1 %% of the people need intensive care for 3 days and sum up
 these cases.</p>
@@ -148,4 +149,4 @@ data = get_data()
 pred = get_prediction(data=data, N=80)
 get_plot(data=data, pred=pred, safepath=time.strftime('%y%m%d_corona.png'))
 write_index()
-plt.show()
+# plt.show()
