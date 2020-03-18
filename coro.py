@@ -11,15 +11,17 @@ from scipy import optimize as op
 
 PREDICTIONS = [{'days': 3,
                 'percentage': 1,
-                'key': 'If 1 % need 3 days of care'}]
+                'key': 'If 1 % need 3 days of care',
+                'plot': True}]
 PREDICTIONS.append({'days': 15,
                     'percentage': 10,
-                    'key': 'If 10 % need 15 days of care'})
+                    'key': 'If 10 % need 15 days of care',
+                    'plot': False})
 
 
 def logistic_function(x, k, x_0):
     # L maximum
-    # k Steepness, d/dx(x_0) = k * L
+    # k Steepness, d/dx(x=x_0) = k * L
     # x_0 point of 0.5L
     L = 0.5 * 0.7 * 82e6 # The amount of people which will be roundabout at the half infection point.
     y = L / (1 + np.exp(-k * (x - x_0)))
@@ -29,10 +31,11 @@ def get_data():
     data = pd.read_csv('covid-19_germany.csv', index_col=0, parse_dates=True)
     data['Delta Infected'] = data['Infected'].diff()
     data.loc[data.index[0], 'Delta Infected'] = data['Infected'][0]
+    data['Total Deceased'] = data['Deceased'].cumsum()
     return data
 
 def get_prediction(data, N=70):
-    d = op.curve_fit(logistic_function, data.index.factorize()[0], data['Infected'], p0=[0.5, 40])[0]
+    d = op.curve_fit(logistic_function, data.index.factorize()[0], data['Infected'], p0=[0.5, 30])[0]
     N = (0, N)
     XX = np.array(range(N[0], N[1]))
     
@@ -55,8 +58,9 @@ def get_plot(data, pred, safepath):
     data['Infected'].plot(ax=ax, marker='x', linestyle='', label='Infected [wikipedia]', color='red')
     pred['Prediction'].plot(ax=ax, label='Prediction', color='red')
     for prediction in PREDICTIONS:
-        prediction_key = prediction['key']
-        pred[prediction_key].plot(label=prediction_key, linestyle=':')
+        if prediction['plot']:
+            prediction_key = prediction['key']
+            pred[prediction_key].plot(label=prediction_key, linestyle=':')
 
     prediction_dummy = pd.DataFrame(data=PREDICTION, columns=['Prediction for %s' % (today)],
                                     index=[pd.to_datetime(today)])
@@ -127,6 +131,8 @@ not from my offline csv file.</li>
 <p><em>Remember:</em> All models are wrong.
 (<a href="https://en.wikipedia.org/wiki/All_models_are_wrong">George Box</a>)</p>
 </blockquote>
+<p><em>Note:</em> On 10. of March 2020 Wikipedia changed it's datasource from the reports to the digital data of the RKI.
+I presume the time of day for the readout changed.</p>
 <h2>Impressum</h2>
 <p>Verantwortlich f&uuml;r den Inhalt dieser Seite:</p>
 Grzegorz Lippe<br/>
