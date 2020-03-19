@@ -37,7 +37,7 @@ def _get_data():
     return data
 
 
-def _get_predictions(data, N=70):
+def _get_predictions(data, predict_date=time.strftime('%Y-%m-%d'), N=70):
     d = op.curve_fit(_logistic_function, data.index.factorize()[0], data['Infected'], p0=[0.5, 30])[0]
     N = (0, N)
     XX = np.array(range(N[0], N[1]))
@@ -56,17 +56,16 @@ def _get_predictions(data, N=70):
                                  columns=['Turning Point'],
                                  index=[turning_date])
 
-    today = time.strftime('%Y-%m-%d')
-    prediction = np.ceil(pred.loc[today]['Prediction'])
-    PREDICTION = pd.DataFrame(data=prediction, columns=['Prediction for %s' % (today)],
-                                  index=[pd.to_datetime(today)])
+    prediction = np.ceil(pred.loc[predict_date]['Prediction'])
+    PREDICTION = pd.DataFrame(data=prediction, columns=['Prediction for %s' % (predict_date)],
+                                  index=[pd.to_datetime(predict_date)])
 
     return pred, PREDICTION, turning_point
 
 
-def get_plot(safepath):
+def get_plot(predict_date, safepath):
     data = _get_data()
-    pred, PREDICTION, turning_point = _get_predictions(data=data, N=80)
+    pred, PREDICTION, turning_point = _get_predictions(data=data, predict_date=predict_date, N=80)
 
     _, ax = plt.subplots(figsize=(13,7))
     data['Infected'].plot(ax=ax, marker='x', linestyle='', label='Infected [wikipedia]', color='red')
@@ -89,7 +88,7 @@ def get_plot(safepath):
     plt.savefig(safepath)
     return ax
 
-def write_index(safepath='index.html'):
+def write_index(picpath, safepath='index.html'):
     string =u"""
 <!DOCTYPE html>
 <html>
@@ -161,12 +160,14 @@ Output ist html and png.</p>
 </div>
 </body>
 </html>
-""" % (time.strftime('%y%m%d_corona.png'))
+""" % (picpath)
     f = open(safepath, 'w')
     f.write(string)
     f.close()
     return string
 
-get_plot(safepath=time.strftime('%y%m%d_corona.png'))
-write_index()
+predict_date = time.strftime('%Y-%m-%d')
+get_plot(predict_date=predict_date, safepath=time.strftime('%y%m%d_corona.png'))
+get_plot(predict_date='2020-03-20', safepath='200320_corona.png')
+write_index(picpath='200320_corona.png')
 # plt.show()
