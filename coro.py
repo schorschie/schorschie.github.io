@@ -116,7 +116,7 @@ It is just a curve fit with two parameters, and I'm even hiding the R<sup>2</sup
 <li><a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">Johns Hopkins University</a></li>
 <li><a href="https://www.worldometers.info/coronavirus/country/germany/">Worldometer.info</a></li>
 </ul>
-<p>They are better in every aspect, except they don't try to predict the epidemic curve.</p>
+<p>They are better in every aspect, except they don't predict the epidemic curve in public.</p>
 
 <h2>Contribute</h2>
 <ul>
@@ -131,8 +131,8 @@ not from my offline csv file.</li>
 <p><em>Remember:</em> All models are wrong.
 (<a href="https://en.wikipedia.org/wiki/All_models_are_wrong">George Box</a>)</p>
 </blockquote>
-<p><em>Note:</em> On 10. of March 2020 Wikipedia changed it's datasource from the reports to the digital data of the RKI.
-I presume the time of day for the readout changed.</p>
+<p><em>Note:</em> On 10<sup>th</sup> of March 2020 Wikipedia changed it's datasource from the reports to the digital
+data of the RKI. I presume the time of day for the readout changed.</p>
 <h2>Impressum</h2>
 <p>Verantwortlich f&uuml;r den Inhalt dieser Seite:</p>
 Grzegorz Lippe<br/>

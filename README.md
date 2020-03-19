@@ -16,14 +16,14 @@ The idea to use a logistic curve came from this 3Blue1Brown [video](https://www.
 Second step I estimate, that 1 % of the people need intensive care for 4 days and sum up
 these cases.
 
-
-
-
-
-
 Contribute
 ==========
 
 * Feel free to comment or contribute. I would like to access the data from some online source and
   not from my offline csv file.
 * Is there a source for the amount of people in intensive care? 1% and 3 days is just a guess.
+
+Open Points
+===========
+
+* Turning point prediction is now 60 days, that seems odd for me, investigate.
