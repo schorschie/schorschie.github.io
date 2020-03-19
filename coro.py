@@ -4,6 +4,7 @@ import time
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from datetime import timedelta
 from matplotlib.dates import MO
 import statsmodels.api as sm
 from scipy import optimize as op
@@ -19,7 +20,7 @@ PREDICTIONS.append({'days': 15,
                     'plot': False})
 
 
-def logistic_function(x, k, x_0):
+def _logistic_function(x, k, x_0):
     # L maximum
     # k Steepness, d/dx(x=x_0) = k * L
     # x_0 point of 0.5L
@@ -27,19 +28,21 @@ def logistic_function(x, k, x_0):
     y = L / (1 + np.exp(-k * (x - x_0)))
     return y
 
-def get_data():
+
+def _get_data():
     data = pd.read_csv('covid-19_germany.csv', index_col=0, parse_dates=True)
     data['Delta Infected'] = data['Infected'].diff()
     data.loc[data.index[0], 'Delta Infected'] = data['Infected'][0]
     data['Total Deceased'] = data['Deceased'].cumsum()
     return data
 
-def get_prediction(data, N=70):
-    d = op.curve_fit(logistic_function, data.index.factorize()[0], data['Infected'], p0=[0.5, 30])[0]
+
+def _get_predictions(data, N=70):
+    d = op.curve_fit(_logistic_function, data.index.factorize()[0], data['Infected'], p0=[0.5, 30])[0]
     N = (0, N)
     XX = np.array(range(N[0], N[1]))
     
-    f = logistic_function(XX, d[0], d[1])
+    f = _logistic_function(XX, d[0], d[1])
     pred = pd.DataFrame(data={'Prediction': f},
                         index=pd.date_range(start=data.index[0], periods=N[1]-N[0], freq='d'))
     new_infected_prediction = np.hstack([pred['Prediction'][0], np.diff(pred['Prediction'])])
@@ -47,13 +50,24 @@ def get_prediction(data, N=70):
         prediction_key = prediction['key']
         pred[prediction_key] = np.ceil(new_infected_prediction * prediction['percentage']/100)
         pred[prediction_key] = pred[prediction_key].rolling('%dd' % (prediction['days'])).sum()
+    
+    turning_date = data.index[0] + timedelta(days=np.ceil(d[1]))
+    turning_point = pd.DataFrame(data=[np.ceil(pred.loc[turning_date]['Prediction'])],
+                                 columns=['Turning Point'],
+                                 index=[turning_date])
 
-
-    return pred
-
-def get_plot(data, pred, safepath):
     today = time.strftime('%Y-%m-%d')
-    PREDICTION = np.ceil(pred.loc[today]['Prediction'])
+    prediction = np.ceil(pred.loc[today]['Prediction'])
+    PREDICTION = pd.DataFrame(data=prediction, columns=['Prediction for %s' % (today)],
+                                  index=[pd.to_datetime(today)])
+
+    return pred, PREDICTION, turning_point
+
+
+def get_plot(safepath):
+    data = _get_data()
+    pred, PREDICTION, turning_point = _get_predictions(data=data, N=80)
+
     _, ax = plt.subplots(figsize=(13,7))
     data['Infected'].plot(ax=ax, marker='x', linestyle='', label='Infected [wikipedia]', color='red')
     pred['Prediction'].plot(ax=ax, label='Prediction', color='red')
@@ -62,10 +76,9 @@ def get_plot(data, pred, safepath):
             prediction_key = prediction['key']
             pred[prediction_key].plot(label=prediction_key, linestyle=':')
 
-    prediction_dummy = pd.DataFrame(data=PREDICTION, columns=['Prediction for %s' % (today)],
-                                    index=[pd.to_datetime(today)])
-    prediction_dummy.plot(ax=ax, marker='v', color='green', markersize=12)
-    ax.annotate('%d' %(PREDICTION), (pd.to_datetime(today), PREDICTION),
+    PREDICTION.plot(ax=ax, marker='v', color='brown', markersize=12)
+    turning_point.plot(ax=ax, marker='^', color='orange', markersize=12)
+    ax.annotate('%d' %(PREDICTION.iloc[0,0]), (PREDICTION.index[0], PREDICTION.iloc[0,0]),
                 textcoords="offset points", rotation=45,
                 xytext=(1, 10))
     plt.yscale('log')
@@ -154,8 +167,6 @@ Output ist html and png.</p>
     f.close()
     return string
 
-data = get_data()
-pred = get_prediction(data=data, N=80)
-get_plot(data=data, pred=pred, safepath=time.strftime('%y%m%d_corona.png'))
+get_plot(safepath=time.strftime('%y%m%d_corona.png'))
 write_index()
 # plt.show()
