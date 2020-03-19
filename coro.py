@@ -98,8 +98,8 @@ by the German goverment.
 
 <h2>Disclaimer</h2>
 
-<p>The numbers are from a wikipedia article <a href="https://de.wikipedia.org/wiki/COVID-19-Fälle_in_Deutschland">
-COVID-19 F&auml;lle in Deutschland</a>.
+<p>The numbers are from a wikipedia article <a href="https://de.wikipedia.org/wiki/COVID-19-Pandemie_in_Deutschland">
+COVID-19 Pandemie in Deutschland</a>.
 
 <p>In the first step I fit a logistic curve to the current progression of infected cases and a
 maximum value of 70%% of the population in Germany. The idea to use a logistic curve came from this
