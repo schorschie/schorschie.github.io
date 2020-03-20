@@ -167,7 +167,7 @@ Output ist html and png.</p>
     return string
 
 predict_date = time.strftime('%Y-%m-%d')
-get_plot(predict_date=predict_date, safepath=time.strftime('%y%m%d_corona.png'))
-get_plot(predict_date='2020-03-20', safepath='200320_corona.png')
-write_index(picpath='200320_corona.png')
+# get_plot(predict_date=predict_date, safepath=time.strftime('%y%m%d_corona.png'))
+get_plot(predict_date='2020-03-21', safepath='200321_corona.png')
+write_index(picpath='200321_corona.png')
 # plt.show()
