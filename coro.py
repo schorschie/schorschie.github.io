@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 
-import time
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from datetime import timedelta
-from matplotlib.dates import MO
 import statsmodels.api as sm
+from datetime import timedelta, datetime
+from matplotlib.dates import MO
 from scipy import optimize as op
 
 
@@ -37,7 +37,7 @@ def _get_data():
     return data
 
 
-def _get_predictions(data, predict_date=time.strftime('%Y-%m-%d'), N=70):
+def _get_predictions(data, predict_date='2020-03-20', N=70):
     d = op.curve_fit(_logistic_function, data.index.factorize()[0], data['Infected'], p0=[0.5, 30])[0]
     N = (0, N)
     XX = np.array(range(N[0], N[1]))
@@ -166,8 +166,9 @@ Output ist html and png.</p>
     f.close()
     return string
 
-predict_date = time.strftime('%Y-%m-%d')
-# get_plot(predict_date=predict_date, safepath=time.strftime('%y%m%d_corona.png'))
-get_plot(predict_date='2020-03-21', safepath='200321_corona.png')
-write_index(picpath='200321_corona.png')
+date = datetime(2020, 3, 22)
+predict_date = date.strftime('%Y-%m-%d')
+safe_path = date.strftime('%y%m%d_corona.png')
+get_plot(predict_date=predict_date, safepath=safe_path)
+write_index(picpath=safe_path)
 # plt.show()
