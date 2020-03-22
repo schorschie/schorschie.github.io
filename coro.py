@@ -69,14 +69,15 @@ def get_plot(predict_date, safepath):
 
     _, ax = plt.subplots(figsize=(13,7))
     data['Infected'].plot(ax=ax, marker='x', linestyle='', label='Infected [wikipedia]', color='red')
-    pred['Prediction'].plot(ax=ax, label='Prediction', color='red')
+    pred['Prediction'].plot(ax=ax, label='Prediction', color='red', linestyle='--',
+                            linewidth=1)
     for prediction in PREDICTIONS:
         if prediction['plot']:
             prediction_key = prediction['key']
             pred[prediction_key].plot(label=prediction_key, linestyle=':')
 
     PREDICTION.plot(ax=ax, marker='v', color='brown', markersize=12)
-    turning_point.plot(ax=ax, marker='^', color='orange', markersize=12)
+#    turning_point.plot(ax=ax, marker='^', color='orange', markersize=12)
     ax.annotate('%d' %(PREDICTION.iloc[0,0]), (PREDICTION.index[0], PREDICTION.iloc[0,0]),
                 textcoords="offset points", rotation=45,
                 xytext=(1, 10))
@@ -107,6 +108,11 @@ Germany, so that people understand, why this drastic measures are necessary. I h
 curve in the near future.</p>
 I do not do this to stress you, but to <em>increase the understanding</em> for the drastic measures taken now 
 by the German goverment.
+
+<h3>Update 22<sup>nd</sup> of March 2020</h3>
+
+The last days showed, that the logistic function failed to predict the next day and the estimate was always to hight.
+I personally see this as good news, because (I hope) it shows that the restrictive measures an effect now.
 
 <h2>Disclaimer</h2>
 
@@ -166,7 +172,7 @@ Output ist html and png.</p>
     f.close()
     return string
 
-date = datetime(2020, 3, 22)
+date = datetime(2020, 3, 23)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('%y%m%d_corona.png')
 get_plot(predict_date=predict_date, safepath=safe_path)
