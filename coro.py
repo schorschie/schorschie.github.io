@@ -38,6 +38,7 @@ def _get_data():
 
 
 def _get_predictions(data, predict_date='2020-03-20', N=70):
+    inc_time = 10  # 10 days of incubation time, so 10 days until respiratory treatment might be necessary
     d = op.curve_fit(_logistic_function, data.index.factorize()[0], data['Infected'], p0=[0.5, 30])[0]
     N = (0, N)
     XX = np.array(range(N[0], N[1]))
@@ -45,7 +46,8 @@ def _get_predictions(data, predict_date='2020-03-20', N=70):
     f = _logistic_function(XX, d[0], d[1])
     pred = pd.DataFrame(data={'Prediction': f},
                         index=pd.date_range(start=data.index[0], periods=N[1]-N[0], freq='d'))
-    new_infected_prediction = np.hstack([pred['Prediction'][0], np.diff(pred['Prediction'])])
+    diff_prediction = np.diff(pred['Prediction'])
+    new_infected_prediction  = np.hstack([[0] * (inc_time+1),  diff_prediction[:-inc_time]]) # shift array with inc_time --> eg. 10 days after infection
     for prediction in PREDICTIONS:
         prediction_key = prediction['key']
         pred[prediction_key] = np.ceil(new_infected_prediction * prediction['percentage']/100)
@@ -172,7 +174,7 @@ Output ist html and png.</p>
     f.close()
     return string
 
-date = datetime(2020, 3, 23)
+date = datetime(2020, 3, 24)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('%y%m%d_corona.png')
 get_plot(predict_date=predict_date, safepath=safe_path)
