@@ -69,7 +69,7 @@ def get_plot(predict_date, safepath):
 
     _, ax = plt.subplots(figsize=(13,7))
     data['Infected'].plot(ax=ax, marker='x', linestyle='', label='Infected [wikipedia]', color='red')
-    pred['Prediction'].plot(ax=ax, label='Prediction', color='red')
+    pred['Prediction'].plot(ax=ax, label='Prediction', color='red', linestyle='--')
     for prediction in PREDICTIONS:
         if prediction['plot']:
             prediction_key = prediction['key']
