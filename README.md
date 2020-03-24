@@ -28,3 +28,5 @@ Open Points
 
 * Turning point prediction is by definition at 25 mio. infected people, half of the expected
   total in Germany. How will the governments measures be visible in the graph? Smaller slope.
+  --> Hide turning point.
+* Create an image gallery for the previews.

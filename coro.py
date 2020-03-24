@@ -76,7 +76,7 @@ def get_plot(predict_date, safepath):
             pred[prediction_key].plot(label=prediction_key, linestyle=':')
 
     PREDICTION.plot(ax=ax, marker='v', color='brown', markersize=12)
-    turning_point.plot(ax=ax, marker='^', color='orange', markersize=12)
+#    turning_point.plot(ax=ax, marker='^', color='orange', markersize=12)
     ax.annotate('%d' %(PREDICTION.iloc[0,0]), (PREDICTION.index[0], PREDICTION.iloc[0,0]),
                 textcoords="offset points", rotation=45,
                 xytext=(1, 10))
@@ -166,7 +166,7 @@ Output ist html and png.</p>
     f.close()
     return string
 
-date = datetime(2020, 3, 22)
+date = datetime(2020, 3, 25)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('%y%m%d_corona.png')
 get_plot(predict_date=predict_date, safepath=safe_path)
