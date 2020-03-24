@@ -67,6 +67,7 @@ def get_plot(predict_date, safepath):
     data = _get_data()
     pred, PREDICTION, turning_point = _get_predictions(data=data, predict_date=predict_date, N=80)
 
+    day_before_prediction = (datetime.strptime(predict_date, '%Y-%m-%d') - timedelta(days=1)).strftime('%Y-%m-%d')
     _, ax = plt.subplots(figsize=(13,7))
     data['Infected'].plot(ax=ax, marker='x', linestyle='', label='Infected [wikipedia]', color='red')
     pred['Prediction'].plot(ax=ax, label='Prediction', color='red', linestyle='--')
@@ -80,6 +81,10 @@ def get_plot(predict_date, safepath):
     ax.annotate('%d' %(PREDICTION.iloc[0,0]), (PREDICTION.index[0], PREDICTION.iloc[0,0]),
                 textcoords="offset points", rotation=45,
                 xytext=(1, 10))
+    ax.annotate('%d' %(data.loc[day_before_prediction, 'Infected']), (pd.to_datetime(day_before_prediction), 
+                                                                      data.loc[day_before_prediction, 'Infected']),
+                textcoords="offset points", rotation=-45,
+                xytext=(-30, 8))
     plt.yscale('log')
     ax.grid(True)
     ax.legend(loc='best')
