@@ -65,7 +65,8 @@ def _get_predictions(data, predict_date='2020-03-20', N=70):
 
 def get_plot(predict_date, safepath):
     data = _get_data()
-    pred, PREDICTION, turning_point = _get_predictions(data=data, predict_date=predict_date, N=80)
+#   pred, PREDICTION, turning_point = _get_predictions(data=data, predict_date=predict_date, N=80)
+    pred, PREDICTION, _ = _get_predictions(data=data, predict_date=predict_date, N=80)
 
     day_before_prediction = (datetime.strptime(predict_date, '%Y-%m-%d') - timedelta(days=1)).strftime('%Y-%m-%d')
     _, ax = plt.subplots(figsize=(13,7))
@@ -77,7 +78,7 @@ def get_plot(predict_date, safepath):
             pred[prediction_key].plot(label=prediction_key, linestyle=':')
 
     PREDICTION.plot(ax=ax, marker='v', color='brown', markersize=12)
-#    turning_point.plot(ax=ax, marker='^', color='orange', markersize=12)
+#   turning_point.plot(ax=ax, marker='^', color='orange', markersize=12)
     ax.annotate('%d' %(PREDICTION.iloc[0,0]), (PREDICTION.index[0], PREDICTION.iloc[0,0]),
                 textcoords="offset points", rotation=45,
                 xytext=(1, 10))
