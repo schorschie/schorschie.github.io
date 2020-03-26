@@ -34,6 +34,7 @@ def _get_data():
     data['Delta Infected'] = data['Infected'].diff()
     data.loc[data.index[0], 'Delta Infected'] = data['Infected'][0]
     data['Total Deceased'] = data['Deceased'].cumsum()
+    print(data)
     return data
 
 
@@ -172,7 +173,7 @@ Output ist html and png.</p>
     f.close()
     return string
 
-date = datetime(2020, 3, 26)
+date = datetime(2020, 3, 27)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('%y%m%d_corona.png')
 get_plot(predict_date=predict_date, safepath=safe_path)
