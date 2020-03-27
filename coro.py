@@ -33,7 +33,8 @@ def _get_data():
     data = pd.read_csv('covid-19_germany.csv', index_col=0, parse_dates=True)
     data['Delta Infected'] = data['Infected'].diff()
     data.loc[data.index[0], 'Delta Infected'] = data['Infected'][0]
-    data['Total Deceased'] = data['Deceased'].cumsum()
+    data['Deceased'] = data['Total Deceased'].diff()
+    data.loc[data.index[0], 'Deceased'] = data['Total Deceased'][0]
     print(data)
     return data
 
