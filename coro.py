@@ -173,7 +173,7 @@ Output ist html and png.</p>
     f.close()
     return string
 
-date = datetime(2020, 3, 27)
+date = datetime(2020, 3, 28)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('%y%m%d_corona.png')
 get_plot(predict_date=predict_date, safepath=safe_path)
