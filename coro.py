@@ -20,14 +20,13 @@ PREDICTIONS.append({'days': 15,
                     'plot': False})
 
 
-def _logistic_function(x, k, x_0):
+def _logistic_function(x, k, x_0, L):
     # L maximum
     # k Steepness, d/dx(x=x_0) = k * L
     # x_0 point of 0.5L
-    L = 0.5 * 0.7 * 82e6 # The amount of people which will be roundabout at the half infection point.
+    # L = 0.5 * 0.7 * 82e6 # The amount of people which will be roundabout at the half infection point.
     y = L / (1 + np.exp(-k * (x - x_0)))
     return y
-
 
 def _get_data():
     data = pd.read_csv('covid-19_germany.csv', index_col=0, parse_dates=True)
@@ -40,19 +39,22 @@ def _get_data():
 
 
 def _get_predictions(data, predict_date='2020-03-20', N=70):
-    d = op.curve_fit(_logistic_function, data.index.factorize()[0], data['Infected'], p0=[0.5, 30])[0]
+    inc_time = 5 # Incubation Time
+    d = op.curve_fit(_logistic_function, data.index.factorize()[0], data['Infected'], p0=[0.5, 30, 500e3])[0]
     N = (0, N)
     XX = np.array(range(N[0], N[1]))
     
-    f = _logistic_function(XX, d[0], d[1])
-    pred = pd.DataFrame(data={'Prediction': f},
+    predicted_infected = _logistic_function(XX, d[0], d[1], d[2])
+    pred = pd.DataFrame(data={'Prediction': predicted_infected},
                         index=pd.date_range(start=data.index[0], periods=N[1]-N[0], freq='d'))
-    new_infected_prediction = np.hstack([pred['Prediction'][0], np.diff(pred['Prediction'])])
+ 
+    diff_prediction = np.diff(pred['Prediction'])
+    new_infected_prediction  = np.hstack([[0] * (inc_time+1),  diff_prediction[:-inc_time]]) # shift array with inc_time --> eg. 10 days after infection
     for prediction in PREDICTIONS:
         prediction_key = prediction['key']
         pred[prediction_key] = np.ceil(new_infected_prediction * prediction['percentage']/100)
         pred[prediction_key] = pred[prediction_key].rolling('%dd' % (prediction['days'])).sum()
-    
+
     turning_date = data.index[0] + timedelta(days=np.ceil(d[1]))
     turning_point = pd.DataFrame(data=[np.ceil(pred.loc[turning_date]['Prediction'])],
                                  columns=['Turning Point'],
@@ -93,6 +95,7 @@ def get_plot(predict_date, safepath):
     ax.legend(loc='best')
     plt.title('Covid-19 Cases in Germany')
     plt.xticks(rotation=30)
+    plt.yticks(10**np.array(range(9)))
     plt.savefig(safepath)
     return ax
 
