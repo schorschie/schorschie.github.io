@@ -14,18 +14,21 @@ PREDICTIONS = [{'until': 0,
                 'days': 7,
                 'key': 'Last week',
                 'plot': True,
+                'predict': True,
                 'style': {'linestyle': '--',
                           'color': 'black'}}]
 PREDICTIONS.append({'until': 7,
                     'days':  7,
                     'key': 'Second to last week',
                     'plot': True,
+                    'predict': True,
                     'style': {'linestyle': '--',
                               'color': 'gray'}})
 PREDICTIONS.append({'until': 14,
                     'days':  7,
                     'key': 'Three weeks before',
                     'plot': True,
+                    'predict': False,
                     'style': {'linestyle': ':',
                               'color': 'gray'}})
 
@@ -51,6 +54,7 @@ def _get_predictions(data, predict_date='2020-03-20', N=70):
     last_date = data.index[-1]
 
     pred = pd.DataFrame(index=pd.date_range(start=data.index[0], periods=N[1]-N[0], freq='d'))
+    PREDICTION = pd.DataFrame(data=[], columns=['Date', 'Infections', 'Description'])
     for prediction in PREDICTIONS:
         start_date = last_date - timedelta(days=prediction['until'])
         end_date = start_date - timedelta(days=prediction['days']-1)
@@ -60,36 +64,37 @@ def _get_predictions(data, predict_date='2020-03-20', N=70):
                          p0=[0.1, -70])[0]
         predicted_infected = _exponential_function(XX, d[0], d[1])
         pred[prediction['key']] = predicted_infected
+        if prediction['predict']:
+            PREDICTION.loc[len(PREDICTION)] = [pd.to_datetime(predict_date),
+                                               np.ceil(pred.loc[predict_date, prediction['key']]),
+                                               prediction['key']]
 
-
-    return pred#, PREDICTION
+    return pred, PREDICTION
 
 
 def get_plot(predict_date, safepath):
     data = _get_data()
-#   pred, PREDICTION, turning_point = _get_predictions(data=data, predict_date=predict_date, N=80)
-#   pred, PREDICTION, _ = _get_predictions(data=data, predict_date=predict_date, N=80)
-#   pred, PREDICTION = _get_predictions(data=data, predict_date=predict_date, N=80)
-    pred = _get_predictions(data=data, predict_date=predict_date, N=80)
+    pred, PREDICTION = _get_predictions(data=data, predict_date=predict_date, N=80)
+#   pred = _get_predictions(data=data, predict_date=predict_date, N=80)
 
     day_before_prediction = (datetime.strptime(predict_date, '%Y-%m-%d') - timedelta(days=1)).strftime('%Y-%m-%d')
     _, ax = plt.subplots(figsize=(13,7))
     data['Infected'].plot(ax=ax, marker='x', linestyle='', label='Infected [wikipedia]', color='red')
-#   pred['Prediction'].plot(ax=ax, label='Prediction', color='red', linestyle='--')
     for prediction in PREDICTIONS:
         if prediction['plot']:
             prediction_key = prediction['key']
             pred[prediction_key].plot(label=prediction_key, **prediction['style'])
 
-#   PREDICTION.plot(ax=ax, marker='v', color='brown', markersize=12)
-#   turning_point.plot(ax=ax, marker='^', color='orange', markersize=12)
-#   ax.annotate('%d' %(PREDICTION.iloc[0,0]), (PREDICTION.index[0], PREDICTION.iloc[0,0]),
-#               textcoords="offset points", rotation=45,
-#               xytext=(1, 10))
-#   ax.annotate('%d' %(data.loc[day_before_prediction, 'Infected']), (pd.to_datetime(day_before_prediction), 
-#                                                                     data.loc[day_before_prediction, 'Infected']),
-#               textcoords="offset points", rotation=-45,
-#               xytext=(-30, 8))
+#    PREDICTION.plot(x='Date', y='Infections', ax=ax, marker='v', color='brown', markersize=12)
+    for _, prediction in PREDICTION.iterrows():
+        ax.plot(prediction['Date'], prediction['Infections'], marker='v', markersize=12)
+        ax.annotate('%d' %(prediction['Infections']), (prediction['Date'], prediction['Infections']),
+                    textcoords="offset points", rotation=45,
+                    xytext=(1, 10))
+    ax.annotate('%d' %(data.loc[day_before_prediction, 'Infected']), (pd.to_datetime(day_before_prediction), 
+                                                                      data.loc[day_before_prediction, 'Infected']),
+                textcoords="offset points", rotation=-45,
+                xytext=(-30, 8))
     plt.yscale('log')
     ax.grid(True)
     ax.legend(loc='best')
