@@ -13,15 +13,21 @@ from scipy import optimize as op
 PREDICTIONS = [{'until': 0,
                 'days': 7,
                 'key': 'Last week',
-                'plot': True}]
+                'plot': True,
+                'style': {'linestyle': '--',
+                          'color': 'black'}}]
 PREDICTIONS.append({'until': 7,
                     'days':  7,
                     'key': 'Second to last week',
-                    'plot': True})
+                    'plot': True,
+                    'style': {'linestyle': '--',
+                              'color': 'gray'}})
 PREDICTIONS.append({'until': 14,
                     'days':  7,
                     'key': 'Three weeks before',
-                    'plot': True})
+                    'plot': True,
+                    'style': {'linestyle': ':',
+                              'color': 'gray'}})
 
 def _exponential_function(x, k, x_0):
     y = np.exp(k * (x - x_0))
@@ -73,7 +79,7 @@ def get_plot(predict_date, safepath):
     for prediction in PREDICTIONS:
         if prediction['plot']:
             prediction_key = prediction['key']
-            pred[prediction_key].plot(label=prediction_key, linestyle=':')
+            pred[prediction_key].plot(label=prediction_key, **prediction['style'])
 
 #   PREDICTION.plot(ax=ax, marker='v', color='brown', markersize=12)
 #   turning_point.plot(ax=ax, marker='^', color='orange', markersize=12)
