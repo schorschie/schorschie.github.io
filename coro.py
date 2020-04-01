@@ -75,7 +75,6 @@ def _get_predictions(data, predict_date='2020-03-20', N=70):
 def get_plot(predict_date, safepath):
     data = _get_data()
     pred, PREDICTION = _get_predictions(data=data, predict_date=predict_date, N=80)
-#   pred = _get_predictions(data=data, predict_date=predict_date, N=80)
 
     day_before_prediction = (datetime.strptime(predict_date, '%Y-%m-%d') - timedelta(days=1)).strftime('%Y-%m-%d')
     _, ax = plt.subplots(figsize=(13,7))
@@ -85,7 +84,6 @@ def get_plot(predict_date, safepath):
             prediction_key = prediction['key']
             pred[prediction_key].plot(label=prediction_key, **prediction['style'])
 
-#    PREDICTION.plot(x='Date', y='Infections', ax=ax, marker='v', color='brown', markersize=12)
     for _, prediction in PREDICTION.iterrows():
         ax.plot(prediction['Date'], prediction['Infections'], marker='v', markersize=12)
         ax.annotate('%d' %(prediction['Infections']), (prediction['Date'], prediction['Infections']),
