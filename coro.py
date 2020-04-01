@@ -47,8 +47,8 @@ def _get_data():
     return data
 
 
-def _get_predictions(data, predict_date='2020-03-20', N=70):
-    N = (0, N)
+def _get_predictions(data, predict_date='2020-03-20'):
+    N = (0, len(data)+7)
     xx =  data.index.factorize()[0]
     XX = np.array(range(N[0], N[1]))
     last_date = data.index[-1]
@@ -73,7 +73,7 @@ def _get_predictions(data, predict_date='2020-03-20', N=70):
 
 def get_plot(predict_date, safepath):
     data = _get_data()
-    pred, PREDICTION = _get_predictions(data=data, predict_date=predict_date, N=80)
+    pred, PREDICTION = _get_predictions(data=data, predict_date=predict_date)
 
     day_before_prediction = (datetime.strptime(predict_date, '%Y-%m-%d') - timedelta(days=1)).strftime('%Y-%m-%d')
     _, ax = plt.subplots(figsize=(13,7))
@@ -99,6 +99,7 @@ def get_plot(predict_date, safepath):
     plt.xticks(rotation=30)
     plt.yticks(10**np.array(range(9)))
     plt.ylim((1, 100e6))
+    plt.xlim((plt.xlim()[0], plt.xlim()[0]+80))
     plt.savefig(safepath)
     return ax
 
@@ -122,10 +123,14 @@ curve in the near future.</p>
 I do not do this to stress you, but to <em>increase the understanding</em> for the drastic measures taken now 
 by the German goverment.
 
-<h3>Update 30<sup>th</sup> of March 2020</h3>
+<h3>Update 1<sup>st</sup> of April 2020</h3>
 
-<p>The measures taken by the government where fruitful and the exponential growth is slowing. Therefore I changed the
-fitting in that manner, that I don't use the 70%% of sick people as a maximum value anymore.</p>
+<p>The logistics function does not apply anymore, because:</p>
+<ul>
+<li>there could be a vaccine before we reach 70%% of infected.</li>
+<li>the shutdown could lead to a confinement of the desease.</li>
+</ul>
+
 <h2>Disclaimer</h2>
 
 <p>The numbers are from a wikipedia article <a href="https://de.wikipedia.org/wiki/COVID-19-Pandemie_in_Deutschland">
