@@ -10,23 +10,32 @@ from matplotlib.dates import MO
 from scipy import optimize as op
 
 
-PREDICTIONS = [{'days': 3,
-                'percentage': 1,
-                'key': 'If 1 % need 3 days of care',
-                'plot': True}]
-PREDICTIONS.append({'days': 15,
-                    'percentage': 10,
-                    'key': 'If 10 % need 15 days of care',
-                    'plot': True})
+PREDICTIONS = [{'until': 0,
+                'days': 7,
+                'key': 'Last week',
+                'plot': True,
+                'predict': True,
+                'style': {'linestyle': '--',
+                          'color': 'black'}}]
+PREDICTIONS.append({'until': 7,
+                    'days':  7,
+                    'key': 'Second to last week',
+                    'plot': True,
+                    'predict': False,
+                    'style': {'linestyle': '--',
+                              'color': 'gray'}})
+PREDICTIONS.append({'until': 14,
+                    'days':  7,
+                    'key': 'Three weeks before',
+                    'plot': True,
+                    'predict': False,
+                    'style': {'linestyle': ':',
+                              'color': 'gray'}})
 
-
-def _logistic_function(x, k, x_0, L):
-    # L maximum
-    # k Steepness, d/dx(x=x_0) = k * L
-    # x_0 point of 0.5L
-    # L = 0.5 * 0.7 * 82e6 # The amount of people which will be roundabout at the half infection point.
-    y = L / (1 + np.exp(-k * (x - x_0)))
+def _exponential_function(x, k, x_0):
+    y = np.exp(k * (x - x_0))
     return y
+
 
 def _get_data():
     data = pd.read_csv('covid-19_germany.csv', index_col=0, parse_dates=True)
@@ -38,54 +47,47 @@ def _get_data():
     return data
 
 
-def _get_predictions(data, predict_date='2020-03-20', N=70):
-    inc_time = 5 # Incubation Time
-    d = op.curve_fit(_logistic_function, data.index.factorize()[0], data['Infected'], p0=[0.5, 30, 500e3])[0]
-    N = (0, N)
+def _get_predictions(data, predict_date='2020-03-20'):
+    N = (0, len(data)+7)
+    xx =  data.index.factorize()[0]
     XX = np.array(range(N[0], N[1]))
-    
-    predicted_infected = _logistic_function(XX, d[0], d[1], d[2])
-    pred = pd.DataFrame(data={'Prediction': predicted_infected},
-                        index=pd.date_range(start=data.index[0], periods=N[1]-N[0], freq='d'))
- 
-    diff_prediction = np.diff(pred['Prediction'])
-    new_infected_prediction  = np.hstack([[0] * (inc_time+1),  diff_prediction[:-inc_time]]) # shift array with inc_time --> eg. 10 days after infection
+    last_date = data.index[-1]
+
+    pred = pd.DataFrame(index=pd.date_range(start=data.index[0], periods=N[1]-N[0], freq='d'))
+    PREDICTION = pd.DataFrame(index=[pd.to_datetime(predict_date)])
     for prediction in PREDICTIONS:
-        prediction_key = prediction['key']
-        pred[prediction_key] = np.ceil(new_infected_prediction * prediction['percentage']/100)
-        pred[prediction_key] = pred[prediction_key].rolling('%dd' % (prediction['days'])).sum()
+        start_date = last_date - timedelta(days=prediction['until'])
+        end_date = start_date - timedelta(days=prediction['days']-1)
+        slice_x = xx[len(xx)-(prediction['until']+prediction['days']) : len(xx)-prediction['until'] ]
+        d = op.curve_fit(_exponential_function, slice_x,
+                         data.loc[end_date : start_date, 'Infected'].values,
+                         p0=[0.1, -70])[0]
+        predicted_infected = _exponential_function(XX, d[0], d[1])
+        pred[prediction['key']] = predicted_infected
+        if prediction['predict']:
+            PREDICTION.loc[predict_date, prediction['key']] = \
+                np.ceil(pred.loc[predict_date, prediction['key']])
 
-    turning_date = data.index[0] + timedelta(days=np.ceil(d[1]))
-    turning_point = pd.DataFrame(data=[np.ceil(pred.loc[turning_date]['Prediction'])],
-                                 columns=['Turning Point'],
-                                 index=[turning_date])
-
-    prediction = np.ceil(pred.loc[predict_date]['Prediction'])
-    PREDICTION = pd.DataFrame(data=prediction, columns=['Prediction for %s' % (predict_date)],
-                                  index=[pd.to_datetime(predict_date)])
-
-    return pred, PREDICTION, turning_point
+    return pred, PREDICTION
 
 
 def get_plot(predict_date, safepath):
     data = _get_data()
-#   pred, PREDICTION, turning_point = _get_predictions(data=data, predict_date=predict_date, N=80)
-    pred, PREDICTION, _ = _get_predictions(data=data, predict_date=predict_date, N=80)
+    pred, PREDICTION = _get_predictions(data=data, predict_date=predict_date)
 
     day_before_prediction = (datetime.strptime(predict_date, '%Y-%m-%d') - timedelta(days=1)).strftime('%Y-%m-%d')
     _, ax = plt.subplots(figsize=(13,7))
     data['Infected'].plot(ax=ax, marker='x', linestyle='', label='Infected [wikipedia]', color='red')
-    pred['Prediction'].plot(ax=ax, label='Prediction', color='red', linestyle='--')
     for prediction in PREDICTIONS:
         if prediction['plot']:
             prediction_key = prediction['key']
-            pred[prediction_key].plot(label=prediction_key, linestyle=':')
+            pred[prediction_key].plot(label=prediction_key, **prediction['style'])
 
-    PREDICTION.plot(ax=ax, marker='v', color='brown', markersize=12)
-#   turning_point.plot(ax=ax, marker='^', color='orange', markersize=12)
-    ax.annotate('%d' %(PREDICTION.iloc[0,0]), (PREDICTION.index[0], PREDICTION.iloc[0,0]),
-                textcoords="offset points", rotation=45,
-                xytext=(1, 10))
+    if PREDICTION.size > 0:
+        PREDICTION.plot(ax=ax, marker='v', markersize=12)
+        ax.annotate('%d' %(PREDICTION.iloc[0,0]), (PREDICTION.index[0], PREDICTION.iloc[0,0]),
+                    textcoords="offset points", rotation=45,
+                    xytext=(1, 10))
     ax.annotate('%d' %(data.loc[day_before_prediction, 'Infected']), (pd.to_datetime(day_before_prediction), 
                                                                       data.loc[day_before_prediction, 'Infected']),
                 textcoords="offset points", rotation=-45,
@@ -96,6 +98,8 @@ def get_plot(predict_date, safepath):
     plt.title('Covid-19 Cases in Germany')
     plt.xticks(rotation=30)
     plt.yticks(10**np.array(range(9)))
+    plt.ylim((1, 100e6))
+    plt.xlim((plt.xlim()[0], plt.xlim()[0]+80))
     plt.savefig(safepath)
     return ax
 
@@ -119,10 +123,14 @@ curve in the near future.</p>
 I do not do this to stress you, but to <em>increase the understanding</em> for the drastic measures taken now 
 by the German goverment.
 
-<h3>Update 30<sup>th</sup> of March 2020</h3>
+<h3>Update 1<sup>st</sup> of April 2020</h3>
 
-<p>The measures taken by the government where fruitful and the exponential growth is slowing. Therefore I changed the
-fitting in that manner, that I don't use the 70%% of sick people as a maximum value anymore.</p>
+<p>The logistics function does not apply anymore, because:</p>
+<ul>
+<li>there could be a vaccine before we reach 70%% of infected.</li>
+<li>the shutdown could lead to a confinement of the desease.</li>
+</ul>
+
 <h2>Disclaimer</h2>
 
 <p>The numbers are from a wikipedia article <a href="https://de.wikipedia.org/wiki/COVID-19-Pandemie_in_Deutschland">
