@@ -111,8 +111,6 @@ layout: home
 logistic_curve: ./%s
 ---
 
-# Covid-19 Cases in Germany
-
 ## Prediction
 
 I'm trying to predict the amount of hospital treatment needed to deal with the corona crisis in
@@ -159,7 +157,7 @@ not from my offline csv file.
     return string
 
 
-date = datetime(2020, 4, 2)
+date = datetime(2020, 4, 3)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('%y%m%d_corona.png')
 get_plot(predict_date=predict_date, safepath=safe_path)
