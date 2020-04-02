@@ -1,2 +1,8 @@
+# Folders
 .vscode
+.jekyll-cache
+.sass-cache
+_site
+
+# Files
 *~

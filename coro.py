@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+ # -*- coding: utf-8 -*-
 
 import pandas as pd
 import numpy as np
@@ -65,7 +66,7 @@ def _get_predictions(data, predict_date='2020-03-20'):
         predicted_infected = _exponential_function(XX, d[0], d[1])
         pred[prediction['key']] = predicted_infected
         if prediction['predict']:
-            PREDICTION.loc[predict_date, prediction['key']] = \
+            PREDICTION.loc[predict_date, prediction['key'] + "'s prediction"] = \
                 np.ceil(pred.loc[predict_date, prediction['key']])
 
     return pred, PREDICTION
@@ -77,7 +78,7 @@ def get_plot(predict_date, safepath):
 
     day_before_prediction = (datetime.strptime(predict_date, '%Y-%m-%d') - timedelta(days=1)).strftime('%Y-%m-%d')
     _, ax = plt.subplots(figsize=(13,7))
-    data['Infected'].plot(ax=ax, marker='x', linestyle='', label='Infected [wikipedia]', color='red')
+    data['Infected'].plot(ax=ax, marker='x', linestyle='', label='Infected [RKI]', color='red')
     for prediction in PREDICTIONS:
         if prediction['plot']:
             prediction_key = prediction['key']
@@ -103,95 +104,63 @@ def get_plot(predict_date, safepath):
     plt.savefig(safepath)
     return ax
 
-def write_index(picpath, safepath='index.html'):
-    string =u"""
-<!DOCTYPE html>
-<html>
-<head>
-<title>Covid-19 cases in Germany</title>
-<link rel="stylesheet", href="coro.css">
-</head>
-<body>
-<div id="centerContainer">
-<h1>Covid-19 Cases in Germany</h1>
 
-<h2>Prediction</h2>
+def write_indexmd(picpath, safepath='index.md'):
+    string =u"""---
+layout: home
+logistic_curve: ./%s
+---
 
-<p>I'm trying to predict the amount of hospital treatment needed to deal with the corona crisis in
-Germany, so that people understand, why this drastic measures are necessary. I hope we will se a decrease of the 
-curve in the near future.</p>
-I do not do this to stress you, but to <em>increase the understanding</em> for the drastic measures taken now 
+# Covid-19 Cases in Germany
+
+## Prediction
+
+I'm trying to predict the amount of hospital treatment needed to deal with the corona crisis in
+Germany, so that people understand, why this drastic measures are necessary. I hope we will se a decrease of the
+curve in the near future.
+
+I do not do this to stress you, but to *increase the understanding* for the drastic measures taken now
 by the German goverment.
 
-<h3>Update 1<sup>st</sup> of April 2020</h3>
+## Disclaimer
 
-<p>The logistics function does not apply anymore, because:</p>
-<ul>
-<li>there could be a vaccine before we reach 70%% of infected.</li>
-<li>the shutdown could lead to a confinement of the desease.</li>
-</ul>
+The numbers are from the daily [RKI Report](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html).
 
-<h2>Disclaimer</h2>
-
-<p>The numbers are from a wikipedia article <a href="https://de.wikipedia.org/wiki/COVID-19-Pandemie_in_Deutschland">
-COVID-19 Pandemie in Deutschland</a>.
-
-<p>In the first step I fit a logistic curve to the current progression of infected cases and a
+In the first step I fit a logistic curve to the current progression of infected cases and a
 maximum value of 70%% of the population in Germany. The idea to use a logistic curve came from this
-<a href="https://www.youtube.com/watch?v=Kas0tIxDvrg&t=473s">3Blue1Brown video</a>.
+[3Blue1Brown youtube video](https://www.youtube.com/watch?v=Kas0tIxDvrg&t=473s).
 Second step I estimate, that 1 %% of the people need intensive care for 3 days and sum up
-these cases.</p>
+these cases.
 
-<p>So as you may have guessed until now, the following plot isn't scientific from any point of view.
-It is just a curve fit with two parameters, and I'm even hiding the R<sup>2</sup> value.</p>
+So as you may have guessed until now, the following plot isn't scientific from any point of view.
+It is just a curve fit with two parameters, and I'm even hiding the R<sup>2</sup> value.
 
-<p>For more scientific data rely on the pro's:</p>
-<ul>
-<li><a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/nCoV.html">Robert Koch Institut</a></li>
-<li><a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">Johns Hopkins University</a></li>
-<li><a href="https://www.worldometers.info/coronavirus/country/germany/">Worldometer.info</a></li>
-</ul>
-<p>They are better in every aspect, except they don't predict the epidemic curve in public.</p>
+For more scientific data rely on the pro's:
 
-<h2>Contribute</h2>
-<ul>
-<li>Feel free to comment or contribute. I would like to access the data from some online source and 
-not from my offline csv file.</li>
-<li>Is there a source for the amount of people in intensive care? 1%% and 3 days is just a guess.</li>
-</ul>
+* [Robert Koch Institut](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/nCoV.html)
+* [Johns Hopkins University](https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6)
+* [Worldometer.info](https://www.worldometers.info/coronavirus/country/germany/)
 
-<img width=90%% height=auto src="%s" alt="Logistic curve of corona virus progression">
+They are better in every aspect, except they don't predict the epidemic curve in public.
 
-<blockquote>
-<p><em>Remember:</em> All models are wrong.
-(<a href="https://en.wikipedia.org/wiki/All_models_are_wrong">George Box</a>)</p>
-</blockquote>
-<p><em>Note:</em> On 10<sup>th</sup> of March 2020 Wikipedia changed it's datasource from the reports to the digital
-data of the RKI. I presume the time of day for the readout changed.</p>
-<h2>Impressum</h2>
-<p>Verantwortlich f&uuml;r den Inhalt dieser Seite:</p>
-Grzegorz Lippe<br/>
-Eugen-Hafner-Str. 10<br/>
-73431 Aalen<br/>
+## Contribute
 
-<p>E-Mail: <a href="mailto:Grzegorz.Lippe@googlemail.com?subject=schorschie.github.io">Grzegorz.Lippe@googlemail.com</a></p>
+* Feel free to comment or contribute. I would like to access the data from some online source and
+not from my offline csv file.
+* Is there a source for the amount of people in intensive care? 1%% and 3 days is just a guess.
 
-<h3>Resources</h3>
+![Logistic curve of corona virus progression]({{ page.logistic_curve }})
 
-<p>This site is hosted by github. I use python with pandas, numpy, matplotlib, statmodels and scipy for the computation
-Output ist html and png.</p>
-</div>
-</body>
-</html>
+> *Remember:* All models are wrong. [George Box](https://en.wikipedia.org/wiki/All_models_are_wrong)
 """ % (picpath)
-    f = open(safepath, 'w')
+    f = open(safepath, 'w', encoding="utf-8")
     f.write(string)
     f.close()
     return string
+
 
 date = datetime(2020, 4, 2)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('%y%m%d_corona.png')
 get_plot(predict_date=predict_date, safepath=safe_path)
-write_index(picpath=safe_path)
-# plt.show()
+write_indexmd(picpath=safe_path)
