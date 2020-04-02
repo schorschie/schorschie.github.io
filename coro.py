@@ -108,6 +108,7 @@ def get_plot(predict_date, safepath):
 def write_indexmd(picpath, safepath='index.md'):
     string =u"""---
 layout: home
+title: Covid-19 Cases in Germany
 logistic_curve: ./%s
 ---
 
