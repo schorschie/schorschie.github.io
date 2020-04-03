@@ -1,45 +1,48 @@
 ---
 layout: home
-title: Covid-19 Cases in Germany
-logistic_curve: ./200404_corona.png
+title: CV
 ---
 
-## Prediction
+## Professional Experience
 
-I'm trying to predict the amount of hospital treatment needed to deal with the corona crisis in
-Germany, so that people understand, why this drastic measures are necessary. I hope we will se a decrease of the
-curve in the near future.
+### Entwicklungsingenieur
 
-I do not do this to stress you, but to *increase the understanding* for the drastic measures taken now
-by the German goverment.
+#### since 2017
 
-## Disclaimer
+> Systems-Engineering  
+> Bosch Corporate Research & Automotive Steering  
+> Renningen & Schwäbisch Gmünd  
 
-The numbers are from the daily [RKI Report](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html).
+### Berechnungsingenieur
 
-In the first step I fit a logistic curve to the current progression of infected cases and a
-maximum value of 70% of the population in Germany. The idea to use a logistic curve came from this
-[3Blue1Brown youtube video](https://www.youtube.com/watch?v=Kas0tIxDvrg&t=473s).
-Second step I estimate, that 1 % of the people need intensive care for 3 days and sum up
-these cases.
+#### 2012 -- 2017
 
-So as you may have guessed until now, the following plot isn't scientific from any point of view.
-It is just a curve fit with two parameters, and I'm even hiding the R<sup>2</sup> value.
+> Computer Aided Engineering  
+> Bosch Automotive Steering  
+> Schwäbisch Gmünd  
 
-For more scientific data rely on the pro's:
+### Projektingenieur
 
-* [Robert Koch Institut](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/nCoV.html)
-* [Johns Hopkins University](https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6)
-* [Worldometer.info](https://www.worldometers.info/coronavirus/country/germany/)
+#### 2010 -- 2012
 
-They are better in every aspect, except they don't predict the epidemic curve in public.
+> MesH Engineering Team  
+> Work Performance at Daimler AG  
+> Stuttgart  
 
-## Contribute
+## Education
 
-* Feel free to comment or contribute. I would like to access the data from some online source and
-not from my offline csv file.
-* Is there a source for the amount of people in intensive care? 1% and 3 days is just a guess.
+### Mechanical Engineering
 
-![Logistic curve of corona virus progression]({{ page.logistic_curve }})
+#### 2003 -- 2009
 
-> *Remember:* All models are wrong. [George Box](https://en.wikipedia.org/wiki/All_models_are_wrong)
+> Dipl.-Ing. Fahrzeug- und Motorentechnik  
+> Universität Stuttgart  
+
+### Civil Service
+
+#### 2002 -- 2003
+
+> Verein zur Förderung spastisch  
+> gelähmter Kinder und  
+> anderer Behinderter e.V.  
+> Nürnberg
