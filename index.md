@@ -39,6 +39,7 @@ title: CV
 
 > Dipl.-Ing. Fahrzeug- und Motorentechnik  
 > Universität Stuttgart  
+> Stuttgart  
 
 ### Civil Service
 
