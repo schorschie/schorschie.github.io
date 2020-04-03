@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Impressum
-permalink: /impressum/
 ---
 
 ## Verantwortlich für den Inhalt dieser Seite
