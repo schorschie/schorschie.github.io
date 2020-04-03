@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Covid-19 Cases in Germany
-logistic_curve: ./200403_corona.png
+logistic_curve: ./200404_corona.png
 ---
 
 ## Prediction
