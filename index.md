@@ -3,6 +3,8 @@ layout: default
 title: CV
 ---
 
+![A portrait of me](/assets/lippe-m.jpg)
+
 ## Professional Experience
 
 ### Entwicklungsingenieur
