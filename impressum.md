@@ -3,7 +3,7 @@ layout: page
 title: Impressum
 ---
 
-## Verantwortlich für den Inhalt dieser Seite
+*Verantwortlich für den Inhalt dieser Seite:*
 
 > Grzegorz Lippe  
 > Eugen-Hafner-Str. 10  
@@ -11,9 +11,9 @@ title: Impressum
 
 E-Mail: [{{ site.email }}](mailto:Grzegorz.Lippe@googlemail.com?subject=schorschie.github.io)
 
-## Resources
+#### Resources
 
-This site is hosted by github. For the computation of the output I use:
+This site is hosted by [github](https://pages.github.com). For the computation of the output I use:
 
 * [python](https://www.python.org)
 * [jekyll](https://jekyllrb.com)

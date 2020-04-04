@@ -13,21 +13,21 @@ from scipy import optimize as op
 
 PREDICTIONS = [{'until': 0,
                 'days': 7,
-                'key': 'Last week',
+                'key': 'This Week',
                 'plot': True,
                 'predict': True,
                 'style': {'linestyle': '--',
                           'color': 'black'}}]
 PREDICTIONS.append({'until': 7,
                     'days':  7,
-                    'key': 'Second to last week',
+                    'key': 'Last Week',
                     'plot': True,
                     'predict': False,
                     'style': {'linestyle': '--',
                               'color': 'gray'}})
 PREDICTIONS.append({'until': 14,
                     'days':  7,
-                    'key': 'Three weeks before',
+                    'key': 'Second to last Week',
                     'plot': True,
                     'predict': False,
                     'style': {'linestyle': ':',
@@ -150,7 +150,7 @@ rely on the pro's:
     return string
 
 
-date = datetime(2020, 4, 4)
+date = datetime(2020, 4, 5)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('%y%m%d_corona.png')
 get_plot(predict_date=predict_date, safepath=safe_path)
