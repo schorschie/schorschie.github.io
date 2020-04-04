@@ -96,11 +96,12 @@ def get_plot(predict_date, safepath):
     plt.yscale('log')
     ax.grid(True)
     ax.legend(loc='best')
-    plt.title('Covid-19 Cases in Germany')
+    plt.title('Covid-19 Cases in Germany', fontsize=14)
     plt.xticks(rotation=30)
     plt.yticks(10**np.array(range(9)))
     plt.ylim((1, 100e6))
     plt.xlim((plt.xlim()[0], plt.xlim()[0]+80))
+    plt.ylabel('Infected [-]')
     plt.savefig(safepath)
     return ax
 
