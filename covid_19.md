@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Covid-19
-logistic_curve: ./200405_corona.png
+logistic_curve: ./200406_corona.png
 ---
 
 ## Prediction of Cases in Germany

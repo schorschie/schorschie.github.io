@@ -96,7 +96,8 @@ def get_plot(predict_date, safepath):
     plt.yscale('log')
     ax.grid(True)
     ax.legend(loc='best')
-    plt.title('Covid-19 Cases in Germany', fontsize=14)
+    plt.title('Covid-19 Cases in Germany, prediction for ' + predict_date,
+              fontsize=14)
     plt.xticks(rotation=30)
     plt.yticks(10**np.array(range(9)))
     plt.ylim((1, 100e6))
@@ -151,7 +152,7 @@ rely on the pro's:
     return string
 
 
-date = datetime(2020, 4, 5)
+date = datetime(2020, 4, 6)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('%y%m%d_corona.png')
 get_plot(predict_date=predict_date, safepath=safe_path)
