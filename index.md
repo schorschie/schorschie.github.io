@@ -7,25 +7,19 @@ title: CV
 
 ## Professional Experience
 
-### Entwicklungsingenieur
-
-#### since 2017
+### Entwicklungsingenieur *(since 2017)*
 
 > Systems-Engineering  
 > Bosch Corporate Research & Automotive Steering  
 > Renningen & Schwäbisch Gmünd  
 
-### Berechnungsingenieur
-
-#### 2012 -- 2017
+### Berechnungsingenieur *(2012 -- 2017)*
 
 > Computer Aided Engineering  
 > Bosch Automotive Steering  
 > Schwäbisch Gmünd  
 
-### Projektingenieur
-
-#### 2010 -- 2012
+### Projektingenieur *(2010 -- 2012)*
 
 > MesH Engineering Team  
 > Work Performance at Daimler AG  
@@ -33,19 +27,36 @@ title: CV
 
 ## Education
 
-### Mechanical Engineering
-
-#### 2003 -- 2009
+### Mechanical Engineering *(2003 -- 2009)*
 
 > Dipl.-Ing. Fahrzeug- und Motorentechnik  
 > Universität Stuttgart  
 > Stuttgart  
 
-### Civil Service
+**Majors:** Vehicle dynamics and simulation technique 
 
-#### 2002 -- 2003
+**Diploma Thesis:** Modellbildung und Simulation eines automatisierten
+Nutzfahrzeuggetriebes
 
-> Verein zur Förderung spastisch  
-> gelähmter Kinder und  
-> anderer Behinderter e.V.  
+My diploma thesis was performed as a on site performer at the Daimler AG, where
+I modeled and simulated a 16-gears transmission for heavy duty vehicles within
+Matlab and SimulationX. The goal of the model was to increase the performance of
+the application of a so called countershaft brake to reduce shift speed an jerk.
+
+### Civil Service *(2002 -- 2003)*
+
+> Verein zur Förderung  
+> spastisch gelähmter Kinder  
+> und anderer Behinderter e.V.  
 > Nürnberg
+
+### School *(2002)*
+
+> Wilhelm Löhe Schule  
+> Nürnberg  
+
+**A-Levels:** Qualification for university entrance with the majors mathematics,
+geography and chemistry. 
+
+At school I engaged myself as a photographer at the schools gazette and the
+choir.
