@@ -16,7 +16,7 @@
 title: Grzegorz Lippe
 email: grzegorz.lippe@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  This is the personal homepage of Grzegorz Lippe. Im a mechanical engineer, raised in Nürnberg
+  This is the personal homepage of Grzegorz Lippe. I'm a mechanical engineer, raised in Nürnberg
   evolved in Stuttgart.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
