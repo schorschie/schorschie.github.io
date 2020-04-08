@@ -84,11 +84,13 @@ def get_plot(predict_date, safepath):
             prediction_key = prediction['key']
             pred[prediction_key].plot(label=prediction_key, **prediction['style'])
 
-    if PREDICTION.size > 0:
-        PREDICTION.plot(ax=ax, marker='v', markersize=12)
-        ax.annotate('%d' %(PREDICTION.iloc[0,0]), (PREDICTION.index[0], PREDICTION.iloc[0,0]),
-                    textcoords="offset points", rotation=45,
-                    xytext=(1, 10))
+        if prediction['predict']:
+            PREDICTION.plot(ax=ax, marker='x', markeredgewidth=2, linestyle='')
+            ax.annotate('%d' %(PREDICTION[prediction['key'] + "'s prediction"][0]),
+                        (PREDICTION.index[0], PREDICTION[prediction['key'] + "'s prediction"][0]),
+                        textcoords="offset points", rotation=45,
+                        xytext=(1, 10))
+
     ax.annotate('%d' %(data.loc[day_before_prediction, 'Infected']), (pd.to_datetime(day_before_prediction), 
                                                                       data.loc[day_before_prediction, 'Infected']),
                 textcoords="offset points", rotation=-45,
@@ -152,7 +154,7 @@ rely on the pro's:
     return string
 
 
-date = datetime(2020, 4, 8)
+date = datetime(2020, 4, 9)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('%y%m%d_corona.png')
 get_plot(predict_date=predict_date, safepath=safe_path)
