@@ -50,7 +50,7 @@ the application of a so called countershaft brake to reduce shift speed an jerk.
 > und anderer Behinderter e.V.  
 > Nürnberg
 
-### School *(2002)*
+### School *(until 2002)*
 
 > Wilhelm Löhe Schule  
 > Nürnberg  
