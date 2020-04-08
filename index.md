@@ -7,19 +7,19 @@ title: CV
 
 ## Professional Experience
 
-### Entwicklungsingenieur *(since 2017)*
+### Systems Engineer *(since 2017)*
 
 > Systems-Engineering  
 > Bosch Corporate Research & Automotive Steering  
 > Renningen & Schwäbisch Gmünd  
 
-### Berechnungsingenieur *(2012 -- 2017)*
+### Calculation Engineer *(2012 -- 2017)*
 
 > Computer Aided Engineering  
 > Bosch Automotive Steering  
 > Schwäbisch Gmünd  
 
-### Projektingenieur *(2010 -- 2012)*
+### Project Engineer *(2010 -- 2012)*
 
 > MesH Engineering Team  
 > Work Performance at Daimler AG  
@@ -55,7 +55,7 @@ the application of a so called countershaft brake to reduce shift speed an jerk.
 > Wilhelm Löhe Schule  
 > Nürnberg  
 
-**A-Levels:** Qualification for university entrance with the majors mathematics,
+**A-Levels:** Qualification for university entrance with the majors in mathematics,
 geography and chemistry. 
 
 At school I engaged myself as a photographer at the schools gazette and the
