@@ -65,6 +65,8 @@ def _get_predictions(data, predict_date='2020-03-20'):
                          p0=[0.1, -70])[0]
         predicted_infected = _exponential_function(XX, d[0], d[1])
         pred[prediction['key']] = predicted_infected
+        doubling_rate = 1/(np.log(2) * d[0])
+        print('Doppelungsrate %s = %5.2f' % (prediction['key'], doubling_rate))
         if prediction['predict']:
             PREDICTION.loc[predict_date, prediction['key'] + "'s prediction"] = \
                 np.ceil(pred.loc[predict_date, prediction['key']])
@@ -154,7 +156,7 @@ rely on the pro's:
     return string
 
 
-date = datetime(2020, 4, 9)
+date = datetime(2020, 4, 10)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('%y%m%d_corona.png')
 get_plot(predict_date=predict_date, safepath=safe_path)

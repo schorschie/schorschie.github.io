@@ -38,9 +38,9 @@ title: CV
 **Diploma Thesis:** Modellbildung und Simulation eines automatisierten
 Nutzfahrzeuggetriebes
 
-My diploma thesis was performed as a on site performer at the Daimler AG, where
+I wrote my diploma thesis as an on site performer at the Daimler AG, where
 I modeled and simulated a 16-gears transmission for heavy duty vehicles within
-Matlab and SimulationX. The goal of the model was to increase the performance of
+Matlab and SimulationX. The goal of the model was to increase the quality of
 the application of a so called countershaft brake to reduce shift speed an jerk.
 
 ### Civil Service *(2002 -- 2003)*
