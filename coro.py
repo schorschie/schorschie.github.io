@@ -64,9 +64,9 @@ def _get_predictions(data, predict_date='2020-03-20'):
                          data.loc[end_date : start_date, 'Infected'].values,
                          p0=[0.1, -70])[0]
         predicted_infected = _exponential_function(XX, d[0], d[1])
+        doubling_rate = 1/(np.log2(np.exp(1)) * d[0])
+        print('Verdopplungszeit %s = %5.2f' % (prediction['key'], doubling_rate))
         pred[prediction['key']] = predicted_infected
-        doubling_rate = 1/(np.log(2) * d[0])
-        print('Doppelungsrate %s = %5.2f' % (prediction['key'], doubling_rate))
         if prediction['predict']:
             PREDICTION.loc[predict_date, prediction['key'] + "'s prediction"] = \
                 np.ceil(pred.loc[predict_date, prediction['key']])
@@ -116,6 +116,7 @@ def write_indexmd(picpath, safepath='covid_19.md'):
 layout: page
 title: Covid-19
 logistic_curve: ./%s
+mathjax: true
 ---
 
 ## Prediction of Cases in Germany
@@ -135,7 +136,7 @@ The data is from the daily [RKI
 Report](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html). I
 started by fitting a logistic curve, like described in this
 [3Blue1Brown](https://www.youtube.com/watch?v=Kas0tIxDvrg&t=473s) youtube video, but now I
-just use a exponential function (e^{kx}), because it doesn't matter if you are only
+just use a exponential function \\\\(e^{k(x-x_0)}\\\\), because it doesn't matter if you are only
 interested in the next day.
 
 So, the following plot is just a curve fit with two parameters, for more scientific data
@@ -156,7 +157,7 @@ rely on the pro's:
     return string
 
 
-date = datetime(2020, 4, 10)
+date = datetime(2020, 4, 11)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('%y%m%d_corona.png')
 get_plot(predict_date=predict_date, safepath=safe_path)

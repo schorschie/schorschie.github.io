@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Covid-19
-logistic_curve: ./200410_corona.png
+logistic_curve: ./200411_corona.png
+mathjax: true
 ---
 
 ## Prediction of Cases in Germany
@@ -21,7 +22,7 @@ The data is from the daily [RKI
 Report](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html). I
 started by fitting a logistic curve, like described in this
 [3Blue1Brown](https://www.youtube.com/watch?v=Kas0tIxDvrg&t=473s) youtube video, but now I
-just use a exponential function (e^{kx}), because it doesn't matter if you are only
+just use a exponential function \\(e^{k(x-x_0)}\\), because it doesn't matter if you are only
 interested in the next day.
 
 So, the following plot is just a curve fit with two parameters, for more scientific data

@@ -33,7 +33,7 @@ title: CV
 > Universität Stuttgart  
 > Stuttgart  
 
-**Majors:** Vehicle dynamics and simulation technique 
+**Majors:** Vehicle dynamics and simulation technique
 
 **Diploma Thesis:** Modellbildung und Simulation eines automatisierten
 Nutzfahrzeuggetriebes
@@ -56,7 +56,7 @@ the application of a so called countershaft brake to reduce shift speed an jerk.
 > Nürnberg  
 
 **A-Levels:** Qualification for university entrance with the majors in mathematics,
-geography and chemistry. 
+geography and chemistry.
 
 At school I engaged myself as a photographer at the schools gazette and the
 choir.
