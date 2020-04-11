@@ -56,6 +56,7 @@ def _get_predictions(data, predict_date='2020-03-20'):
 
     pred = pd.DataFrame(index=pd.date_range(start=data.index[0], periods=N[1]-N[0], freq='d'))
     PREDICTION = pd.DataFrame(index=[pd.to_datetime(predict_date)])
+    doubling_rate = pd.DataFrame(columns=['Doubling Rate'])
     for prediction in PREDICTIONS:
         start_date = last_date - timedelta(days=prediction['until'])
         end_date = start_date - timedelta(days=prediction['days']-1)
@@ -64,19 +65,20 @@ def _get_predictions(data, predict_date='2020-03-20'):
                          data.loc[end_date : start_date, 'Infected'].values,
                          p0=[0.1, -70])[0]
         predicted_infected = _exponential_function(XX, d[0], d[1])
-        doubling_rate = 1/(np.log2(np.exp(1)) * d[0])
-        print('Verdopplungszeit %s = %5.2f' % (prediction['key'], doubling_rate))
+        doubling_rate.loc[prediction['key'], 'Doubling Rate'] =\
+            1/(np.log2(np.exp(1)) * d[0])
         pred[prediction['key']] = predicted_infected
         if prediction['predict']:
             PREDICTION.loc[predict_date, prediction['key'] + "'s prediction"] = \
                 np.ceil(pred.loc[predict_date, prediction['key']])
 
-    return pred, PREDICTION
+    return pred, PREDICTION, doubling_rate
 
 
 def get_plot(predict_date, safepath):
     data = _get_data()
-    pred, PREDICTION = _get_predictions(data=data, predict_date=predict_date)
+    pred, PREDICTION, doubling_rate = _get_predictions(data=data, predict_date=predict_date)
+    print(doubling_rate)
 
     day_before_prediction = (datetime.strptime(predict_date, '%Y-%m-%d') - timedelta(days=1)).strftime('%Y-%m-%d')
     _, ax = plt.subplots(figsize=(13,7))
@@ -108,6 +110,11 @@ def get_plot(predict_date, safepath):
     plt.xlim((plt.xlim()[0], plt.xlim()[0]+80))
     plt.ylabel('Infected [-]')
     plt.savefig(safepath)
+
+#   _, ax = plt.subplots(figsize=(13,7))
+#   doubling_rate.plot(ax=ax, kind='bar')
+#   plt.savefig('bar_' + safepath)
+
     return ax
 
 
@@ -157,7 +164,7 @@ rely on the pro's:
     return string
 
 
-date = datetime(2020, 4, 11)
+date = datetime(2020, 4, 12)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('%y%m%d_corona.png')
 get_plot(predict_date=predict_date, safepath=safe_path)
