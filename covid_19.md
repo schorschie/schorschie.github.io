@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Covid-19
-logistic_curve: ./200414_corona.png
+logistic_curve: ./200415_corona.png
 mathjax: true
 ---
 
