@@ -32,6 +32,13 @@ PREDICTIONS.append({'until': 14,
                     'predict': False,
                     'style': {'linestyle': ':',
                               'color': 'gray'}})
+PREDICTIONS.append({'until': 21,
+                    'days':  7,
+                    'key': 'Three Weeks before',
+                    'plot': True,
+                    'predict': False,
+                    'style': {'linestyle': ':',
+                              'color': 'lightgray'}})
 
 def _exponential_function(x, k, x_0):
     y = np.exp(k * (x - x_0))
@@ -164,7 +171,7 @@ rely on the pro's:
     return string
 
 
-date = datetime(2020, 4, 15)
+date = datetime(2020, 4, 16)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('%y%m%d_corona.png')
 get_plot(predict_date=predict_date, safepath=safe_path)

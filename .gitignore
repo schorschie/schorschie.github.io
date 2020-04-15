@@ -6,3 +6,5 @@ _site
 
 # Files
 *~
+*.pdf
+*.tex
