@@ -171,7 +171,7 @@ rely on the pro's:
     return string
 
 
-date = datetime(2020, 4, 18)
+date = datetime(2020, 4, 19)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('%y%m%d_corona.png')
 get_plot(predict_date=predict_date, safepath=safe_path)
