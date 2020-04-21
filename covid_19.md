@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Covid-19
-logistic_curve: ./200421_corona.png
+logistic_curve: ./200422_corona.png
 mathjax: true
 ---
 
@@ -20,10 +20,7 @@ expected.
 
 The data is from the daily [RKI
 Report](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html). I
-started by fitting a logistic curve, like described in this
-[3Blue1Brown](https://www.youtube.com/watch?v=Kas0tIxDvrg&t=473s) youtube video, but now I
-just use a exponential function \\(e^{k(x-x_0)}\\), because it doesn't matter if you are only
-interested in the next day.
+fit a exponential function \\(e^{k(x-x_0)}\\) for the last week of the time span.
 
 So, the following plot is just a curve fit with two parameters, for more scientific data
 rely on the pro's:
@@ -36,3 +33,34 @@ rely on the pro's:
 ![Logistic curve of corona virus progression]({{ page.logistic_curve }})
 
 > *Remember:* All models are wrong. [George Box](https://en.wikipedia.org/wiki/All_models_are_wrong)
+
+## Doubling Rates
+
+The following table shows the doubling rates in days (how much days does it take for the infected people to double their amount),
+based on the data points of a whole week. 
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Doubling Rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>This Week</th>
+      <td>34.9091</td>
+    </tr>
+    <tr>
+      <th>Last Week</th>
+      <td>22.234</td>
+    </tr>
+    <tr>
+      <th>Second to last Week</th>
+      <td>11.0024</td>
+    </tr>
+    <tr>
+      <th>Three Weeks before</th>
+      <td>6.52414</td>
+    </tr>
+  </tbody>
+</table>

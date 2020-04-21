@@ -21,24 +21,37 @@ PREDICTIONS = [{'until': 0,
 PREDICTIONS.append({'until': 7,
                     'days':  7,
                     'key': 'Last Week',
-                    'plot': True,
+                    'plot': False,
                     'predict': False,
                     'style': {'linestyle': '--',
                               'color': 'gray'}})
 PREDICTIONS.append({'until': 14,
                     'days':  7,
                     'key': 'Second to last Week',
-                    'plot': True,
+                    'plot': False,
                     'predict': False,
                     'style': {'linestyle': ':',
                               'color': 'gray'}})
 PREDICTIONS.append({'until': 21,
                     'days':  7,
                     'key': 'Three Weeks before',
-                    'plot': True,
+                    'plot': False,
                     'predict': False,
                     'style': {'linestyle': ':',
                               'color': 'lightgray'}})
+
+AXVLINES = [{'date': datetime(2020, 3, 14),
+             'plot': True,
+             'style': {'color': 'green',
+                       'label': 'Schools in Germany closed'}}]
+AXVLINES.append({'date': datetime(2020, 3, 21),
+                 'plot': True,
+                 'style': {'color': 'orange',
+                           'label': 'Shops in Germany closed'}})
+AXVLINES.append({'date': datetime(2020, 4, 20),
+                 'plot': True,
+                 'style': {'color': 'blue',
+                           'label': 'Shops in Germany opened'}})
 
 def _exponential_function(x, k, x_0):
     y = np.exp(k * (x - x_0))
@@ -87,7 +100,7 @@ def get_plot(predict_date, safepath):
     pred, PREDICTION, doubling_rate = _get_predictions(data=data, predict_date=predict_date)
     print(doubling_rate)
 
-    day_before_prediction = (datetime.strptime(predict_date, '%Y-%m-%d') - timedelta(days=1)).strftime('%Y-%m-%d')
+#    day_before_prediction = (datetime.strptime(predict_date, '%Y-%m-%d') - timedelta(days=1)).strftime('%Y-%m-%d')
     _, ax = plt.subplots(figsize=(13,7))
     data['Infected'].plot(ax=ax, marker='x', linestyle='', label='Infected [RKI]', color='red')
     for prediction in PREDICTIONS:
@@ -102,10 +115,13 @@ def get_plot(predict_date, safepath):
                         textcoords="offset points", rotation=45,
                         xytext=(1, 10))
 
-    ax.annotate('%d' %(data.loc[day_before_prediction, 'Infected']), (pd.to_datetime(day_before_prediction), 
-                                                                      data.loc[day_before_prediction, 'Infected']),
-                textcoords="offset points", rotation=-45,
-                xytext=(-30, 8))
+    for axline in AXVLINES:
+        if axline['plot']:
+            ax.axvline(axline['date'], **axline['style'])
+#   ax.annotate('%d' %(data.loc[day_before_prediction, 'Infected']), (pd.to_datetime(day_before_prediction), 
+#                                                                     data.loc[day_before_prediction, 'Infected']),
+#               textcoords="offset points", rotation=-45,
+#               xytext=(-30, 8))
     plt.yscale('log')
     ax.grid(True)
     ax.legend(loc='best')
@@ -122,10 +138,10 @@ def get_plot(predict_date, safepath):
 #   doubling_rate.plot(ax=ax, kind='bar')
 #   plt.savefig('bar_' + safepath)
 
-    return ax
+    return ax, doubling_rate
 
 
-def write_indexmd(picpath, safepath='covid_19.md'):
+def write_indexmd(picpath, doubling_rate, safepath='covid_19.md'):
     string =u"""---
 layout: page
 title: Covid-19
@@ -148,10 +164,7 @@ expected.
 
 The data is from the daily [RKI
 Report](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html). I
-started by fitting a logistic curve, like described in this
-[3Blue1Brown](https://www.youtube.com/watch?v=Kas0tIxDvrg&t=473s) youtube video, but now I
-just use a exponential function \\\\(e^{k(x-x_0)}\\\\), because it doesn't matter if you are only
-interested in the next day.
+fit a exponential function \\\\(e^{k(x-x_0)}\\\\) for the last week of the time span.
 
 So, the following plot is just a curve fit with two parameters, for more scientific data
 rely on the pro's:
@@ -164,15 +177,22 @@ rely on the pro's:
 ![Logistic curve of corona virus progression]({{ page.logistic_curve }})
 
 > *Remember:* All models are wrong. [George Box](https://en.wikipedia.org/wiki/All_models_are_wrong)
-""" % (picpath)
+
+## Doubling Rates
+
+The following table shows the doubling rates in days (how much days does it take for the infected people to double their amount),
+based on the data points of a whole week. 
+%s
+""" % (picpath, doubling_rate.to_html())
     f = open(safepath, 'w', encoding="utf-8")
     f.write(string)
     f.close()
     return string
 
 
-date = datetime(2020, 4, 21)
+date = datetime(2020, 4, 22)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('%y%m%d_corona.png')
-get_plot(predict_date=predict_date, safepath=safe_path)
-write_indexmd(picpath=safe_path)
+_, doubling_rate = get_plot(predict_date=predict_date, safepath=safe_path)
+write_indexmd(picpath=safe_path,
+              doubling_rate=doubling_rate)
