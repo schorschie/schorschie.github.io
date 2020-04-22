@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Covid-19
-logistic_curve: ./200422_corona.png
+logistic_curve: ./200423_corona.png
 mathjax: true
 ---
 
@@ -38,29 +38,30 @@ rely on the pro's:
 
 The following table shows the doubling rates in days (how much days does it take for the infected people to double their amount),
 based on the data points of a whole week. 
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Doubling Rate</th>
+      <th>Doubling Rate [d]</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>This Week</th>
-      <td>34.9091</td>
+      <td>39.121100</td>
     </tr>
     <tr>
       <th>Last Week</th>
-      <td>22.234</td>
+      <td>26.946586</td>
     </tr>
     <tr>
-      <th>Second to last Week</th>
-      <td>11.0024</td>
+      <th>Second to Last Week</th>
+      <td>12.806972</td>
     </tr>
     <tr>
-      <th>Three Weeks before</th>
-      <td>6.52414</td>
+      <th>Three Weeks Before</th>
+      <td>7.314242</td>
     </tr>
   </tbody>
 </table>

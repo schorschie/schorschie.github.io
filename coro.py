@@ -27,14 +27,14 @@ PREDICTIONS.append({'until': 7,
                               'color': 'gray'}})
 PREDICTIONS.append({'until': 14,
                     'days':  7,
-                    'key': 'Second to last Week',
+                    'key': 'Second to Last Week',
                     'plot': False,
                     'predict': False,
                     'style': {'linestyle': ':',
                               'color': 'gray'}})
 PREDICTIONS.append({'until': 21,
                     'days':  7,
-                    'key': 'Three Weeks before',
+                    'key': 'Three Weeks Before',
                     'plot': False,
                     'predict': False,
                     'style': {'linestyle': ':',
@@ -51,7 +51,7 @@ AXVLINES.append({'date': datetime(2020, 3, 21),
 AXVLINES.append({'date': datetime(2020, 4, 20),
                  'plot': True,
                  'style': {'color': 'blue',
-                           'label': 'Shops in Germany opened'}})
+                           'label': 'Shops (≤800m²) in Germany opened'}})
 
 def _exponential_function(x, k, x_0):
     y = np.exp(k * (x - x_0))
@@ -76,7 +76,7 @@ def _get_predictions(data, predict_date='2020-03-20'):
 
     pred = pd.DataFrame(index=pd.date_range(start=data.index[0], periods=N[1]-N[0], freq='d'))
     PREDICTION = pd.DataFrame(index=[pd.to_datetime(predict_date)])
-    doubling_rate = pd.DataFrame(columns=['Doubling Rate'])
+    doubling_rate = pd.DataFrame()
     for prediction in PREDICTIONS:
         start_date = last_date - timedelta(days=prediction['until'])
         end_date = start_date - timedelta(days=prediction['days']-1)
@@ -85,7 +85,7 @@ def _get_predictions(data, predict_date='2020-03-20'):
                          data.loc[end_date : start_date, 'Infected'].values,
                          p0=[0.1, -70])[0]
         predicted_infected = _exponential_function(XX, d[0], d[1])
-        doubling_rate.loc[prediction['key'], 'Doubling Rate'] =\
+        doubling_rate.loc[prediction['key'], 'Doubling Rate [d]'] =\
             1/(np.log2(np.exp(1)) * d[0])
         pred[prediction['key']] = predicted_infected
         if prediction['predict']:
@@ -100,7 +100,7 @@ def get_plot(predict_date, safepath):
     pred, PREDICTION, doubling_rate = _get_predictions(data=data, predict_date=predict_date)
     print(doubling_rate)
 
-#    day_before_prediction = (datetime.strptime(predict_date, '%Y-%m-%d') - timedelta(days=1)).strftime('%Y-%m-%d')
+    day_before_prediction = (datetime.strptime(predict_date, '%Y-%m-%d') - timedelta(days=1)).strftime('%Y-%m-%d')
     _, ax = plt.subplots(figsize=(13,7))
     data['Infected'].plot(ax=ax, marker='x', linestyle='', label='Infected [RKI]', color='red')
     for prediction in PREDICTIONS:
@@ -118,10 +118,10 @@ def get_plot(predict_date, safepath):
     for axline in AXVLINES:
         if axline['plot']:
             ax.axvline(axline['date'], **axline['style'])
-#   ax.annotate('%d' %(data.loc[day_before_prediction, 'Infected']), (pd.to_datetime(day_before_prediction), 
-#                                                                     data.loc[day_before_prediction, 'Infected']),
-#               textcoords="offset points", rotation=-45,
-#               xytext=(-30, 8))
+    ax.annotate('%d' %(data.loc[day_before_prediction, 'Infected']), (pd.to_datetime(day_before_prediction), 
+                                                                      data.loc[day_before_prediction, 'Infected']),
+                textcoords="offset points", rotation=-45,
+                xytext=(-30, 8))
     plt.yscale('log')
     ax.grid(True)
     ax.legend(loc='best')
@@ -182,6 +182,7 @@ rely on the pro's:
 
 The following table shows the doubling rates in days (how much days does it take for the infected people to double their amount),
 based on the data points of a whole week. 
+
 %s
 """ % (picpath, doubling_rate.to_html())
     f = open(safepath, 'w', encoding="utf-8")
@@ -190,7 +191,7 @@ based on the data points of a whole week.
     return string
 
 
-date = datetime(2020, 4, 22)
+date = datetime(2020, 4, 23)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('%y%m%d_corona.png')
 _, doubling_rate = get_plot(predict_date=predict_date, safepath=safe_path)
