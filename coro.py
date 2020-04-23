@@ -193,7 +193,7 @@ based on the data points of a whole week.
 
 date = datetime(2020, 4, 24)
 predict_date = date.strftime('%Y-%m-%d')
-safe_path = date.strftime('%y%m%d_corona.png')
+safe_path = date.strftime('assets/images/%y%m%d_corona.png')
 _, doubling_rate = get_plot(predict_date=predict_date, safepath=safe_path)
 write_indexmd(picpath=safe_path,
               doubling_rate=doubling_rate)
