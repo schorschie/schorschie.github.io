@@ -8,3 +8,4 @@ _site
 *~
 *.pdf
 *.tex
+Gemfile.lock
