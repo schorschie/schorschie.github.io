@@ -67,6 +67,8 @@
 -moz-transform-origin: 50% 50%;
 -o-transform-origin: 50% 50%;
 transform-origin: 50% 50%;
+/* Standard */
+transform: rot(-45deg);
 /* Safari */
 -webkit-transform: rotate(-45deg);
 /* Firefox */
@@ -77,6 +79,8 @@ transform-origin: 50% 50%;
 -o-transform: rotate(-45deg);
 }
 #lightbox #close:after {
+/* Standard */
+transform: rot(45deg);
 /* Safari */
 -webkit-transform: rotate(45deg);
 /* Firefox */
