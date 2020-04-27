@@ -191,7 +191,7 @@ based on the data points of a whole week.
     return string
 
 
-date = datetime(2020, 4, 27)
+date = datetime(2020, 4, 28)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('assets/images/%y%m%d_corona.png')
 _, doubling_rate = get_plot(predict_date=predict_date, safepath=safe_path)

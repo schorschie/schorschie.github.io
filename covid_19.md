@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Covid-19
-logistic_curve: ./assets/images/200427_corona.png
+logistic_curve: ./assets/images/200428_corona.png
 mathjax: true
 ---
 
@@ -49,19 +49,19 @@ based on the data points of a whole week.
   <tbody>
     <tr>
       <th>This Week</th>
-      <td>47.760718</td>
+      <td>51.565499</td>
     </tr>
     <tr>
       <th>Last Week</th>
-      <td>31.118208</td>
+      <td>31.960397</td>
     </tr>
     <tr>
       <th>Second to Last Week</th>
-      <td>17.202057</td>
+      <td>19.021734</td>
     </tr>
     <tr>
       <th>Three Weeks Before</th>
-      <td>8.779556</td>
+      <td>9.622217</td>
     </tr>
   </tbody>
 </table>
