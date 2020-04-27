@@ -49,19 +49,19 @@ based on the data points of a whole week.
   <tbody>
     <tr>
       <th>This Week</th>
-      <td>51.565499</td>
+      <td>51.57</td>
     </tr>
     <tr>
       <th>Last Week</th>
-      <td>31.960397</td>
+      <td>31.96</td>
     </tr>
     <tr>
       <th>Second to Last Week</th>
-      <td>19.021734</td>
+      <td>19.02</td>
     </tr>
     <tr>
       <th>Three Weeks Before</th>
-      <td>9.622217</td>
+      <td>9.62</td>
     </tr>
   </tbody>
 </table>

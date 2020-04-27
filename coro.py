@@ -184,7 +184,7 @@ The following table shows the doubling rates in days (how much days does it take
 based on the data points of a whole week. 
 
 %s
-""" % (picpath, doubling_rate.to_html())
+""" % (picpath, doubling_rate.to_html(float_format=lambda x: '%10.2f' % (x)))
     f = open(safepath, 'w', encoding="utf-8")
     f.write(string)
     f.close()
