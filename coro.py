@@ -130,7 +130,7 @@ def get_plot(predict_date, safepath):
     plt.xticks(rotation=30)
     plt.yticks(10**np.array(range(9)))
     plt.ylim((1, 100e6))
-    plt.xlim((plt.xlim()[0], plt.xlim()[0]+80))
+    plt.xlim((plt.xlim()[0]+6, plt.xlim()[0]+160))
     plt.ylabel('Infected [-]')
     plt.savefig(safepath)
 
@@ -191,7 +191,7 @@ based on the data points of a whole week.
     return string
 
 
-date = datetime(2020, 5, 5)
+date = datetime(2020, 5, 6)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('assets/images/%y%m%d_corona.png')
 _, doubling_rate = get_plot(predict_date=predict_date, safepath=safe_path)
