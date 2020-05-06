@@ -83,7 +83,8 @@ def _get_predictions(data, predict_date='2020-03-20'):
         slice_x = xx[len(xx)-(prediction['until']+prediction['days']) : len(xx)-prediction['until'] ]
         d = op.curve_fit(_exponential_function, slice_x,
                          data.loc[end_date : start_date, 'Infected'].values,
-                         p0=[0.1, -70])[0]
+                         p0=[0.006, -1830])[0]
+        print('Exponential coefficients: k = %f, x_0 = %f' % tuple(d))
         predicted_infected = _exponential_function(XX, d[0], d[1])
         doubling_rate.loc[prediction['key'], 'Doubling Rate [d]'] =\
             1/(np.log2(np.exp(1)) * d[0])
@@ -98,6 +99,7 @@ def _get_predictions(data, predict_date='2020-03-20'):
 def get_plot(predict_date, safepath):
     data = _get_data()
     pred, PREDICTION, doubling_rate = _get_predictions(data=data, predict_date=predict_date)
+    print('')
     print(doubling_rate)
 
     day_before_prediction = (datetime.strptime(predict_date, '%Y-%m-%d') - timedelta(days=1)).strftime('%Y-%m-%d')
@@ -191,7 +193,7 @@ based on the data points of a whole week.
     return string
 
 
-date = datetime(2020, 5, 6)
+date = datetime(2020, 5, 7)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('assets/images/%y%m%d_corona.png')
 _, doubling_rate = get_plot(predict_date=predict_date, safepath=safe_path)
