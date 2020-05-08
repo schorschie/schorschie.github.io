@@ -48,6 +48,10 @@ AXVLINES.append({'date': datetime(2020, 3, 21),
                  'plot': True,
                  'style': {'color': 'orange',
                            'label': 'Shops in Germany closed'}})
+AXVLINES.append({'date': datetime(2020, 4, 12),
+                 'plot': True,
+                 'style': {'color': 'yellow',
+                           'label': 'Eastern'}})
 AXVLINES.append({'date': datetime(2020, 4, 20),
                  'plot': True,
                  'style': {'color': 'blue',
@@ -193,7 +197,7 @@ based on the data points of a whole week.
     return string
 
 
-date = datetime(2020, 5, 8)
+date = datetime(2020, 5, 9)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('assets/images/%y%m%d_corona.png')
 _, doubling_rate = get_plot(predict_date=predict_date, safepath=safe_path)
