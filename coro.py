@@ -56,6 +56,10 @@ AXVLINES.append({'date': datetime(2020, 4, 20),
                  'plot': True,
                  'style': {'color': 'blue',
                            'label': 'Shops (≤800m²) in Germany opened'}})
+AXVLINES.append({'date': datetime(2020, 5, 4),
+                 'plot': True,
+                 'style': {'color': 'magenta',
+                           'label': 'All Shops in Germany opened'}})
 
 def _exponential_function(x, k, x_0):
     y = np.exp(k * (x - x_0))
@@ -199,7 +203,7 @@ based on the data points of a whole week.
     return string
 
 
-date = datetime(2020, 5, 10)
+date = datetime(2020, 5, 11)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('assets/images/%y%m%d_corona.png')
 post_path = date.strftime('_posts/%Y-%m-%d-corona_update.md')
