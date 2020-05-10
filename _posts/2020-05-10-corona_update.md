@@ -1,9 +1,14 @@
 ---
-layout: page
-title: Covid-19
-logistic_curve: ./assets/images/200509_corona.png
+layout: post
+title: Covid-19 Update
+date:   2020-05-10 15:41:42 +0200
+logistic_curve: /assets/images/200510_corona.png
 mathjax: true
+categories: Corona, Covid, update
 ---
+
+Today I noticed, that the prediction estimated to low for today, so the speed of the infections
+seems to increase again.
 
 ## Prediction of Cases in Germany
 
@@ -37,7 +42,7 @@ rely on the pro's:
 ## Doubling Rates
 
 The following table shows the doubling rates in days (how much days does it take for the infected people to double their amount),
-based on the data points of a whole week. 
+based on the data points of a whole week.
 
 <table border="1" class="dataframe">
   <thead>
@@ -49,19 +54,19 @@ based on the data points of a whole week.
   <tbody>
     <tr>
       <th>This Week</th>
-      <td>124.28</td>
+      <td>111.77</td>
     </tr>
     <tr>
       <th>Last Week</th>
-      <td>81.42</td>
+      <td>83.90</td>
     </tr>
     <tr>
       <th>Second to Last Week</th>
-      <td>47.15</td>
+      <td>47.45</td>
     </tr>
     <tr>
       <th>Three Weeks Before</th>
-      <td>33.30</td>
+      <td>31.87</td>
     </tr>
   </tbody>
 </table>

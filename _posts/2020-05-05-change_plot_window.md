@@ -2,7 +2,7 @@
 layout: post
 title:  "Change the Width of the Plot Window"
 date:   2020-05-05 10:00:20 +0200
-categories: tesla, battery, charger
+categories: plot, covid
 ---
 
 <!-- markdownlint-disable no-inline-html -->

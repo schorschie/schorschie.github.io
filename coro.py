@@ -149,10 +149,12 @@ def get_plot(predict_date, safepath):
 
 def write_indexmd(picpath, doubling_rate, safepath='covid_19.md'):
     string =u"""---
-layout: page
-title: Covid-19
-logistic_curve: ./%s
+layout: post
+title: Covid-19 Update
+date:   %s
+logistic_curve: /%s
 mathjax: true
+categories: Corona, Covid-19, update
 ---
 
 ## Prediction of Cases in Germany
@@ -187,19 +189,21 @@ rely on the pro's:
 ## Doubling Rates
 
 The following table shows the doubling rates in days (how much days does it take for the infected people to double their amount),
-based on the data points of a whole week. 
+based on the data points of a whole week.
 
 %s
-""" % (picpath, doubling_rate.to_html(float_format=lambda x: '%10.2f' % (x)))
+""" % (datetime.now().strftime('%Y-%m-%d %H:%M:%S +0200'), picpath, doubling_rate.to_html(float_format=lambda x: '%10.2f' % (x)))
     f = open(safepath, 'w', encoding="utf-8")
     f.write(string)
     f.close()
     return string
 
 
-date = datetime(2020, 5, 9)
+date = datetime(2020, 5, 10)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('assets/images/%y%m%d_corona.png')
+post_path = date.strftime('_posts/%Y-%m-%d-corona_update.md')
 _, doubling_rate = get_plot(predict_date=predict_date, safepath=safe_path)
 write_indexmd(picpath=safe_path,
-              doubling_rate=doubling_rate)
+              doubling_rate=doubling_rate,
+              safepath=post_path)
