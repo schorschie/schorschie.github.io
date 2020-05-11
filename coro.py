@@ -156,12 +156,26 @@ def write_indexmd(picpath, doubling_rate, safepath='covid_19.md'):
 layout: post
 title: Covid-19 Update
 date:   %s
-logistic_curve: /%s
 mathjax: true
 categories: Corona, Covid-19, update
 ---
 
-## Prediction of Cases in Germany
+## Prediction for {{ page.date | date: "%%s" | plus: 86400 | date_to_string }}
+
+![Logistic curve of corona virus progression](/%s)
+
+> *Remember:* All models are wrong. [George Box](https://en.wikipedia.org/wiki/All_models_are_wrong)
+
+## Doubling Rates
+
+The following table shows the doubling rates in days (how much days does it take for the infected people to double their amount),
+based on the data points of a whole week.
+
+<!-- markdownlint-disable no-inline-html -->
+%s
+<!-- markdownlint-enable no-inline-html -->
+
+## Background
 
 I'm trying to predict the amount of infected people in Germany for the next day. I had
 difficulties with the crazy increasing numbers in Italy and later in Germany. I know it is
@@ -185,28 +199,19 @@ rely on the pro's:
 * [Johns Hopkins University](https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6)
 * [Worldometer.info](https://www.worldometers.info/coronavirus/country/germany/)
 * or, if you want to create your own simulation: [CovidSim](http://covidsim.eu).
-
-![Logistic curve of corona virus progression]({{ page.logistic_curve }})
-
-> *Remember:* All models are wrong. [George Box](https://en.wikipedia.org/wiki/All_models_are_wrong)
-
-## Doubling Rates
-
-The following table shows the doubling rates in days (how much days does it take for the infected people to double their amount),
-based on the data points of a whole week.
-
-%s
-""" % (datetime.now().strftime('%Y-%m-%d %H:%M:%S +0200'), picpath, doubling_rate.to_html(float_format=lambda x: '%10.2f' % (x)))
+""" % (datetime.now().strftime('%Y-%m-%d %H:%M:%S +0200'),
+       picpath,
+       doubling_rate.to_html(float_format=lambda x: '%10.2f' % (x)))
     f = open(safepath, 'w', encoding="utf-8")
     f.write(string)
     f.close()
     return string
 
 
-date = datetime(2020, 5, 11)
+date = datetime(2020, 5, 12)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('assets/images/%y%m%d_corona.png')
-post_path = date.strftime('_posts/%Y-%m-%d-corona_update.md')
+post_path = datetime.now().strftime('_posts/%Y-%m-%d-corona_update.md')
 _, doubling_rate = get_plot(predict_date=predict_date, safepath=safe_path)
 write_indexmd(picpath=safe_path,
               doubling_rate=doubling_rate,

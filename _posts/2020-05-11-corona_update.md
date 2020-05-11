@@ -1,13 +1,52 @@
 ---
 layout: post
 title: Covid-19 Update
-date:   2020-05-10 20:00:00 +0200
-logistic_curve: /assets/images/200511_corona.png
+date:   2020-05-11 09:46:51 +0200
 mathjax: true
 categories: Corona, Covid-19, update
 ---
 
-## Prediction of Cases in Germany
+## Prediction for {{ page.date | date: "%s" | plus: 86400 | date_to_string }}
+
+![Logistic curve of corona virus progression](/assets/images/200512_corona.png)
+
+> *Remember:* All models are wrong. [George Box](https://en.wikipedia.org/wiki/All_models_are_wrong)
+
+## Doubling Rates
+
+The following table shows the doubling rates in days (how much days does it take for the infected people to double their amount),
+based on the data points of a whole week.
+
+<!-- markdownlint-disable no-inline-html -->
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Doubling Rate [d]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>This Week</th>
+      <td>114.20</td>
+    </tr>
+    <tr>
+      <th>Last Week</th>
+      <td>94.93</td>
+    </tr>
+    <tr>
+      <th>Second to Last Week</th>
+      <td>51.57</td>
+    </tr>
+    <tr>
+      <th>Three Weeks Before</th>
+      <td>31.96</td>
+    </tr>
+  </tbody>
+</table>
+<!-- markdownlint-enable no-inline-html -->
+
+## Background
 
 I'm trying to predict the amount of infected people in Germany for the next day. I had
 difficulties with the crazy increasing numbers in Italy and later in Germany. I know it is
@@ -31,39 +70,3 @@ rely on the pro's:
 * [Johns Hopkins University](https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6)
 * [Worldometer.info](https://www.worldometers.info/coronavirus/country/germany/)
 * or, if you want to create your own simulation: [CovidSim](http://covidsim.eu).
-
-![Logistic curve of corona virus progression]({{ page.logistic_curve }})
-
-> *Remember:* All models are wrong. [George Box](https://en.wikipedia.org/wiki/All_models_are_wrong)
-
-## Doubling Rates
-
-The following table shows the doubling rates in days (how much days does it take for the infected people to double their amount),
-based on the data points of a whole week.
-
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Doubling Rate [d]</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>This Week</th>
-      <td>107.44</td>
-    </tr>
-    <tr>
-      <th>Last Week</th>
-      <td>86.39</td>
-    </tr>
-    <tr>
-      <th>Second to Last Week</th>
-      <td>47.76</td>
-    </tr>
-    <tr>
-      <th>Three Weeks Before</th>
-      <td>31.12</td>
-    </tr>
-  </tbody>
-</table>

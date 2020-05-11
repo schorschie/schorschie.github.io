@@ -1,10 +1,14 @@
 ---
 layout: post
 title: Covid-19 Update
-date:   2020-05-10 09:31:16 +0200
+date:   2020-05-09 15:41:42 +0200
+logistic_curve: /assets/images/200510_corona.png
 mathjax: true
-categories: Corona, Covid-19, update
+categories: Corona, Covid, update
 ---
+
+Today I noticed, that the prediction estimated to low for today, so the speed of the infections
+seems to increase again.
 
 ## Prediction of Cases in Germany
 
@@ -31,7 +35,7 @@ rely on the pro's:
 * [Worldometer.info](https://www.worldometers.info/coronavirus/country/germany/)
 * or, if you want to create your own simulation: [CovidSim](http://covidsim.eu).
 
-![Logistic curve of corona virus progression](/assets/images/200511_corona.png)
+![Logistic curve of corona virus progression]({{ page.logistic_curve }})
 
 > *Remember:* All models are wrong. [George Box](https://en.wikipedia.org/wiki/All_models_are_wrong)
 
@@ -51,19 +55,19 @@ based on the data points of a whole week.
   <tbody>
     <tr>
       <th>This Week</th>
-      <td>114.20</td>
+      <td>111.77</td>
     </tr>
     <tr>
       <th>Last Week</th>
-      <td>94.93</td>
+      <td>83.90</td>
     </tr>
     <tr>
       <th>Second to Last Week</th>
-      <td>51.57</td>
+      <td>47.45</td>
     </tr>
     <tr>
       <th>Three Weeks Before</th>
-      <td>31.96</td>
+      <td>31.87</td>
     </tr>
   </tbody>
 </table>
