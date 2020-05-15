@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Covid-19 Update
-date:   2020-05-15 10:18:47 +0200
+date:   2020-05-15 10:20:47 +0200
 mathjax: true
 categories: Corona, Covid-19, update
 ---
 
 ## Prediction for {{ page.date | date: "%s" | plus: 86400 | date_to_string }}
 
-![Logistic curve of corona virus progression](/assets/images/200515_corona.png)
+![Logistic curve of corona virus progression](/assets/images/200516_corona.png)
 
 {: .right}
 [(csv)](/covid-19_germany.csv)
@@ -31,19 +31,19 @@ based on the data points of a whole week.
   <tbody>
     <tr>
       <th>This Week</th>
-      <td>152.46</td>
+      <td>153.38</td>
     </tr>
     <tr>
       <th>Last Week</th>
-      <td>134.36</td>
+      <td>124.28</td>
     </tr>
     <tr>
       <th>Second to Last Week</th>
-      <td>77.69</td>
+      <td>81.42</td>
     </tr>
     <tr>
       <th>Three Weeks Before</th>
-      <td>43.85</td>
+      <td>47.15</td>
     </tr>
   </tbody>
 </table>
