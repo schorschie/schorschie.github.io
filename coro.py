@@ -164,6 +164,9 @@ categories: Corona, Covid-19, update
 
 ![Logistic curve of corona virus progression](/%s)
 
+{: .right}
+[(csv)](/covid-19_germany.csv)
+
 > *Remember:* All models are wrong. [George Box](https://en.wikipedia.org/wiki/All_models_are_wrong)
 
 ## Doubling Rates
@@ -208,7 +211,7 @@ rely on the pro's:
     return string
 
 
-date = datetime(2020, 5, 14)
+date = datetime(2020, 5, 15)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('assets/images/%y%m%d_corona.png')
 post_path = datetime.now().strftime('_posts/%Y-%m-%d-corona_update.md')
