@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Covid-19 Update
-date:   2020-05-18 09:46:39 +0200
+date:   2020-05-18 10:02:51 +0200
 mathjax: true
-categories: Corona, Covid-19, update
+categories: Covid-19, update
 ---
 
 ## Prediction for {{ page.date | date: "%s" | plus: 86400 | date_to_string: "ordinal" }}
@@ -29,24 +29,29 @@ based on the data points of a whole week.
     <tr style="text-align: right;">
       <th></th>
       <th>Doubling Rate [d]</th>
+      <th>Prediction [19.05.20]</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Fit based on this weeks data</th>
-      <td>164.65</td>
+      <td>165</td>
+      <td>175806</td>
     </tr>
     <tr>
       <th>Last Week</th>
-      <td>114.20</td>
+      <td>114</td>
+      <td>178579</td>
     </tr>
     <tr>
       <th>Second to Last Week</th>
-      <td>94.93</td>
+      <td>95</td>
+      <td>182656</td>
     </tr>
     <tr>
       <th>Three Weeks Before</th>
-      <td>51.57</td>
+      <td>52</td>
+      <td>209714</td>
     </tr>
   </tbody>
 </table>
@@ -77,4 +82,4 @@ rely on the pro's:
 * [Worldometer.info](https://www.worldometers.info/coronavirus/country/germany/)
 * or, if you want to create your own simulation: [CovidSim](http://covidsim.eu).
 
-[^1]: [Tagesschau: Das gilt in Restaurants, Hotels und Cafés](https://www.tagesschau.de/inland/gastronomie-coronavirus-101.html)
+[^1]: [Tagesschau: Das gilt in Restaurants, Hotels und Caf�s](https://www.tagesschau.de/inland/gastronomie-coronavirus-101.html)

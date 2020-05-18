@@ -85,6 +85,7 @@ def _get_predictions(data, predict_date='2020-03-20'):
     xx =  data.index.factorize()[0]
     XX = np.array(range(N[0], N[1]))
     last_date = data.index[-1]
+    formated_pred_date = datetime.strptime(predict_date, '%Y-%m-%d').strftime('%d.%m.%y')
 
     pred = pd.DataFrame(index=pd.date_range(start=data.index[0], periods=N[1]-N[0], freq='d'))
     PREDICTION = pd.DataFrame(index=[pd.to_datetime(predict_date)])
@@ -101,6 +102,8 @@ def _get_predictions(data, predict_date='2020-03-20'):
         doubling_rate.loc[prediction['key'], 'Doubling Rate [d]'] =\
             1/(np.log2(np.exp(1)) * d[0])
         pred[prediction['key']] = predicted_infected
+        doubling_rate.loc[prediction['key'], 'Prediction [' + formated_pred_date + ']' ] =\
+            np.ceil(pred.loc[predict_date, prediction['key']])
         if prediction['predict']:
             PREDICTION.loc[predict_date, prediction['key'] + "'s prediction"] = \
                 np.ceil(pred.loc[predict_date, prediction['key']])
@@ -209,7 +212,7 @@ rely on the pro's:
 * or, if you want to create your own simulation: [CovidSim](http://covidsim.eu).
 """ % (datetime.now().strftime('%Y-%m-%d %H:%M:%S +0200'),
        picpath,
-       doubling_rate.to_html(float_format=lambda x: '%10.2f' % (x)))
+       doubling_rate.to_html(float_format=lambda x: '%10.0f' % (x)))
     f = open(safepath, 'w', encoding="utf-8")
     f.write(string)
     f.close()
