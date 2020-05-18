@@ -13,9 +13,9 @@ from scipy import optimize as op
 
 PREDICTIONS = [{'until': 0,
                 'days': 7,
-                'key': 'This Week',
+                'key': 'Fit based on this weeks data',
                 'plot': True,
-                'predict': True,
+                'predict': False,
                 'style': {'linestyle': '--',
                           'color': 'black'}}]
 PREDICTIONS.append({'until': 7,
@@ -60,6 +60,10 @@ AXVLINES.append({'date': datetime(2020, 5, 4),
                  'plot': True,
                  'style': {'color': 'magenta',
                            'label': 'All Shops in Germany opened'}})
+AXVLINES.append({'date': datetime(2020, 5, 18),
+                 'plot': True,
+                 'style': {'color': 'seagreen',
+                           'label': 'Most Restaurants in Germany opened'}})
 
 def _exponential_function(x, k, x_0):
     y = np.exp(k * (x - x_0))
@@ -111,6 +115,7 @@ def get_plot(predict_date, safepath):
     print(doubling_rate)
 
     day_before_prediction = (datetime.strptime(predict_date, '%Y-%m-%d') - timedelta(days=1)).strftime('%Y-%m-%d')
+    plt.rcParams.update({'font.size': 16})
     _, ax = plt.subplots(figsize=(13,7))
     data['Infected'].plot(ax=ax, marker='x', linestyle='', label='Infected [RKI]', color='red')
     for prediction in PREDICTIONS:
@@ -160,7 +165,7 @@ mathjax: true
 categories: Corona, Covid-19, update
 ---
 
-## Prediction for {{ page.date | date: "%%s" | plus: 86400 | date_to_string }}
+## Prediction for {{ page.date | date: "%%s" | plus: 86400 | date_to_string: "ordinal" }}
 
 ![Logistic curve of corona virus progression](/%s)
 
@@ -211,7 +216,7 @@ rely on the pro's:
     return string
 
 
-date = datetime(2020, 5, 18)
+date = datetime(2020, 5, 19)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('assets/images/%y%m%d_corona.png')
 post_path = datetime.now().strftime('_posts/%Y-%m-%d-corona_update.md')
