@@ -219,7 +219,7 @@ rely on the pro's:
     return string
 
 
-date = datetime(2020, 5, 19)
+date = datetime(2020, 5, 20)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('assets/images/%y%m%d_corona.png')
 post_path = datetime.now().strftime('_posts/%Y-%m-%d-corona_update.md')
