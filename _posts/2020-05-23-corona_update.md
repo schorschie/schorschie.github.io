@@ -8,6 +8,11 @@ categories: Corona, Covid-19, update
 
 ## Prediction for {{ page.date | date: "%s" | plus: 86400 | date_to_string: "ordinal" }}
 
+On 21.05. I made a mistake transcribing the data from RKI. It is corrected here. 176752 is the
+correct value. Also I read an interesting Article on
+[Süddeutsche](https://www.sueddeutsche.de/politik/coronavirus-deutschland-news-1.4828033),
+where they claim that there were infections in a Restaurant and in a Church.
+
 ![Logistic curve of corona virus progression](/assets/images/200524_corona.png)
 
 {: .right}
