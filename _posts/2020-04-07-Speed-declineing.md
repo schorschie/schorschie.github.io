@@ -10,7 +10,7 @@ As you can see from the data of the
 [RKI](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html)
 data (overviews from
 [Wikipedia](https://de.wikipedia.org/wiki/COVID-19-Pandemie_in_Deutschland#Infektionsf%C3%A4lle)),
-the speed of the newly infected in Germany ist declining. 
+the speed of the newly infected in Germany ist declining.
 
 | Date       | Infected | Delta |
 |-----------:|---------:|------:|

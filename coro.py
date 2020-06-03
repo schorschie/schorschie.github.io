@@ -72,6 +72,8 @@ def _exponential_function(x, k, x_0):
 
 def _get_data():
     data = pd.read_csv('covid-19_germany.csv', index_col=0, parse_dates=True)
+    data['Infected'] = data['AnzahlFall']
+    data['Total Deceased'] = data['AnzahlTodesfall']
     data['Delta Infected'] = data['Infected'].diff()
     data.loc[data.index[0], 'Delta Infected'] = data['Infected'][0]
     data['Deceased'] = data['Total Deceased'].diff()
@@ -81,7 +83,7 @@ def _get_data():
 
 
 def _get_predictions(data, predict_date='2020-03-20'):
-    N = (0, len(data)+7)
+    N = (0, len(data)+20)
     xx =  data.index.factorize()[0]
     XX = np.array(range(N[0], N[1]))
     last_date = data.index[-1]
@@ -96,7 +98,7 @@ def _get_predictions(data, predict_date='2020-03-20'):
         slice_x = xx[len(xx)-(prediction['until']+prediction['days']) : len(xx)-prediction['until'] ]
         d = op.curve_fit(_exponential_function, slice_x,
                          data.loc[end_date : start_date, 'Infected'].values,
-                         p0=[0.006, -1830])[0]
+                         p0=[0.0015, -5030], maxfev=2000)[0]
         print('Exponential coefficients: k = %f, x_0 = %f' % tuple(d))
         predicted_infected = _exponential_function(XX, d[0], d[1])
         doubling_rate.loc[prediction['key'], 'Doubling Rate [d]'] =\
@@ -219,7 +221,7 @@ rely on the pro's:
     return string
 
 
-date = datetime(2020, 5, 27)
+date = datetime(2020, 6, 2)
 predict_date = date.strftime('%Y-%m-%d')
 safe_path = date.strftime('assets/images/%y%m%d_corona.png')
 post_path = datetime.now().strftime('_posts/%Y-%m-%d-corona_update.md')
