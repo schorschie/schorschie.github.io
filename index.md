@@ -5,12 +5,21 @@ title: CV
 
 ![A portrait of me](/assets/lippe-m.jpg)
 
+&nbsp;
+
+> Hi, I’m Gregory, a highly skilled mechanical engineer. I love developing and
+> implementing new methods for computational simulations of mechanic and control
+> problems. I recently implemented a enterprise wide new verification and
+> validation approach and now want to see virtualized development come to life.
+
+&nbsp;
+
 ## Professional Experience
 
 ### Systems Engineer *(since 2017)*
 
 > Systems-Engineering  
-> Bosch Corporate Research & Automotive Steering  
+> Bosch Corporate Research  
 > Renningen & Schwäbisch Gmünd  
 
 ### Calculation Engineer *(2012 -- 2017)*
@@ -45,10 +54,9 @@ the application of a so called countershaft brake to reduce shift speed an jerk.
 
 ### Civil Service *(2002 -- 2003)*
 
-> Verein zur Förderung  
-> spastisch gelähmter Kinder  
-> und anderer Behinderter e.V.  
-> Nürnberg
+> Verein zur Förderung spastisch gelähmter  
+> Kinder und anderer Behinderter e.V.  
+> Nürnberg  
 
 ### School *(until 2002)*
 

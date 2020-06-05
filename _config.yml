@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: grzegorzlippe.de
-email: Grzegorz.Lippe@gmail.com
+email: grzegorz@posteo.de
 description: >- # this means to ignore newlines until "baseurl:"
   This is the personal homepage of Grzegorz Lippe. I'm a mechanical engineer, raised in Nürnberg
   evolved in Stuttgart.
