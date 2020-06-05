@@ -13,7 +13,6 @@ Here is an interesting article from [Süddeutsche](http://www.sueddeutsche.de)
 regarding this topic: [Warten auf die zweite
 Welle](https://www.sueddeutsche.de/gesundheit/coronavirus-zweite-welle-neuinfektionen-1.4924892).
 
-
 ![Logistic curve of corona virus progression](/assets/images/200602_corona.png)
 
 {: .right}
