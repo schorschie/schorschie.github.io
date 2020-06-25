@@ -15,6 +15,17 @@
     }
 }
 
+.image-gallery3 li {
+    float: left;
+    display: block;
+    margin: 0 0 1% 1%;
+    width: 32%;
+    @include media-query($on-palm) {
+        width: 49%;
+    }
+}
+
+
 .image-gallery li a {
     text-align: center;
     text-decoration: none!important;

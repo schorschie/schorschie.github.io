@@ -2,6 +2,7 @@
 
  # -*- coding: utf-8 -*-
 
+import to_pandas
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -10,35 +11,6 @@ from datetime import timedelta, datetime
 from matplotlib.dates import MO
 from scipy import optimize as op
 
-
-PREDICTIONS = [{'until': 0,
-                'days': 7,
-                'key': 'Fit based on this weeks data',
-                'plot': True,
-                'predict': False,
-                'style': {'linestyle': '--',
-                          'color': 'black'}}]
-PREDICTIONS.append({'until': 7,
-                    'days':  7,
-                    'key': 'Last Week',
-                    'plot': False,
-                    'predict': False,
-                    'style': {'linestyle': '--',
-                              'color': 'gray'}})
-PREDICTIONS.append({'until': 14,
-                    'days':  7,
-                    'key': 'Second to Last Week',
-                    'plot': False,
-                    'predict': False,
-                    'style': {'linestyle': ':',
-                              'color': 'gray'}})
-PREDICTIONS.append({'until': 21,
-                    'days':  7,
-                    'key': 'Three Weeks Before',
-                    'plot': False,
-                    'predict': False,
-                    'style': {'linestyle': ':',
-                              'color': 'lightgray'}})
 
 AXVLINES = [{'date': datetime(2020, 3, 14),
              'plot': True,
@@ -65,13 +37,9 @@ AXVLINES.append({'date': datetime(2020, 5, 18),
                  'style': {'color': 'seagreen',
                            'label': 'Most Restaurants in Germany opened'}})
 
-def _exponential_function(x, k, x_0):
-    y = np.exp(k * (x - x_0))
-    return y
-
-
-def _get_data():
-    data = pd.read_csv('covid-19_germany.csv', index_col=0, parse_dates=True)
+def _get_data(region):
+    assert isinstance(region, str)
+    data = pd.read_csv('covid-19_' + region + '.csv', index_col=0, parse_dates=True)
     data['Infected'] = data['AnzahlFall']
     data['Total Deceased'] = data['AnzahlTodesfall']
     data['Delta Infected'] = data['Infected'].diff()
@@ -82,111 +50,66 @@ def _get_data():
     return data
 
 
-def _get_predictions(data, predict_date='2020-03-20'):
-    N = (0, len(data)+20)
-    xx =  data.index.factorize()[0]
-    XX = np.array(range(N[0], N[1]))
-    last_date = data.index[-1]
-    formated_pred_date = datetime.strptime(predict_date, '%Y-%m-%d').strftime('%d.%m.%y')
+def get_plot(plots):
+    for a_plot in plots:
+        data = _get_data(a_plot['code'])
 
-    pred = pd.DataFrame(index=pd.date_range(start=data.index[0], periods=N[1]-N[0], freq='d'))
-    PREDICTION = pd.DataFrame(index=[pd.to_datetime(predict_date)])
-    doubling_rate = pd.DataFrame()
-    for prediction in PREDICTIONS:
-        start_date = last_date - timedelta(days=prediction['until'])
-        end_date = start_date - timedelta(days=prediction['days']-1)
-        slice_x = xx[len(xx)-(prediction['until']+prediction['days']) : len(xx)-prediction['until'] ]
-        d = op.curve_fit(_exponential_function, slice_x,
-                         data.loc[end_date : start_date, 'Infected'].values,
-                         p0=[0.0015, -5030], maxfev=2000)[0]
-        print('Exponential coefficients: k = %f, x_0 = %f' % tuple(d))
-        predicted_infected = _exponential_function(XX, d[0], d[1])
-        doubling_rate.loc[prediction['key'], 'Doubling Rate [d]'] =\
-            1/(np.log2(np.exp(1)) * d[0])
-        pred[prediction['key']] = predicted_infected
-        doubling_rate.loc[prediction['key'], 'Prediction [' + formated_pred_date + ']' ] =\
-            np.ceil(pred.loc[predict_date, prediction['key']])
-        if prediction['predict']:
-            PREDICTION.loc[predict_date, prediction['key'] + "'s prediction"] = \
-                np.ceil(pred.loc[predict_date, prediction['key']])
+        _, ax = plt.subplots(figsize=(13,7))
+        data['Infected'].plot(ax=ax, marker='x', linestyle='', label='Infected [RKI]', color='red')
 
-    return pred, PREDICTION, doubling_rate
+        for axline in AXVLINES:
+            if axline['plot']:
+                ax.axvline(axline['date'], **axline['style'])
 
+        plt.yscale('log')
+        ax.grid(True)
+        ax.legend(loc='best')
+        plt.title('Covid-19 Cases in ' + a_plot['region'],
+                fontsize=14)
+        plt.xticks(rotation=30)
+        plt.yticks(10**np.array(range(9)))
+        plt.ylim((1, 100e6))
+        plt.xlim((plt.xlim()[0]+6, plt.xlim()[0]+160))
+        plt.ylabel('Infected [-]')
+        plt.savefig(a_plot['safe_path'])
 
-def get_plot(predict_date, safepath):
-    data = _get_data()
-    pred, PREDICTION, doubling_rate = _get_predictions(data=data, predict_date=predict_date)
-    print('')
-    print(doubling_rate)
+        plt.gcf().set_size_inches(2,2)
+        ax.get_legend().remove()
+        for ticklabel in (ax.get_xticklabels()):
+            ticklabel.set_fontsize(5)
+        for ticklabel in (ax.get_yticklabels()):
+            ticklabel.set_fontsize(5)
+        ax.xaxis.get_label().set_fontsize(6)
+        ax.yaxis.get_label().set_fontsize(6)
+        ax.title.set_fontsize(7)
+        plt.savefig(a_plot['thumb_path'])
 
-    day_before_prediction = (datetime.strptime(predict_date, '%Y-%m-%d') - timedelta(days=1)).strftime('%Y-%m-%d')
-    plt.rcParams.update({'font.size': 16})
-    _, ax = plt.subplots(figsize=(13,7))
-    data['Infected'].plot(ax=ax, marker='x', linestyle='', label='Infected [RKI]', color='red')
-    for prediction in PREDICTIONS:
-        if prediction['plot']:
-            prediction_key = prediction['key']
-            pred[prediction_key].plot(label=prediction_key, **prediction['style'])
-
-        if prediction['predict']:
-            PREDICTION.plot(ax=ax, marker='x', markeredgewidth=2, linestyle='')
-            ax.annotate('%d' %(PREDICTION[prediction['key'] + "'s prediction"][0]),
-                        (PREDICTION.index[0], PREDICTION[prediction['key'] + "'s prediction"][0]),
-                        textcoords="offset points", rotation=45,
-                        xytext=(1, 10))
-
-    for axline in AXVLINES:
-        if axline['plot']:
-            ax.axvline(axline['date'], **axline['style'])
-    ax.annotate('%d' %(data.loc[day_before_prediction, 'Infected']), (pd.to_datetime(day_before_prediction), 
-                                                                      data.loc[day_before_prediction, 'Infected']),
-                textcoords="offset points", rotation=-45,
-                xytext=(-30, 8))
-    plt.yscale('log')
-    ax.grid(True)
-    ax.legend(loc='best')
-    plt.title('Covid-19 Cases in Germany, prediction for ' + predict_date,
-              fontsize=14)
-    plt.xticks(rotation=30)
-    plt.yticks(10**np.array(range(9)))
-    plt.ylim((1, 100e6))
-    plt.xlim((plt.xlim()[0]+6, plt.xlim()[0]+160))
-    plt.ylabel('Infected [-]')
-    plt.savefig(safepath)
-
-#   _, ax = plt.subplots(figsize=(13,7))
-#   doubling_rate.plot(ax=ax, kind='bar')
-#   plt.savefig('bar_' + safepath)
-
-    return ax, doubling_rate
+        plt.close()
 
 
-def write_indexmd(picpath, doubling_rate, safepath='covid_19.md'):
+def write_indexmd(picpath, safepath='covid_19.md'):
     string =u"""---
 layout: post
 title: Covid-19 Update
 date:   %s
 mathjax: true
 categories: Corona, Covid-19, update
+images:""" % (datetime.now().strftime('%Y-%m-%d %H:%M:%S +0200'))
+
+    for pic in picpath:
+        string = string + "\n  - path: /" + pic['safe_path'] + "\n    title: " + pic['region']
+
+    string = string + """
 ---
 
 ## Prediction for {{ page.date | date: "%%s" | plus: 86400 | date_to_string: "ordinal" }}
 
-![Logistic curve of corona virus progression](/%s)
+{%% include image-gallery3.html %%}
 
 {: .right}
 [(csv)](/covid-19_germany.csv)
 
 > *Remember:* All models are wrong. [George Box](https://en.wikipedia.org/wiki/All_models_are_wrong)
-
-## Doubling Rates
-
-The following table shows the doubling rates in days (how much days does it take for the infected people to double their amount),
-based on the data points of a whole week.
-
-<!-- markdownlint-disable no-inline-html -->
-%s
-<!-- markdownlint-enable no-inline-html -->
 
 ## Background
 
@@ -212,20 +135,34 @@ rely on the pro's:
 * [Johns Hopkins University](https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6)
 * [Worldometer.info](https://www.worldometers.info/coronavirus/country/germany/)
 * or, if you want to create your own simulation: [CovidSim](http://covidsim.eu).
-""" % (datetime.now().strftime('%Y-%m-%d %H:%M:%S +0200'),
-       picpath,
-       doubling_rate.to_html(float_format=lambda x: '%10.0f' % (x)))
+
+{%% include image-lightbox.html %%}
+""" % (picpath)
+
     f = open(safepath, 'w', encoding="utf-8")
     f.write(string)
     f.close()
     return string
 
 
-date = datetime(2020, 6, 2)
-predict_date = date.strftime('%Y-%m-%d')
-safe_path = date.strftime('assets/images/%y%m%d_corona.png')
+# to_pandas.write_csv() # downloade csv from rki
+
+date = datetime(2020, 6, 25)
 post_path = datetime.now().strftime('_posts/%Y-%m-%d-corona_update.md')
-_, doubling_rate = get_plot(predict_date=predict_date, safepath=safe_path)
-write_indexmd(picpath=safe_path,
-              doubling_rate=doubling_rate,
+
+plots = [{'code' : 'germany',
+          'region' : 'Deutschland',
+         'safe_path' : date.strftime('assets/images/%y%m%d_germany.png'),
+         'thumb_path' : date.strftime('assets/images/%y%m%d_germany_thumb.png')}]
+plots.append({'code' : 'bw',
+              'region' : 'Baden-Württemberg',
+              'safe_path' : date.strftime('assets/images/%y%m%d_bw.png'),
+              'thumb_path' : date.strftime('assets/images/%y%m%d_bw_thumb.png')})
+plots.append({'code' : 'oak',
+              'region' : 'Ostalbkreis',
+              'safe_path' : date.strftime('assets/images/%y%m%d_oak.png'),
+              'thumb_path' : date.strftime('assets/images/%y%m%d_oak_thumb.png')})
+
+get_plot(plots=plots)
+write_indexmd(picpath=plots,
               safepath=post_path)

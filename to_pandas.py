@@ -3,7 +3,6 @@
 import pandas as pd
 import requests
 
-DOWNLOAD_DATA = True
 
 def scrape(rki_csv_path='covid_19.csv'):
     url = 'https://opendata.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0.csv'
@@ -23,16 +22,23 @@ def get_rki(rki_csv_path='covid_19.csv'):
                       date_parser=dateparser)
     return rki
 
-if DOWNLOAD_DATA:
-    scrape()
+def write_csv():
+    rki = get_rki()
 
-rki = get_rki()
+    deutschland = rki[['AnzahlFall', 'AnzahlTodesfall', 'Meldedatum']].groupby('Meldedatum').sum().cumsum()
+    deutschland.to_csv('covid-19_germany.csv')
 
-deutschland = rki[['AnzahlFall', 'AnzahlTodesfall', 'Meldedatum']].groupby('Meldedatum').sum().cumsum()
-deutschland.to_csv('covid-19_germany.csv')
+    bw = rki.query("Bundesland == 'Baden-Württemberg'")[['AnzahlFall', 'AnzahlTodesfall', 'Meldedatum']].groupby('Meldedatum').sum().cumsum()
+    bw.to_csv('covid-19_bw.csv')
 
-bw = rki.query("Bundesland == 'Baden-Württemberg'")[['AnzahlFall', 'AnzahlTodesfall', 'Meldedatum']].groupby('Meldedatum').sum().cumsum()
-bw.to_csv('covid-19_bw.csv')
+    oak = rki.query("Landkreis == 'LK Ostalbkreis'")[['AnzahlFall', 'AnzahlTodesfall', 'Meldedatum']].groupby('Meldedatum').sum().cumsum()
+    oak.to_csv('covid-19_oak.csv')
 
-oak = rki.query("Landkreis == 'LK Ostalbkreis'")[['AnzahlFall', 'AnzahlTodesfall', 'Meldedatum']].groupby('Meldedatum').sum().cumsum()
-oak.to_csv('covid-19_oak.csv')
+
+if __name__ == "__main__":
+
+    DOWNLOAD_DATA = True
+    if DOWNLOAD_DATA:
+        scrape()
+
+    write_csv()
