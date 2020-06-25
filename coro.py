@@ -71,7 +71,7 @@ def get_plot(plots):
         plt.ylim((1, 100e6))
         plt.xlim((plt.xlim()[0]+6, plt.xlim()[0]+160))
         plt.ylabel('Infected [-]')
-        plt.savefig(a_plot['safe_path'])
+        plt.savefig(a_plot['safe_path'], bbox_inches = 'tight')
 
         plt.gcf().set_size_inches(2,2)
         ax.get_legend().remove()
@@ -82,7 +82,7 @@ def get_plot(plots):
         ax.xaxis.get_label().set_fontsize(6)
         ax.yaxis.get_label().set_fontsize(6)
         ax.title.set_fontsize(7)
-        plt.savefig(a_plot['thumb_path'])
+        plt.savefig(a_plot['thumb_path'], bbox_inches = 'tight')
 
         plt.close()
 

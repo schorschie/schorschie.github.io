@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Covid-19 Update
-date:   2020-06-25 10:48:29 +0200
+date:   2020-06-25 10:53:33 +0200
 mathjax: true
 categories: Corona, Covid-19, update
 images:
