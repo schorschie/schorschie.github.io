@@ -1,50 +1,26 @@
 ---
 layout: post
 title: Covid-19 Update
-date:   2020-05-11 09:46:51 +0200
+date:   2020-07-03 12:35:04 +0200
 mathjax: true
 categories: Corona, Covid-19, update
+images:
+  - path: /assets/images/200703_germany.png
+    title: Deutschland
+  - path: /assets/images/200703_bw.png
+    title: Baden-Württemberg
+  - path: /assets/images/200703_oak.png
+    title: Ostalbkreis
 ---
 
-## Prediction for {{ page.date | date: "%s" | plus: 86400 | date_to_string }}
+## Prediction for {{ page.date | date: "%s" | plus: 86400 | date_to_string: "ordinal" }}
 
-![Logistic curve of corona virus progression](/assets/images/200512_corona.png)
+{% include image-gallery3.html %}
+
+{: .right}
+[(csv)](/covid-19_germany.csv)
 
 > *Remember:* All models are wrong. [George Box](https://en.wikipedia.org/wiki/All_models_are_wrong)
-
-## Doubling Rates
-
-The following table shows the doubling rates in days (how much days does it take for the infected people to double their amount),
-based on the data points of a whole week.
-
-<!-- markdownlint-disable no-inline-html -->
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Doubling Rate [d]</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>This Week</th>
-      <td>114.20</td>
-    </tr>
-    <tr>
-      <th>Last Week</th>
-      <td>94.93</td>
-    </tr>
-    <tr>
-      <th>Second to Last Week</th>
-      <td>51.57</td>
-    </tr>
-    <tr>
-      <th>Three Weeks Before</th>
-      <td>31.96</td>
-    </tr>
-  </tbody>
-</table>
-<!-- markdownlint-enable no-inline-html -->
 
 ## Background
 
@@ -70,3 +46,5 @@ rely on the pro's:
 * [Johns Hopkins University](https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6)
 * [Worldometer.info](https://www.worldometers.info/coronavirus/country/germany/)
 * or, if you want to create your own simulation: [CovidSim](http://covidsim.eu).
+
+{% include image-lightbox.html %}
