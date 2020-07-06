@@ -1,4 +1,10 @@
 
+// Language selector
+.site-lang {
+    float: right;
+    min-height: $base-line-height * $base-font-size * 1.5;
+  }
+
 // Image Gallery
 .image-gallery {
     overflow: auto;

@@ -1,6 +1,8 @@
 ---
 layout: default
 title: CV
+lang: en
+ref: index
 ---
 
 ![A portrait of me](/assets/lippe-m.jpg)
@@ -52,16 +54,18 @@ course is founded on two pillars, data analysis and results communication, both 
 the correct use of different hypothesis testing methods and profound usage of the plot
 capabilities of python.
 
+The project I made during the Udacity Nanodegree are hosted [github
+repository](https://github.com/schorschie/udacity)
+
 ### Mechanical Engineering *(2003 -- 2009)*
 
-> Dipl.-Ing. Fahrzeug- und Motorentechnik  
-> Universität Stuttgart  
+> Dipl.-Ing. Automotive and Engine Engineering  
+> University of Stuttgart  
 > Stuttgart  
 
 **Majors:** Vehicle dynamics and simulation technique
 
-**Diploma Thesis:** Modellbildung und Simulation eines automatisierten
-Nutzfahrzeuggetriebes
+**Diploma Thesis:** Modelling and Simulation of an automated heavy duty gear box
 
 I wrote my diploma thesis as an on site performer at the Daimler AG, where
 I modeled and simulated a 16-gears transmission for heavy duty vehicles within
@@ -70,18 +74,19 @@ the application of a so called countershaft brake to reduce shift speed an jerk.
 
 ### Civil Service *(2002 -- 2003)*
 
-> Verein zur Förderung spastisch gelähmter  
-> Kinder und anderer Behinderter e.V.  
-> Nürnberg  
+> Association for the promotion of paralyzed  
+> children and other disabled people e.V.  
+> Nuremberg  
 
-During my civil service I learned to take responsibility for me, people and my community. I
-helped disabled children and frail elders by commuting them to school, for shopping or to a
+During my [civil service](https://en.wikipedia.org/wiki/Zivildienst) I learned
+to take responsibility for me, people and my community. I helped disabled
+children and frail elders by commuting them to school, for shopping or to a
 doctors appointment safely, reliably and on time.
 
 ### School *(until 2002)*
 
-> Wilhelm Löhe Schule  
-> Nürnberg  
+> Wilhelm Löhe School  
+> Nuremberg  
 
 **A-Levels:** Qualification for university entrance with the majors in mathematics,
 geography and chemistry.
