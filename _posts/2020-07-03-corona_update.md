@@ -11,6 +11,8 @@ images:
     title: Baden-Württemberg
   - path: /assets/images/200703_oak.png
     title: Ostalbkreis
+ref: Covid-19_update
+lang: en
 ---
 
 ## Prediction for {{ page.date | date: "%s" | plus: 86400 | date_to_string: "ordinal" }}

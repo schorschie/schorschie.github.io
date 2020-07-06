@@ -4,6 +4,8 @@ title:  "Speed of Corona declining"
 date:   2020-04-07 10:47:20 +0200
 categories: personal, homepage, website, corona
 mathjax: true
+ref: speed_declining
+lang: en
 ---
 
 As you can see from the data of the
@@ -32,6 +34,6 @@ patients need them for two weeks, than a daily rate of \\(d_r=14 \cdot
 \frac{n}{50}\\) would be handable.
 
 I also hope that we can do this without the so called Hammer and Dance"
-Strategy. I don't know enought about epidemics to claim, whether a linear
+Strategy. I don't know enough about epidemics to claim, whether a linear
 growth is possible. We would need to first increase the value of daily new
 infected to d and then lower the \\(R_0\\) coefficient to \\(1\\).

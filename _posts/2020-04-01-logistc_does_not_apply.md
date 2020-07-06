@@ -4,6 +4,8 @@ title:  "Logistic curve does not apply anymore"
 date:   2020-04-01 08:24:20 +0200
 categories: model, logistic, curve, exponential, function
 mathjax: true
+ref: Logistic
+lang: en
 ---
 
 The logistics function does not apply anymore, because:

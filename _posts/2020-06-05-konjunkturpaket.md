@@ -3,6 +3,8 @@ layout: post
 title: Konjunkturpaket
 date: 2020-06-05 12:26:30 +0200
 categories: meinung, Covid-19, politik
+ref: konjunkturpaket
+lang: de
 ---
 
 Ich will die Groko zum Konjunkturpaket beglückwünschen, endlich haben sie mit

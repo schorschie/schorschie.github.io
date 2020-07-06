@@ -1,6 +1,6 @@
 ---
 layout: default
-title: CV
+title: Lebenslauf
 lang: de
 ref: index
 ---

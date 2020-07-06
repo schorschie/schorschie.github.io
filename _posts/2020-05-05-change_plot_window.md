@@ -3,6 +3,8 @@ layout: post
 title:  "Change the Width of the Plot Window"
 date:   2020-05-05 10:00:20 +0200
 categories: plot, covid
+ref: change_window
+lang: en
 ---
 
 <!-- markdownlint-disable no-inline-html -->

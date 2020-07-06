@@ -1,21 +1,22 @@
 ---
 layout: page
-title: Imprint
+title: Impressum
 ref: impressum
-lang: en
+lang: de
 ---
 
-*Responsible for the content of this page:*
+*Verantwortlich für den Inhalt dieser Seite:*
 
 > Grzegorz Lippe  
 > Eugen-Hafner-Str. 10  
 > 73431 Aalen  
 
-E-Mail: [{{ site.email }}](mailto:{{ site.email}}?subject=schorschie.github.io)
+E-Mail: [{{ site.email }}](mailto:{{ site.email }}?subject=schorschie.github.io)
 
-#### Resources
+#### Ressourcen
 
-This site is hosted by [github](https://pages.github.com). For the computation of the output I use:
+Diese Seite wird von [github](https://pages.github.com) gehostet. Für diverse
+Zwecke nutze ich:
 
 * [python](https://www.python.org)
 * [jekyll](https://jekyllrb.com)
