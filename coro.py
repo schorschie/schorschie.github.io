@@ -63,7 +63,7 @@ def get_plot(plots):
 
         plt.yscale('log')
         ax.grid(True)
-        ax.legend(loc='best')
+        ax.legend(loc='upper left')
         plt.title('Covid-19 Cases in ' + a_plot['region'],
                 fontsize=14)
         plt.xticks(rotation=30)
@@ -100,6 +100,8 @@ images:""" % (datetime.now().strftime('%Y-%m-%d %H:%M:%S +0200'))
         string = string + "\n  - path: /" + pic['safe_path'] + "\n    title: " + pic['region']
 
     string = string + """
+ref: Covid-19_update
+lang: en
 ---
 
 ## Prediction for {{ page.date | date: "%%s" | plus: 86400 | date_to_string: "ordinal" }}
@@ -147,7 +149,7 @@ rely on the pro's:
 
 # to_pandas.write_csv() # downloade csv from rki
 
-date = datetime(2020, 7, 3)
+date = datetime(2020, 7, 6)
 post_path = datetime.now().strftime('_posts/%Y-%m-%d-corona_update.md')
 
 plots = [{'code' : 'germany',

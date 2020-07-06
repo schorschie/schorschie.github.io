@@ -7,5 +7,8 @@ ref: wikipedia_RKI
 lang: en
 ---
 
-*Note:* On 10<sup>th</sup> of March 2020 Wikipedia changed it's data source from the reports to the digital
-data of the RKI. I presume therefore the time of day for the readout also changed.
+<!-- markdownlint-disable no-inline-html -->
+*Note:* On 10<sup>th</sup> of March 2020 Wikipedia changed it's data source from
+the reports to the digital data of the RKI. I presume therefore the time of day
+for the readout also changed.
+<!-- markdownlint-enable no-inline-html -->
