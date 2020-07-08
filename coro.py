@@ -104,7 +104,7 @@ ref: Covid-19_update
 lang: en
 ---
 
-## Prediction for {{ page.date | date: "%%s" | plus: 86400 | date_to_string: "ordinal" }}
+## Status of {{ page.date | date: "%%s" | date_to_string: "ordinal" }}
 
 {%% include image-gallery3.html %%}
 
@@ -149,7 +149,7 @@ rely on the pro's:
 
 # to_pandas.write_csv() # downloade csv from rki
 
-date = datetime(2020, 7, 6)
+date = datetime(2020, 7, 8)
 post_path = datetime.now().strftime('_posts/%Y-%m-%d-corona_update.md')
 
 plots = [{'code' : 'germany',
