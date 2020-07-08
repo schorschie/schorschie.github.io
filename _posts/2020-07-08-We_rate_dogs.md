@@ -1,19 +1,10 @@
 ---
 layout: post
 title: We rate dogs Udacity project
-date:   2020-06-19 12:35:04 +0200
-categories: home, education, udacity
+date:   2020-07-08 18:35:04 +0200
+categories: twitter, education, udacity
 ref: udacity-dogs
 lang: en
-images:
-  - path: /assets/images/dogs/DGGmoV4XsAAUL6n.jpg
-    title: OMG!
-  - path: /assets/images/dogs/DGBdLU1WsAANxJ9.jpg
-    title: In the bush :D
-  - path: /assets/images/dogs/DF_q7IAWsAEuuN8.jpg
-    title: Full of food
-  - path: /assets/images/dogs/DF6hr6BUMAAzZgT.jpg
-    title: And again so cute!
 ---
 
 As part of a [Udacity](https://www.udacity.com) Data Analyst Nanodegree I analyzed a Twitter account:
