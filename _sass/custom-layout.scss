@@ -21,6 +21,31 @@
     }
 }
 
+.image-gallery li a {
+    text-align: center;
+    text-decoration: none!important;
+    color: #777;
+}
+
+.image-gallery li a span {
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 3px 0;
+}
+
+.image-gallery li a img {
+    width: 100%;
+    display: block;
+}
+
+// Image Gallery 3
+.image-gallery3{
+    overflow: auto;
+    margin-left: -1%!important;
+}
+
 .image-gallery3 li {
     float: left;
     display: block;
@@ -31,23 +56,58 @@
     }
 }
 
-
-.image-gallery li a {
+.image-gallery3 li a {
     text-align: center;
     text-decoration: none!important;
     color: #777;
 }
-.image-gallery li a span {
+.image-gallery3 li a span {
     display: block;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
     padding: 3px 0;
 }
-.image-gallery li a img {
+.image-gallery3 li a img {
     width: 100%;
     display: block;
 }
+
+// Image Gallery 4
+.image-gallery4{
+    overflow: auto;
+    margin-left: -1%!important;
+}
+
+.image-gallery4 li {
+    float: left;
+    display: block;
+    margin: 0 0 1% 1%;
+    width: 24%;
+    @include media-query($on-palm) {
+        width: 49%;
+    }
+}
+
+.image-gallery4 li a {
+    text-align: center;
+    text-decoration: none!important;
+    color: #777;
+}
+
+.image-gallery4 li a span {
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 3px 0;
+}
+
+.image-gallery4 li a img {
+    width: 100%;
+    display: block;
+}
+
 
 // Posts
 
@@ -60,4 +120,17 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.half-centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+// two images
+.half-image {
+    float: left;
+    width: 49%;
 }

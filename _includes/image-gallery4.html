@@ -1,0 +1,14 @@
+{% unless page.images == empty or page.images == nil %}
+<ul class="image-gallery4">
+{% endunless %}
+{% for image in page.images %}
+<li>
+  <a href="{{ image.path | relative_url }}">
+    <img src="{{ image.path | replace: '.', '_thumb.' | relative_url }}" alt="{{ image.title }}" title="{{ image.title }}" />
+    <span>{{ image.title }}</span>
+  </a>
+</li>
+{% endfor %}
+{% unless page.images == empty or page.images == nil %}
+</ul>
+{% endunless %}
