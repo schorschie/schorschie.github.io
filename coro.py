@@ -149,7 +149,7 @@ rely on the pro's:
 
 # to_pandas.write_csv() # downloade csv from rki
 
-date = datetime(2020, 7, 8)
+date = datetime(2020, 7, 28)
 post_path = datetime.now().strftime('_posts/%Y-%m-%d-corona_update.md')
 
 plots = [{'code' : 'germany',

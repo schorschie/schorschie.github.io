@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Covid-19 Update
-date:   2020-07-08 18:40:43 +0200
+date:   2020-07-28 13:03:10 +0200
 mathjax: true
 categories: Corona, Covid-19, update
 images:
-  - path: /assets/images/200708_germany.png
+  - path: /assets/images/200728_germany.png
     title: Deutschland
-  - path: /assets/images/200708_bw.png
+  - path: /assets/images/200728_bw.png
     title: Baden-Württemberg
-  - path: /assets/images/200708_oak.png
+  - path: /assets/images/200728_oak.png
     title: Ostalbkreis
 ref: Covid-19_update
 lang: en
