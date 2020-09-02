@@ -21,11 +21,11 @@ AXVLINES.append({'date': datetime(2020, 3, 21),
                  'style': {'color': 'orange',
                            'label': 'Shops in Germany closed'}})
 AXVLINES.append({'date': datetime(2020, 4, 12),
-                 'plot': True,
+                 'plot': False,
                  'style': {'color': 'yellow',
                            'label': 'Eastern'}})
 AXVLINES.append({'date': datetime(2020, 4, 20),
-                 'plot': True,
+                 'plot': False,
                  'style': {'color': 'blue',
                            'label': 'Shops (≤800m²) in Germany opened'}})
 AXVLINES.append({'date': datetime(2020, 5, 4),
@@ -36,6 +36,14 @@ AXVLINES.append({'date': datetime(2020, 5, 18),
                  'plot': True,
                  'style': {'color': 'seagreen',
                            'label': 'Most Restaurants in Germany opened'}})
+AXVLINES.append({'date': datetime(2020, 6, 29),
+                 'plot': True,
+                 'style': {'color': 'goldenrod',
+                           'label': 'Summer holidays begin in NRW'}})
+AXVLINES.append({'date': datetime(2020, 9, 8),
+                 'plot': True,
+                 'style': {'color': 'darkgoldenrod',
+                           'label': 'Summer holidays end in BY'}})
 
 def _get_data(region):
     assert isinstance(region, str)
@@ -69,7 +77,7 @@ def get_plot(plots):
         plt.xticks(rotation=30)
         plt.yticks(10**np.array(range(9)))
         plt.ylim((1, 100e6))
-        plt.xlim((plt.xlim()[0]+6, plt.xlim()[0]+160))
+        plt.xlim((plt.xlim()[0]+6, plt.xlim()[0]+240))
         plt.ylabel('Infected [-]')
         plt.savefig(a_plot['safe_path'], bbox_inches = 'tight')
 
@@ -106,37 +114,22 @@ lang: en
 
 ## Status of {{ page.date | date: "%%s" | date_to_string: "ordinal" }}
 
-{%% include image-gallery3.html %%}
-
-{: .right}
-[(csv)](/covid-19_germany.csv)
-
-> *Remember:* All models are wrong. [George Box](https://en.wikipedia.org/wiki/All_models_are_wrong)
-
-## Background
-
-I'm trying to predict the amount of infected people in Germany for the next day. I had
-difficulties with the crazy increasing numbers in Italy and later in Germany. I know it is
-in the nature of many people like me, having problems imagining exponential growth. (I
-believe older generations, who used a slide ruler instead of a calculated may be in benefit
-here.)
-
-So for me it was a relief to see, that the numbers aren't behaving crazy, but just as
-expected.
-
-## Disclaimer
-
-The data is from the daily [RKI
-Report](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html). I
-fit a exponential function \\\\(e^{k(x-x_0)}\\\\) for the last week of the time span.
-
-So, the following plot is just a curve fit with two parameters, for more scientific data
+So in the following plots is just show data of Germany, Baden-Württemberg and
+the Ostalbkreis, which are regions I'm interested in. For more scientific data
 rely on the pro's:
 
 * [Robert Koch Institut](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/nCoV.html)
 * [Johns Hopkins University](https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6)
 * [Worldometer.info](https://www.worldometers.info/coronavirus/country/germany/)
 * or, if you want to create your own simulation: [CovidSim](http://covidsim.eu).
+
+{%% include image-gallery3.html %%}
+
+{: .right}
+[(csv)](https://opendata.arcgis.com/datasets/dd4580c810204019a7b8eb3e0b329dd6_0.csv)
+
+The data is from the daily [RKI
+Report](https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Fallzahlen.html).
 
 {%% include image-lightbox.html %%}
 """ % (picpath)
@@ -149,7 +142,7 @@ rely on the pro's:
 
 # to_pandas.write_csv() # downloade csv from rki
 
-date = datetime(2020, 7, 28)
+date = datetime(2020, 9, 2)
 post_path = datetime.now().strftime('_posts/%Y-%m-%d-corona_update.md')
 
 plots = [{'code' : 'germany',
