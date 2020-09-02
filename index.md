@@ -24,6 +24,14 @@ ref: index
 > Bosch Corporate Research  
 > Renningen & Schwäbisch Gmünd  
 
+Ingenieur in einem bereichsübergreifendem Entwicklungsprojekt im Bosch Zentrum für
+Forschung und Vorausentwicklung in Renningen.
+
+* In dem Projekt werden Prozesse und Methoden zur simulationsbasierten
+  Freigabe und statistisch belegten Modellvalidierung entwickelt.
+* Das Projekt ist geschäftsbereichsübergreifend in einem agilen Setting
+  organisiert.
+
 ### Calculation Engineer *(2012 -- 2017)*
 
 > Computer Aided Engineering  

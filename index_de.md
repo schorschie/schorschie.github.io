@@ -19,11 +19,17 @@ ref: index
 
 ## Berufstätigkeit
 
-### Systemingenieur *(seit 2017)*
+### Systemingenieur *(seit 2020)*
 
 > Systems-Engineering  
-> Bosch Corporate Research  
-> Renningen & Schwäbisch Gmünd  
+> Bosch Automotive Steering  
+> Schwäbisch Gmünd  
+
+### Entwicklungsingenieur *(2017 -- 2020)*
+
+> Corporate Research  
+> Robert Bosch GmbH  
+> Renningen  
 
 Ingenieur in einem bereichsübergreifendem Entwicklungsprojekt im Bosch Zentrum für
 Forschung und Vorausentwicklung in Renningen.
@@ -73,12 +79,12 @@ in das Udacity Data Analyst Nano-Degree Programm.
 > und ein Portfolio von Projekten erstellt.
 > [[Udacity](https://www.udacity.com/course/data-analyst-nanodegree--nd002)]
 
-Ich habe den Kurs im Juni 2020 [abgeschlossen]
-(https://graduation.udacity.com/confirm/GMHQJMC3). Meine bereits vorhandenen
-Kenntnisse in Jupyter, matplotlib und der statmodels toolbox konnte ich ausbauen
-und auf die gelehrten Hypothesen-Testmethoden anwenden. Die Udacity-Projekte
-kann man auf meinem [Github repository](https://github.com/schorschie/udacity)
-einsehen.
+Ich habe den Kurs im Juni 2020
+[abgeschlossen](https://graduation.udacity.com/confirm/GMHQJMC3).
+Meine bereits vorhandenen Kenntnisse in Jupyter, matplotlib und der
+statmodels toolbox konnte ich ausbauen und auf die gelehrten
+Hypothesen-Testmethoden anwenden. Die Udacity-Projekte kann man auf meinem
+[Github repository](https://github.com/schorschie/udacity) einsehen.
 
 ### Studium der Fahrzeug- und Motorentechnik *(2003 -- 2009)*
 
