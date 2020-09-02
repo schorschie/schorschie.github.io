@@ -50,7 +50,6 @@
 }
 
 // Posts
-
 .right {
     text-align: right;
 }
@@ -60,4 +59,15 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+// Time Stamp in CV
+.left_time_stamp {
+    position: relative;
+    left: -150px;
+    bottom: -42px;
+    @include media-query($on-palm) {
+        text-align: right;
+        left: 0px;
+    }
 }
