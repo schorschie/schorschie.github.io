@@ -29,8 +29,9 @@ ref: index
 > Bosch Automotive Steering  
 > Schwäbisch Gmünd  
 
-Im Bereich Systems Engineering implementiere ich ein Vorgehen für
-simulationsbasierte Freigaben für Automotive Steering.
+* Im Bereich Systems Engineering implementiere ich ein Vorgehen für
+  simulationsbasierte Freigaben für Automotive Steering.
+* Ich unterstütze mein Team als Scrum Master.
 
 *(2017 -- 2020)*
 {: .left_time_stamp}
@@ -154,6 +155,8 @@ Einkauf, zuverlässig und pünktlich.
 > Nürnberg  
 
 **Schriftliche Prüfung:** Mathematik und Erdkunde (LK), sowie Chemie (GK).
+
+**Mündlich:** Deutsch (GK).
 
 Während der Schulzeit engagierte ich mich als Fotograph für die Schülerzeitung
 sowie im Schulchor.

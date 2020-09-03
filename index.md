@@ -27,8 +27,9 @@ ref: index
 > Bosch Automotive Steering  
 > Schwäbisch Gmünd  
 
-Implementation of a process for simulation based release within Automotive
-Steering.
+* Implementation of a process for simulation based release within Automotive
+  Steering.
+* I serve my team as scrum master.
 
 *(2017 -- 2020)*
 {: .left_time_stamp}
@@ -39,13 +40,16 @@ Steering.
 > Robert Bosch GmbH  
 > Renningen  
 
-Ingenieur in einem bereichsübergreifendem Entwicklungsprojekt im Bosch Zentrum für
-Forschung und Vorausentwicklung in Renningen.
+Engineer in a trans-divisional development project at the Bosch Corporate Sector
+Research and Advance Engineering Center in Renningen.
 
-* In dem Projekt werden Prozesse und Methoden zur simulationsbasierten
-  Freigabe und statistisch belegten Modellvalidierung entwickelt.
-* Das Projekt ist geschäftsbereichsübergreifend in einem agilen Setting
-  organisiert.
+* Starting with
+  [NASA 7009](https://standards.nasa.gov/standard/oce/nasa-std-7009) and
+  [ProStep Smart SE](https://www.prostep.org/projekte/smart-systems-engineering/)
+  processes and methods for simulation based release and statistic model
+  validation were developed.
+* Within this agile, trans divisional project I supported with my skills as
+  Scrum Master for my development team.
 
 *(2012 -- 2017)*
 {: .left_time_stamp}
