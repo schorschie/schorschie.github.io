@@ -9,16 +9,16 @@ ref: index
 
 &nbsp;
 
-> Hi, I’m Gregory, a highly skilled mechanical engineer. I love developing and
-> implementing new methods for computational simulations of mechanic and control
-> problems. I recently implemented a enterprise wide new verification and
-> validation approach and now want to see virtualized development come to life.
+> Hi, I’m Gregory, a highly skilled mechanical and software engineer. I love
+> developing and implementing new methods for computational simulations of
+> mechanic and control problems. My recent project is an enterprise wide new
+> verification and validation approach which I see come to life.
 
 &nbsp;
 
 ## Professional Experience
 
-*(since 2017)*
+*(since 2020)*
 {: .left_time_stamp}
 
 ### Systems Engineer
@@ -78,9 +78,11 @@ Forschung und Vorausentwicklung in Renningen.
 * For the formula student racing team of the University of Stuttgart I performed
   drive dynamic calculation.
 
+&nbsp;
+
 ## Education
 
-*(pandemic 2020)*
+*(Pandemic 2020)*
 {: .left_time_stamp}
 
 ### Data Analyst Nanodegree
@@ -125,8 +127,7 @@ the application of a so called countershaft brake to reduce shift speed an jerk.
 
 ### Civil Service
 
-> Association for the promotion of paralyzed  
-> children and other disabled people e.V.  
+> Association for humans with disabilities e.V.  
 > Nuremberg  
 
 During my [civil service](https://en.wikipedia.org/wiki/Zivildienst) I learned

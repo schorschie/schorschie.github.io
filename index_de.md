@@ -10,10 +10,11 @@ ref: index
 &nbsp;
 
 > Hallo, mein Name ist Grzegorz und ich bin ein hoch qualifizierter
-> Maschinenbau-Ingenieur. Ich entwickle und implementiere neue Methoden für die
-> Simulation mechanischer und regelungstechnischer Baugruppen. Mein aktuelles
-> Projekt ist ein neuer Ansatz für die Verifikation und Validierung von
-> Simulationsmodellen, welches ich zur Zeit in meinem Unternehmen adaptiere.
+> Maschinenbau- und Software-Ingenieur. Ich entwickle und implementiere neue
+> Methoden für die Simulation mechanischer und regelungstechnischer Baugruppen.
+> Mein aktuelles Projekt ist ein neuer Ansatz für die Verifikation und
+> Validierung von Simulationsmodellen, welches ich zur Zeit in meinem
+> Unternehmen adaptiere.
 
 &nbsp;
 
@@ -46,10 +47,10 @@ Forschung und Vorausentwicklung in Renningen.
 * Ausgehend von
   [NASA 7009](https://standards.nasa.gov/standard/oce/nasa-std-7009) und
   [ProStep Smart SE](https://www.prostep.org/projekte/smart-systems-engineering/)
-  wurden in dem Projekt werden Prozesse und Methoden zur simulationsbasierten
+  wurden in dem Projekt Prozesse und Methoden zur simulationsbasierten
   Freigabe und statistisch belegten Modellvalidierung entwickelt.
 * Zusätzlich zur Entwicklungarbeit habe ich in diesem agilen, geschäftsübergreifenden
-  Setting meinen Beitrag als Scrum Master geleistet.
+  Setting meinen Beitrag als Scrum Master für mein Entwicklungsteam geleistet.
 
 *(2012 -- 2017)*
 {: .left_time_stamp}
@@ -59,6 +60,7 @@ Forschung und Vorausentwicklung in Renningen.
 > Computer Aided Engineering  
 > Bosch Automotive Steering  
 > Schwäbisch Gmünd  
+> (damals: ZF Lenksysteme GmbH)  
 
 * Auslegung und Lebensdauerberechnung von Verzahnungen, Zahnstangen und
   Kugelgewindetrieben.
@@ -80,6 +82,8 @@ Forschung und Vorausentwicklung in Renningen.
   SimulationX und Simpack.
 * Für das Rennteam der Uni-Stuttgart habe ich Fahrdynamik-Berechnungen für die
   Formula-Student mit Simpack durchgeführt.
+
+&nbsp;
 
 ## Bildungsweg
 
@@ -103,7 +107,7 @@ in das Udacity Data Analyst Nano-Degree Programm.
 Ich habe den Kurs im Juni 2020
 [abgeschlossen](https://graduation.udacity.com/confirm/GMHQJMC3).
 Meine bereits vorhandenen Kenntnisse in Jupyter, matplotlib und der
-statmodels toolbox konnte ich ausbauen und auf die gelehrten
+statmodels toolbox konnte ich ausbauen und auf die gelernten
 Hypothesen-Testmethoden anwenden. Die Udacity-Projekte kann man auf meinem
 [Github repository](https://github.com/schorschie/udacity) einsehen.
 
@@ -132,8 +136,9 @@ Matlab, mit dem Ziel, die Anzahl der Schaltabbrüche zu minimieren.
 ### Zivildienst
 
 > Verein zur Förderung spastisch gelähmter  
-> Kinder und anderer Behinderter e.V.  
+> Kinder und anderer Körperbehinderter e.V.  
 > Nürnberg  
+> (heute: Verein für Menschen mit Körperbehinderung Nürnberg e.V.)  
 
 Während dem Zivildienst habe ich gelernt Verantwortung für meine Gemeinschaft,
 andere Menschen und mich selbst zu übernehmen. I half behinderten Kindern oder
