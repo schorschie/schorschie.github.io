@@ -110,7 +110,6 @@
 
 
 // Posts
-
 .right {
     text-align: right;
 }
@@ -133,4 +132,15 @@
 .half-image {
     float: left;
     width: 49%;
+}
+
+// Time Stamp in CV
+.left_time_stamp {
+    position: relative;
+    left: -150px;
+    bottom: -42px;
+    @include media-query($on-palm) {
+        text-align: right;
+        left: 0px;
+    }
 }

@@ -9,36 +9,87 @@ ref: index
 
 &nbsp;
 
-> Hi, I’m Gregory, a highly skilled mechanical engineer. I love developing and
-> implementing new methods for computational simulations of mechanic and control
-> problems. I recently implemented a enterprise wide new verification and
-> validation approach and now want to see virtualized development come to life.
+> Hi, I’m Gregory, a highly skilled mechanical and software engineer. I love
+> developing and implementing new methods for computational simulations of
+> mechanic and control problems. My recent project is an enterprise wide new
+> verification and validation approach which I see come to life.
 
 &nbsp;
 
 ## Professional Experience
 
-### Systems Engineer *(since 2017)*
+*(since 2020)*
+{: .left_time_stamp}
+
+### Systems Engineer
 
 > Systems-Engineering  
-> Bosch Corporate Research  
-> Renningen & Schwäbisch Gmünd  
+> Bosch Automotive Steering  
+> Schwäbisch Gmünd  
 
-### Calculation Engineer *(2012 -- 2017)*
+* Implementation of a process for simulation based release within Automotive
+  Steering.
+* I serve my team as scrum master.
+
+*(2017 -- 2020)*
+{: .left_time_stamp}
+
+### Development Engineer
+
+> Corporate Research  
+> Robert Bosch GmbH  
+> Renningen  
+
+Engineer in a trans-divisional development project at the Bosch Corporate Sector
+Research and Advance Engineering Center in Renningen.
+
+* Starting with
+  [NASA 7009](https://standards.nasa.gov/standard/oce/nasa-std-7009) and
+  [ProStep Smart SE](https://www.prostep.org/projekte/smart-systems-engineering/)
+  processes and methods for simulation based release and statistic model
+  validation were developed.
+* Within this agile, trans divisional project I supported with my skills as
+  Scrum Master for my development team.
+
+*(2012 -- 2017)*
+{: .left_time_stamp}
+
+### Calculation Engineer
 
 > Computer Aided Engineering  
 > Bosch Automotive Steering  
 > Schwäbisch Gmünd  
 
-### Project Engineer *(2010 -- 2012)*
+* Design and reliability calculations for pinion and rack toothing and ball nut
+  gears.
+* NVH calculation of steering columns with mechanic and electric steering gear
+  adjustments.
+* In the first quarter of 2015 I lead a task force, to deal with steering column
+  NVH issues which showed up during the industrialization of the product.
+
+*(2010 -- 2012)*
+{: .left_time_stamp}
+
+### Project Engineer
 
 > MesH Engineering Team  
 > Work Performance at Daimler AG  
 > Stuttgart  
 
+* As a sub contractor I calculated drive train noise and vibrations issues with
+  SimulationX and Simpack, which are an object oriented modelling package and a
+  multi-body simulation environment.
+* For the formula student racing team of the University of Stuttgart I performed
+  drive dynamic calculation.
+
+&nbsp;
+
 ## Education
 
-### Data Analyst Nanodegree *(pandemic 2020)*
+*(Pandemic 2020)*
+{: .left_time_stamp}
+
+### Data Analyst Nanodegree
 
 > This program prepares you for a career as a data analyst by helping you learn to organize
 > data, uncover patterns and insights, draw meaningful conclusions, and clearly communicate
@@ -57,7 +108,10 @@ capabilities of python.
 The project I made during the Udacity Nanodegree are hosted [github
 repository](https://github.com/schorschie/udacity)
 
-### Mechanical Engineering *(2003 -- 2009)*
+*(2003 -- 2009)*
+{: .left_time_stamp}
+
+### Mechanical Engineering
 
 > Dipl.-Ing. Automotive and Engine Engineering  
 > University of Stuttgart  
@@ -72,10 +126,12 @@ I modeled and simulated a 16-gears transmission for heavy duty vehicles within
 Matlab and SimulationX. The goal of the model was to increase the quality of
 the application of a so called countershaft brake to reduce shift speed an jerk.
 
-### Civil Service *(2002 -- 2003)*
+*(2002 -- 2003)*
+{: .left_time_stamp}
 
-> Association for the promotion of paralyzed  
-> children and other disabled people e.V.  
+### Civil Service
+
+> Association for humans with disabilities e.V.  
 > Nuremberg  
 
 During my [civil service](https://en.wikipedia.org/wiki/Zivildienst) I learned
@@ -83,7 +139,10 @@ to take responsibility for me, people and my community. I helped disabled
 children and frail elders by commuting them to school, for shopping or to a
 doctors appointment safely, reliably and on time.
 
-### School *(until 2002)*
+*(until 2002)*
+{: .left_time_stamp}
+
+### School
 
 > Wilhelm Löhe School  
 > Nuremberg  
