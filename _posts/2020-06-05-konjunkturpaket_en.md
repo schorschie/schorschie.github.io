@@ -7,17 +7,18 @@ ref: konjunkturpaket
 lang: en
 ---
 
-Ich will die Groko zum Konjunkturpaket beglückwünschen, endlich haben sie mit
-der alten Regel gebrochen das Geld bei Eliten/großen wirkungsvollen
-Markteilnehmern zu konzentrieren.
+I like the German COVID-19 policy of the Groko ([Große
+Koalition](https://de.wikipedia.org/wiki/Gro%C3%9Fe_Koalition#GroKo)), because
+it does not only concentrate money at some big industries, but also has the
+common people in mind.
 
-Wir leben in einer sozialen Marktwirtschaft und vom Wettbewerb. Wenn wir alte
-Technologien protegieren, werden andere (zum Beispiel Apple, Tesla, Amazon) die
-Geschäftsmodelle der Zukunft entwickeln und wir werden auf lange Sicht zu
-Konsumenten.
+We live in a social market economy. On the one side social: we don't let
+people starve, on the other side market: old business models die out and are
+replaced by new ones. If we patronize old industrie, other societies will
+develop the business models of the feature (like Apple, Tesla or Amazon). In the
+long term it will turn Germany to consumers.
 
-Gerne mehr davon! Pumpt das Geld in Schulen (15 Kinder pro Klasse, geiles
-Gebäude, geile Lehrer), Infrastruktur (Glasfaser in jedes Dorf, getrennte
-Fahrrad und Auto-Straßen) und last but not least nachhaltige Energie!!! Wie geil
-wäre es wenn wir uns in Deutschland autark und nachhaltig mit Energie, der Kohle
-der Zukunft versorgen könnten???
+Give me more of it! Pump money into schools (15 kids per class, good buildings,
+good teachers), infrastructure (glass fiber in every village, separate cycle and
+car lanes) and last but not lease sustainable energy!!! How awesome would it be,
+if Germany could sustain itself with sustainable energy, the coal of the future?
