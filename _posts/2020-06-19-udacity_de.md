@@ -24,15 +24,15 @@ gebraucht.
 [![Udacity Data Analyst Nanodegree Certificate](/assets/images/udacity_data_analyst.png){:
 .centered }](https://confirm.udacity.com/GMHQJMC3)
 
-Über Udacity und deren Konzept selber will ich gar nicht ins Detail gehen. Zum
+Über den Inhalt des Kurses will ich gar nicht ins Detail gehen. Zum
 einen ist der Lehrplan für den Daten Analyst Nano Degree online einsehbar und
-zum anderen bietet Udacity einige gratis Kurse an. man kann sich also leicht ein
-Bild über das Didaktische Konzept von Udacity machen. Zusammengefasst:
+zum anderen bietet Udacity einige gratis Kurse an. Man kann sich also leicht ein
+Bild über das didaktische Konzept von Udacity machen. Zusammengefasst:
 
 - Videos mit Theorie
 - Links zu Begleitmaterialien
-- Online Multiple Choice Tests
-- Jupyter Notebooks
+- Online Ankreuztests
+- Online Jupyter Notebooks
 - Am Ender jeder Lektion eine Hausaufgabe (Projekt), die von jemandem korrigiert
   wird. Es waren insgesamt 6 Lektionen in diesem Kurs.
 
@@ -49,6 +49,6 @@ gründlich von einem Udacity Mitarbeiter geprüft und mit wertvollem Feedback
 zurückgeschickt.
 
 Ich bin sehr zufrieden mit dem Kurs. Einziger Wermutstropfen: manchmal ging es
-mir persönlich zu sehr ins detail und man kann die Lektionen nicht wirklich
-vorspulen ohne ggf. dann etwas Unbekanntes doch zu verpassen. Vielleicht wäre
-hier ein Inhaltsverzeichnis hilfreich.
+mir persönlich zu sehr ins Detail und man kann die Lektionen nicht wirklich
+vorspulen ohne dann gegebenenfalls etwas Unbekanntes zu überspringen. Vielleicht
+wäre hier ein Inhaltsverzeichnis hilfreich.
