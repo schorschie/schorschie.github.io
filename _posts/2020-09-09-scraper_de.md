@@ -60,3 +60,10 @@ bw.to_csv('covid-19_bw.csv')
 oak = rki.query("Landkreis == 'LK Ostalbkreis'")[['AnzahlFall', 'AnzahlTodesfall', 'Meldedatum']].groupby('Meldedatum').sum().cumsum()
 oak.to_csv('covid-19_oak.csv')
 ```
+
+Andere Quellen für COVID19 Datensätze und Analysen:
+
+* [Johns Hopkins University](https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6)
+* [Worldometer.info](https://www.worldometers.info/coronavirus/country/germany/)
+* [Süddeutsche Zeitung](https://www.sueddeutsche.de/wissen/corona-zahlen-1.4844448)
+* or, if you want to create your own simulation: [CovidSim](http://covidsim.eu)
