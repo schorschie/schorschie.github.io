@@ -8,8 +8,8 @@ lang: de
 ---
 
 Ich will die Groko zum Konjunkturpaket beglückwünschen, endlich haben sie mit
-der alten Regel gebrochen das Geld bei Eliten/großen wirkungsvollen
-Markteilnehmern zu konzentrieren.
+der alten Regel gebrochen das Geld bei großen wirkungsvollen
+Markteilnehmern (Eliten) zu konzentrieren.
 
 Wir leben in einer sozialen Marktwirtschaft und vom Wettbewerb. Wenn wir alte
 Technologien protegieren, werden andere (zum Beispiel Apple, Tesla, Amazon) die

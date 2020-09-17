@@ -23,4 +23,7 @@ This site is hosted by [github](https://pages.github.com). For the computation o
 * [numpy](https://numpy.org)
 * [matplotlib](https://matplotlib.org)
 * [statmodels](https://www.statsmodels.org/stable/index.html)
-* Image viewer overlay is [Lightbox](https://jekyllcodex.org/without-plugin/lightbox/#) from [Joost van der Schee](https://github.com/jhvanderschee)
+* Image viewer overlay is
+  [Lightbox](https://jekyllcodex.org/without-plugin/lightbox/#) from
+  [Joost van der Schee](https://github.com/jhvanderschee)
+* [making-jekyll-multilingual](https://www.sylvaindurand.org/making-jekyll-multilingual/)
