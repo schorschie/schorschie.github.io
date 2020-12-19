@@ -12,12 +12,12 @@ Diese Woche habe ich einen weiteren "Nano-Degree" bei Udacity gestartet,
 "Machine Learning Engineer".
 
 Bestandteil des ersten Kurses ist die Aufforderung doch ein eigenes Python
-Package auf [PyPi](https://www.pypi.org) hochzuladen, als Bestandteil des
+Package auf [PyPi](https://www.pypi.org) hochzuladen, als Fundament für ein
 eigenen Portfolios.
 
-Nun, hier ist es: [RKI Scraper]({% post_url 2020-09-09-scraper_de %}) Ich habe
-den RKI Scraper aus meinem letzten post () ein bisschen aufgehübscht und ihn auf
-PyPi hochgeladen. Er lädt die aktuelle Version der RKI Daten aus dem Netz
+Nun, hier ist es: () Ich habe den RKI Scraper aus meinem letzten post [RKI
+Scraper]({% post_url 2020-09-09-scraper_de %}) ein bisschen aufgehübscht und ihn
+auf PyPi hochgeladen. Er lädt die aktuelle Version der RKI Daten aus dem Netz
 herunter und parst diese in ein Pandas DataFrame.
 
 Nun kann man sich die RKI Daten folgendermaßen bereitstellen:
@@ -32,3 +32,5 @@ Nun kann man sich die RKI Daten folgendermaßen bereitstellen:
 >>> r = RKI()  # dauert, über 100 MB !
 >>> r.df.head()
 ```
+
+Falls jemand Hilfe brauch, oder ein Fehler findet gerne schreiben!
