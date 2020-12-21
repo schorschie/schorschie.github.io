@@ -15,10 +15,11 @@ The Nano Degree consist out of five courses, the first course is software
 engineering and as a part of it one is encouraged to upload ones own Python
 class to [PyPi](https://www.pypi.org) to build up a own portfolio.
 
-So I took the script from [RKI Data Scraper]({% post_url 2020-09-09-scraper_de %}),
-refined it to a class and uploaded it to PyPi as [RKI Scraper](). It downloads
-the current version of the RKI csv file and parses it into a pandas dataframe.
-Thats about it, but I haven't found anything similar on the web last summer.
+So I took the script from [RKI Data Scraper]({% post_url 2020-09-09-scraper_de
+%}), refined it to a class and uploaded it to PyPi as
+[rki_scraper](https://pypi.org/project/rki-scraper/0.1.7/). It downloads the
+current version of the RKI csv file and parses it into a pandas dataframe. Thats
+about it, but I haven't found anything similar on the web last summer.
 
 To download it, do the following:
 
