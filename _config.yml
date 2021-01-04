@@ -17,10 +17,10 @@ title:
   de: grzegorzlippe.de
   en: grzegorzlippe.de
 
-email: grzegorz@posteo.de
+email: grzegorz.lippe@posteo.de
 description:
-  de: This is the personal homepage of Grzegorz Lippe. I'm a mechanical engineer, raised in Nürnberg  evolved in Stuttgart.
-  en: This is the personal homepage of Grzegorz Lippe. I'm a mechanical engineer, raised in Nürnberg  evolved in Stuttgart.
+  de: This is the personal homepage of Grzegorz Lippe. I'm a mechanical engineer, raised in Nuremberg  evolved in Stuttgart.
+  en: This is the personal homepage of Grzegorz Lippe. I'm a mechanical engineer, raised in Nuremberg  evolved in Stuttgart.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: GrzegorzLippe
