@@ -71,3 +71,22 @@
         left: 0px;
     }
 }
+
+// Level 1 Heading
+
+.post-content {
+    h1 {
+      @include relative-font-size(2.5);
+  
+      @include media-query($on-laptop) {
+        @include relative-font-size(1.75);
+      }
+    }
+  }
+
+// CV Headings
+.post-content .cv-heading {
+  margin-top: $spacing-unit * 2;
+  margin-left: -$spacing-unit;
+  font-weight: $midi-font-weight;
+}
