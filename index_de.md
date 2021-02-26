@@ -88,6 +88,31 @@ Forschung und Vorausentwicklung in Renningen.
 
 ## Bildungsweg
 
+*(2021)*
+{: .left_time_stamp}
+
+### Machine Learning Engineer Nano-Degree
+
+> Erfahren Sie fortgeschrittene Techniken und Algorithmen für maschinelles
+> Lernen und wie Sie Ihre Modelle in einer Produktionsumgebung verpacken und
+> bereitstellen. Sammeln Sie praktische Erfahrungen mit Amazon SageMaker, um
+> geschulte Modelle in einer Webanwendung bereitzustellen und die Leistung Ihrer
+> Modelle zu bewerten. Testen Sie A / B-Modelle und lernen Sie, wie Sie die
+> Modelle aktualisieren, wenn Sie mehr Daten erfassen. Dies ist eine wichtige
+> Fähigkeit in der Industrie.
+> [[Udacity](https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009t),
+> maschinell übersetzt mit [google](https://translate.google.com)]
+
+In einem Projekt bei Bosch/AS kam es zu einem Bezug zum maschinellen Lernen und
+ich konnte die Gelegenheit nutzen um mich in diesem Feld zu bilden. Daher habe
+ich zu Beginn des Jahres diese Online Schulung
+[absolviert](https://confirm.udacity.com/CGALRCZP).
+
+Mein Abschlussprojekt für den Nanodegree, ein
+[CNN](https://de.wikipedia.org/wiki/Convolutional_Neural_Network) das
+Hunderassen mit >80% genauigkeit erkennt ist auf
+[github](https://github.com/schorschie/udacity_dog_breed) veröffentlicht.
+
 *(Frühjahr 2020)*
 {: .left_time_stamp}
 
