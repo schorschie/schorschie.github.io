@@ -86,6 +86,27 @@ Research and Advance Engineering Center in Renningen.
 
 ## Education
 
+*(2021)*
+{: .left_time_stamp}
+
+### Machine Learning Engineer Nanodegree
+
+> Learn advanced machine learning techniques and algorithms and how to package
+> and deploy your models to a production environment. Gain practical experience
+> using Amazon SageMaker to deploy trained models to a web application and
+> evaluate the performance of your models. A/B test models and learn how to
+> update the models as you gather more data, an important skill in industry.
+> [[Udacity](https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009t)]
+
+I took a liking in the Udacity didactic and in scope of a Bosch/AS project I
+could advance within the field of machine learning. So I took this [nano
+degree](https://confirm.udacity.com/CGALRCZP) in the beginning of the year.
+
+The capstone project, the final test for the Nanodegree in which I created and
+trained an [CNN](https://en.wikipedia.org/wiki/Convolutional_neural_network) to
+detect dog breeds with >80% accuracy is hosted in a [github
+repository](https://github.com/schorschie/udacity_dog_breed).
+
 *(Pandemic 2020)*
 {: .left_time_stamp}
 
@@ -105,7 +126,7 @@ course is founded on two pillars, data analysis and results communication, both 
 the correct use of different hypothesis testing methods and profound usage of the plot
 capabilities of python.
 
-The project I made during the Udacity Nanodegree are hosted [github
+The projects I made during the Udacity Nanodegree are hosted [github
 repository](https://github.com/schorschie/udacity)
 
 *(2003 -- 2009)*
