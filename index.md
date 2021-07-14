@@ -107,7 +107,7 @@ trained an [CNN](https://en.wikipedia.org/wiki/Convolutional_neural_network) to
 detect dog breeds with >80% accuracy is hosted in a [github
 repository](https://github.com/schorschie/udacity_dog_breed).
 
-*(Pandemic 2020)*
+*(2020)*
 {: .left_time_stamp}
 
 ### Data Analyst Nanodegree
@@ -126,7 +126,7 @@ course is founded on two pillars, data analysis and results communication, both 
 the correct use of different hypothesis testing methods and profound usage of the plot
 capabilities of python.
 
-The projects I made during the Udacity Nanodegree are hosted [github
+The projects I made during the Udacity Nanodegree are hosted on a [github
 repository](https://github.com/schorschie/udacity)
 
 *(2003 -- 2009)*
