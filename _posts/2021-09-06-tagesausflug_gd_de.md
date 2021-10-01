@@ -12,7 +12,7 @@ Okay, vieleicht ist Tagesausflug ein bisschen übertrieben. Wenn man genüsslich
 ausschläft und zum Abendessen wieder daheim sein will, dann passt es aber.
 
 Die schönste Stauferstadt an der Rems bietet eine wunderbare Kulisse für einen
-ausgedehnten Spaziergang mit Kindern. 
+ausgedehnten Spaziergang mit Kindern.
 
 Start am Parkhaus am Bahnhof
 
