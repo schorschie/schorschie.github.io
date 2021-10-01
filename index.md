@@ -114,6 +114,65 @@ daily operations.
 
 &nbsp;
 
+## Programming Experience
+
+*(2020)*
+{: .left_time_stamp}
+
+ Utilized Python, Jupyter, and Pandas within a data sharing project with an OEM:
+
+* Developed the pipeline for customer data batches from OEM vehicles to Bosch’s
+  database.
+* Gathered data for common domain specific incidents to refine  requirements and
+  models.
+* Devised future plan to leverage an unsupervised machine learning algorithm on
+  the data.
+
+*(2018)*
+{: .left_time_stamp}
+
+Structured a simulation quality framework in Python and Jupyter during corporate
+research project:
+
+* Used Pandas, Matplotlib and Scikit-learn for the visualization of a
+  statistical validation data.
+* Applied Bitbucket and Jenkins for code peer reviews and automated build/test
+  processes.
+* Acquired additional resources through the Bosch inner source hub and still do.
+
+*(2015)*
+{: .left_time_stamp}
+
+Generated a FE model analyzer with MATLAB for quality tests of NVH models:
+
+* Analyzed script via the NASTRAN source of the model and deduced the common
+  volume elements and connectors.
+* Produced a Bill of Materials with images of the parts, listing density, mass,
+  and stiffness which led to create a visualization of the parts and the
+  connectors (springs, stiff couplings).
+
+*(2009)*
+{: .left_time_stamp}
+
+Formulated a depth-first search algorithm in Visual Basic in CATIA during a
+working student activity:
+
+* Examined the structure of a cable harness utilizing a (self made) depth-first
+  search algorithm.
+* Automatically created a technical drawing with all connectors and cable
+  lengths.
+
+*(2007)*
+{: .left_time_stamp}
+
+Combined electrodynamic and structural mechanic within an FE model in ANSYS for
+my study work:
+
+* Calculated the electromagnetic forces on the injector through the FE mesh.
+* Measured mechanical forces while moving the parts, remeshing the injector,
+  defining new initial conditions, and reiterating starting with the
+  electromagnetic forces.
+
 ## Education
 
 *(2021)*
