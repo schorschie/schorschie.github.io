@@ -119,6 +119,8 @@ daily operations.
 *(2020)*
 {: .left_time_stamp}
 
+### Jupyter
+
  Utilized Python, Jupyter, and Pandas within a data sharing project with an OEM:
 
 * Developed the pipeline for customer data batches from OEM vehicles to Bosch’s
@@ -130,6 +132,8 @@ daily operations.
 
 *(2018)*
 {: .left_time_stamp}
+
+### Pandas
 
 Structured a simulation quality framework in Python and Jupyter during corporate
 research project:
@@ -143,6 +147,8 @@ research project:
 *(2015)*
 {: .left_time_stamp}
 
+### NX NASTRAN
+
 Generated a FE model analyzer with MATLAB for quality tests of NVH models:
 
 * Analyzed script via the NASTRAN source of the model and deduced the common
@@ -154,6 +160,8 @@ Generated a FE model analyzer with MATLAB for quality tests of NVH models:
 *(2009)*
 {: .left_time_stamp}
 
+### VBA
+
 Formulated a depth-first search algorithm in Visual Basic in CATIA during a
 working student activity:
 
@@ -164,6 +172,8 @@ working student activity:
 
 *(2007)*
 {: .left_time_stamp}
+
+### ANSYS
 
 Combined electrodynamic and structural mechanic within an FE model in ANSYS for
 my study work:
