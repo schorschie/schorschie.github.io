@@ -60,4 +60,4 @@ I've linked my notebook, but here is the questionable part:
     
 Here is the output of the code above:
 
-![Perfectly fitting time series](/assets/images/kaggle-time-series-exersice-1-fit.png)
+![Perfectly fitting time series](/assets/images/kaggle-time-series-exercise-1-fit.png)
