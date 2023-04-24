@@ -99,7 +99,7 @@ Bremen.
 ### Project Engineer
 
 > MesH Engineering Team  
-> Work Performance at Daimler AG  
+> Contract Engineer at Daimler AG  
 > Stuttgart  
 
 Carried out calculation of power train oscillations of Daimler light commercial
