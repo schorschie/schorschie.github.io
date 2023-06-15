@@ -22,6 +22,12 @@ ref: index
 
 &nbsp;
 
+## Contents
+
+* [Professional Experience](#professional-experience)
+* [Programming Experience](#programming-experience)
+* [Education](#education)
+
 ## Professional Experience
 
 *(since 2020)*
@@ -30,24 +36,24 @@ ref: index
 ### Systems Engineer
 
 > Systems-Engineering  
-> Bosch Automotive Steering  
+> Bosch Automotive Steering GmbH  
 > Schwäbisch Gmünd  
 
-Planning and documenting team projects in Jira to enhance functional efficiency.
-Support continuous development of the team by conducting comprehensive
-performance reviews. Analyse customer requirements and suggest robust action
-plan to meet. Ensure provision of optimal design solution whilst identifying
-specification of system function contribution in collaboration with key
-stakeholders. Set up verification criteria for requirements. Develop the
-pipeline for customer data batches from the vehicles to Bosch’s database while
-serving as a Data Engineer.
+As the team's Scrum Master, I am responsible for planning, refining, and
+documenting the team’s projects and progress. I additionally support the
+continuous development of the team by providing the ability to use continuous
+integration methods for the team.
 
-* Established a platform for post SOP vehicle field data.
-* Developed and implemented the simulation-based release process in CR for the
-  simulation model exchange of automotive steering models with the OEMs.
-* Acted as a Team Scrum Master, responsible for planning, refining, and
-  documenting the team’s projects and progress. Organized team’s workload and
-  successfully doubled the team output.
+Most valuable contributions of my side are:
+
+* Developed the ETL process for customer time series batches from the vehicle's
+  CAN traces to Bosch’s database while serving as a Data Engineer. The data base
+  is currently 200 GB in size and growing.
+* Developed a measurement analyzing tool and most importantly embedded it in a
+  well documented continuous integration environment, so that every Bosch
+  employee can contribute following the Bosch Inner Source philosophy.
+* In my first Data Science Project I developed a neural net, which  clusters of
+  time series data.
 
 *(2017 -- 2020)*
 {: .left_time_stamp}
@@ -81,7 +87,7 @@ model.
 ### Calculation Engineer
 
 > Computer Aided Engineering  
-> Bosch Automotive Steering  
+> Bosch Automotive Steering GmbH  
 > Schwäbisch Gmünd  
 
 Oversee calculation and mechanical design of rack pinion gears. Played a pivotal
@@ -114,12 +120,12 @@ daily operations.
 
 &nbsp;
 
-## Programming Experience
+## Programming Experience[⇧](#)
 
-*(2020)*
+*(since 2019)*
 {: .left_time_stamp}
 
-### Jupyter
+### Python and Jupyter
 
  Utilized Python, Jupyter, and Pandas within a data sharing project with an OEM:
 
@@ -130,10 +136,10 @@ daily operations.
 * Devised future plan to leverage an unsupervised machine learning algorithm on
   the data.
 
-*(2018)*
+*(2018 -- 2019)*
 {: .left_time_stamp}
 
-### Pandas
+### Python and Pandas
 
 Structured a simulation quality framework in Python and Jupyter during corporate
 research project:
@@ -179,11 +185,43 @@ Combined electrodynamic and structural mechanic within an FE model in ANSYS for
 my study work:
 
 * Calculated the electromagnetic forces on the injector through the FE mesh.
-* Measured mechanical forces while moving the parts, remeshing the injector,
+* Measured mechanical forces while moving the parts, re-meshing the injector,
   defining new initial conditions, and reiterating starting with the
   electromagnetic forces.
 
-## Education
+## Education[⇧](#)
+
+*(2022 -- 2023)*
+{: .left_time_stamp}
+
+### Bosch Senior Data Scientist
+
+The Bosch internal 1.5-year course give me a deep expert knowledge on Data
+Science topics, with a large focus on hands-on knowledge and project work within
+my department, accompanied by Bosch [BCAI](https://www.bosch-ai.com/) mentors.
+
+The course is divided into two parts: Junior Expert and Senior Expert. Both
+parts consist of a classroom training phase and a project phase. The topics
+covered in the junior's classroom phase are:
+
+* Basics of Statistics
+* Statistical Learning & Gaussian Processes
+* Classical Machine Learning
+* Machine Learning Projects
+* Deep Learning
+* Advanced Deep Learning
+* Time Series Analysis
+
+And in the senior's classroom phase:
+
+* ML Deployment
+* Embedded AI
+* Validation&Verification / Explainable AI
+* Data Efficiency
+* Option 1: Sequence Models specialization
+* Option 2: Computer Vision specialization
+* Foundation models
+* Reinforcement Learning (optional)
 
 *(2021)*
 {: .left_time_stamp}
