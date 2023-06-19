@@ -18,6 +18,14 @@ ref: index
 
 &nbsp;
 
+## Inhalt
+
+* [Berufstätigkeit](#berufstätigkeit)
+* [Programmiererfahrung](#programmiererfahrung)
+* [Bildungsweg](#bildungsweg)
+
+&nbsp;
+
 ## Berufstätigkeit
 
 *(seit 2020)*
@@ -86,7 +94,79 @@ Forschung und Vorausentwicklung in Renningen.
 
 &nbsp;
 
-## Bildungsweg
+## Programmiererfahrung[⇧](#)
+
+*(since 2019)*
+{: .left_time_stamp}
+
+### Python und Jupyter
+
+Verwendung von Python, Jupyter und Pandas im Rahmen eines Datenaustauschprojekts mit einem OEM:
+
+* Ich entwickelte die Pipeline für Kundendaten-Batches von OEM-Fahrzeugen zur
+  Bosch-Datenbank.
+* Die Daten wurden nach häufigen domänenspezifischen Vorfällen durchsucht, um
+  Systemanforderungen und Simulationsmodelle zu verbessern.
+* Ich habe ein machine learning Algorithmus verwendet umd die zeitvarianten
+  Daten zu clustern.
+
+*(2018 -- 2019)*
+{: .left_time_stamp}
+
+### Python und Pandas
+
+Entwicklung eines Simulationsqualitäts-Framework in Python und Jupyter auf Basis
+der Arbeit von Oberkampf & Roy innerhalb eines Unternehmensforschungsprojekts:
+
+* Verwendet Pandas, Matplotlib und Scikit-learn zur Visualisierung statistischer
+  Validierungsdaten.
+* Einsatz von Bitbucket und Jenkins für Code-Peer-Reviews und automatisierte
+  Build-/Testprozesse.
+* Akquise neuer Ressourcen über den Bosch Inner Source Hub.
+
+*(2015)*
+{: .left_time_stamp}
+
+### NX NASTRAN
+
+Ich habe einen FEM-Checker mit MATLAB für Qualitätstests von NVH-Modellen
+entwickelt:
+
+* Das Skript hat die NASTRAN-Quelle des Modells analysiert und die gemeinsamen
+  Volumenelemente und Anschlüsse abgeleitet.
+* Es Erstellte eine Stückliste mit Bildern der Teile und listete Dichte, Masse
+  und Steifigkeit auf, was zur Erstellung einer Visualisierung der Teile und der
+  Anschlüsse (Federn, steife Kupplungen) führte.
+
+*(2009)*
+{: .left_time_stamp}
+
+### VBA
+
+Während einer Werkstudententätigkeit habe ich einen Tiefensuchalgorithmus in
+Visual Basic in CATIA implementiert. Der Algorithmus:
+
+* untersuchte die Struktur eines Kabelbaums mithilfe einer (selbst erstellten)
+  Tiefensuche.
+* Nach dem Auslesen der Struktur wurde automatisch eine technische Zeichnung mit
+  allen Anschlüssen und Kabellängen erstellt.
+
+*(2007)*
+{: .left_time_stamp}
+
+### ANSYS
+
+Während meiner Studienarbeit programmierte ich eine kombinierte Elektrodynamik
+und Strukturmechanik-Simulation innerhalb eines FE-Modells in ANSYS:
+
+* Zunächst berechnet die Simulation die elektromagnetischen Kräfte auf einen
+  Injektor durch das FE-Netz.
+* Mithilfe der berechneten Kräfte wurde analytisch die neue Position des
+  Injektors bestimmt, das Modell neu vernetzt und die Berechung wiederholt.
+
+&nbsp;
+
+## Bildungsweg[⇧](#)
 
 *(2021)*
 {: .left_time_stamp}

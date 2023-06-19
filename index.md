@@ -28,6 +28,8 @@ ref: index
 * [Programming Experience](#programming-experience)
 * [Education](#education)
 
+&nbsp;
+
 ## Professional Experience
 
 *(since 2020)*
@@ -131,24 +133,23 @@ daily operations.
 
 * Developed the pipeline for customer data batches from OEM vehicles to Bosch’s
   database.
-* Gathered data for common domain specific incidents to refine  requirements and
-  models.
-* Devised future plan to leverage an unsupervised machine learning algorithm on
-  the data.
+* Gathered data for common domain specific incidents to refine system
+  requirements and models.
+* Utilized a machine learning algorithm to cluster the time variant data.
 
 *(2018 -- 2019)*
 {: .left_time_stamp}
 
 ### Python and Pandas
 
-Structured a simulation quality framework in Python and Jupyter during corporate
-research project:
+Developed a simulation quality framework based on the suggestion of Oberkampf
+& Roy during a corporate research project:
 
 * Used Pandas, Matplotlib and Scikit-learn for the visualization of a
   statistical validation data.
 * Applied Bitbucket and Jenkins for code peer reviews and automated build/test
   processes.
-* Acquired additional resources through the Bosch inner source hub and still do.
+* Acquired new resources through the Bosch inner source hub.
 
 *(2015)*
 {: .left_time_stamp}
@@ -188,6 +189,8 @@ my study work:
 * Measured mechanical forces while moving the parts, re-meshing the injector,
   defining new initial conditions, and reiterating starting with the
   electromagnetic forces.
+
+&nbsp;
 
 ## Education[⇧](#)
 
