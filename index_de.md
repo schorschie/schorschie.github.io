@@ -9,12 +9,11 @@ ref: index
 
 &nbsp;
 
-> Hallo, mein Name ist Grzegorz und ich bin ein hoch qualifizierter
+> Hallo, mein Name ist Grzegorz und ich bin ein qualifizierter
 > Maschinenbau- und Software-Ingenieur. Ich entwickle und implementiere neue
 > Methoden für die Simulation mechanischer und regelungstechnischer Baugruppen.
-> Mein aktuelles Projekt ist ein neuer Ansatz für die Verifikation und
-> Validierung von Simulationsmodellen, welches ich zur Zeit in meinem
-> Unternehmen adaptiere.
+> Mein Aktuelles Projekt ist die Implementierung von Machine Learning auf
+> zeitvarianten Fahrzeugmessreihen.
 
 &nbsp;
 
@@ -34,12 +33,25 @@ ref: index
 ### Systemingenieur
 
 > Systems-Engineering  
-> Bosch Automotive Steering  
+> Bosch Automotive Steering GmbH  
 > Schwäbisch Gmünd  
 
-* Im Bereich Systems Engineering implementiere ich ein Vorgehen für
-  simulationsbasierte Freigaben für Automotive Steering.
-* Ich unterstütze mein Team als Scrum Master.
+Ich bin Data Scientist in Ausbildung und unterstütze das Team bei der
+Ausarbeitung der "Operational Design Definition (ODD)" im Rahmen der Requirement
+Definition. Zudem verbessere ich die Fähigkeiten in der Softwareentwicklung
+durch das bereitstellen eines Continuous Integration Prozesses.
+
+Die wertigsten Beiträge meinerseits sind:
+
+* Entwicklung eines ETL Prozesses für zeitvariante Kundendaten, die aus
+  Fahrzeugmessungen im Feld stammen. Diese Daten werden in einer Bosch Datenbank
+  gespeichert und erreichen mittlerweile 200+ GB.
+* Entwicklung eines Auswerte-Tools mit einer GUI, aber in der Art, dass es gut
+  dokumentiert von jedem Bosch Mitarbeiter nach unserer Bosch [Inner
+  Source](https://innersourcecommons.org/) Philosophy weiterentwickelt werden
+  kann.
+* In meinem ersten Data Science Projekt habe ich ein Neuronales Netz entwickelt,
+  dass zeitvariante Daten clustert.
 
 *(2017 -- 2020)*
 {: .left_time_stamp}
@@ -50,16 +62,17 @@ ref: index
 > Robert Bosch GmbH  
 > Renningen  
 
-Ingenieur in einem bereichsübergreifendem Entwicklungsprojekt im Bosch Zentrum für
-Forschung und Vorausentwicklung in Renningen.
+In einem auf drei Jahre befristetem Vorausentwicklungsprojekt wurden wirksame
+Methoden/Prozesse für die simulationsbasierte Freigabe und statistische
+Modellvalidierdung formuliert und implementiert.
 
-* Ausgehend von
-  [NASA 7009](https://standards.nasa.gov/standard/oce/nasa-std-7009) und
-  [ProStep Smart SE](https://www.prostep.org/projekte/smart-systems-engineering/)
-  wurden in dem Projekt Prozesse und Methoden zur simulationsbasierten
-  Freigabe und statistisch belegten Modellvalidierung entwickelt.
-* Zusätzlich zur Entwicklungarbeit habe ich in diesem agilen, geschäftsübergreifenden
-  Setting meinen Beitrag als Scrum Master für mein Entwicklungsteam geleistet.
+* Während des Projekts koordinierte ich den Entwicklungsfortschritt mit dem
+  Forschungsmanagement des Unternehmens und berichtete alle zwei Monate
+  direkt an das Top-Management.
+* Ich erwarb umfassende Kenntnisse in agile Methoden sowie eine
+  Scrum-Master Schulung und war als Scrum-Master-Proxy tätig.
+* Aufbau einer Toolbox für ein Simulations- und Modellqualitäts-Framework, das
+  derzeit im Inner Source Hub von Bosch eingesetzt wird.
 
 *(2012 -- 2017)*
 {: .left_time_stamp}

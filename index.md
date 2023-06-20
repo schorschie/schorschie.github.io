@@ -41,10 +41,10 @@ ref: index
 > Bosch Automotive Steering GmbH  
 > Schwäbisch Gmünd  
 
-As the team's Scrum Master, I am responsible for planning, refining, and
-documenting the team’s projects and progress. I additionally support the
-continuous development of the team by providing the ability to use continuous
-integration methods for the team.
+I'm currently the team's data scientist in training and provide the team with
+data insights for operational design definition (ODD). I additionally support
+the software development capabilities of the team by providing the ability to
+use continuous integration methods for the team.
 
 Most valuable contributions of my side are:
 
@@ -53,8 +53,9 @@ Most valuable contributions of my side are:
   is currently 200 GB in size and growing.
 * Developed a measurement analyzing tool and most importantly embedded it in a
   well documented continuous integration environment, so that every Bosch
-  employee can contribute following the Bosch Inner Source philosophy.
-* In my first Data Science Project I developed a neural net, which  clusters of
+  employee can contribute following the Bosch [Inner
+  Source](https://innersourcecommons.org/) philosophy.
+* In my first Data Science Project I developed a neural net, which clusters
   time series data.
 
 *(2017 -- 2020)*
@@ -72,14 +73,12 @@ project in an agile setting over different business units of Bosch.
 Collaborated with an agile Bosch wide team comprising of people from different
 business units, including but not limited to power tools, electric drives, power
 systems, brake systems, corporate research, and automotive steering.
-Demonstrated a clustering algorithm to estimate a valid range of a simulation
-model.
 
-* Coordinated with corporate research management in a TOP Project (top business
-  value, priority, and secret) reporting directly to the top management for
-  every two months.
-* Acquired inclusive insights of agile methodologies as well as received scrum
-  master certificate and gained knowledge as a scrum master proxy.
+* During the project I had to coordinate efforts with Bosch corporate research
+  management reporting directly to the top management for every two months.
+* During that time I acquired inclusive insights of agile methodologies as well
+  as received scrum master certificate and gained knowledge as a scrum master
+  proxy.
 * Established a toolbox for a simulation and model quality framework currently
   serving within the Bosch inner source hub.
 
