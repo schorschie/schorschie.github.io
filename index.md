@@ -9,10 +9,16 @@ ref: index
 
 &nbsp;
 
-> Hi, I’m Gregory, a highly skilled mechanical and software engineer. I love
-> developing and implementing new methods for computational simulations of
-> mechanic and control problems. My recent project is an enterprise wide new
-> verification and validation approach which I see come to life.
+> Solution-oriented and technically advanced professional with extensive
+> experience in project management and software development with strong acumen
+> of data analysis and machine learning. Develop expertise in advanced machine
+> learning techniques and algorithms as well as models’ deployment across a
+> production environment. Possess strong aptitude to organize data, identify
+> patterns and insights, draw meaningful conclusions, and clearly communicate
+> critical findings. Skilled in formulating and executing effective
+> methods/processes for simulation-based release and statistical model
+> validation. Proficient in uncovering and troubleshooting varied data
+> management issues.
 
 &nbsp;
 
@@ -27,9 +33,21 @@ ref: index
 > Bosch Automotive Steering  
 > Schwäbisch Gmünd  
 
-* Implementation of a process for simulation based release within Automotive
-  Steering.
-* I serve my team as scrum master.
+Planning and documenting team projects in Jira to enhance functional efficiency.
+Support continuous development of the team by conducting comprehensive
+performance reviews. Analyse customer requirements and suggest robust action
+plan to meet. Ensure provision of optimal design solution whilst identifying
+specification of system function contribution in collaboration with key
+stakeholders. Set up verification criteria for requirements. Develop the
+pipeline for customer data batches from the vehicles to Bosch’s database while
+serving as a Data Engineer.
+
+* Established a platform for post SOP vehicle field data.
+* Developed and implemented the simulation-based release process in CR for the
+  simulation model exchange of automotive steering models with the OEMs.
+* Acted as a Team Scrum Master, responsible for planning, refining, and
+  documenting the team’s projects and progress. Organized team’s workload and
+  successfully doubled the team output.
 
 *(2017 -- 2020)*
 {: .left_time_stamp}
@@ -40,16 +58,22 @@ ref: index
 > Robert Bosch GmbH  
 > Renningen  
 
-Engineer in a trans-divisional development project at the Bosch Corporate Sector
-Research and Advance Engineering Center in Renningen.
+Formulated and implemented effective methods/processes for simulation-based
+release and statistical model validation. Enabled successful execution of
+project in an agile setting over different business units of Bosch.
+Collaborated with an agile Bosch wide team comprising of people from different
+business units, including but not limited to power tools, electric drives, power
+systems, brake systems, corporate research, and automotive steering.
+Demonstrated a clustering algorithm to estimate a valid range of a simulation
+model.
 
-* Starting with
-  [NASA 7009](https://standards.nasa.gov/standard/oce/nasa-std-7009) and
-  [ProStep Smart SE](https://www.prostep.org/projekte/smart-systems-engineering/)
-  processes and methods for simulation based release and statistic model
-  validation were developed.
-* Within this agile, trans divisional project I supported with my skills as
-  Scrum Master for my development team.
+* Coordinated with corporate research management in a TOP Project (top business
+  value, priority, and secret) reporting directly to the top management for
+  every two months.
+* Acquired inclusive insights of agile methodologies as well as received scrum
+  master certificate and gained knowledge as a scrum master proxy.
+* Established a toolbox for a simulation and model quality framework currently
+  serving within the Bosch inner source hub.
 
 *(2012 -- 2017)*
 {: .left_time_stamp}
@@ -60,12 +84,14 @@ Research and Advance Engineering Center in Renningen.
 > Bosch Automotive Steering  
 > Schwäbisch Gmünd  
 
-* Design and reliability calculations for pinion and rack toothing and ball nut
-  gears.
-* NVH calculation of steering columns with mechanic and electric steering gear
-  adjustments.
-* In the first quarter of 2015 I lead a task force, to deal with steering column
-  NVH issues which showed up during the industrialization of the product.
+Oversee calculation and mechanical design of rack pinion gears. Played a pivotal
+role in rack and ball nut gear dimensioning. Performed NVH calculations on
+steering columns. Served as a Task Force Leader to identify and promptly
+troubleshoot NVH problem in the industrial production of steering columns in
+Bremen.
+
+* Devised and deployed an FEM model analysis tool in line company needs.
+* Obtained the financial bonus for high performance
 
 *(2010 -- 2012)*
 {: .left_time_stamp}
@@ -73,20 +99,114 @@ Research and Advance Engineering Center in Renningen.
 ### Project Engineer
 
 > MesH Engineering Team  
-> Work Performance at Daimler AG  
+> Contract Engineer at Daimler AG  
 > Stuttgart  
 
-* As a sub contractor I calculated drive train noise and vibrations issues with
-  SimulationX and Simpack, which are an object oriented modelling package and a
-  multi-body simulation environment.
-* For the formula student racing team of the University of Stuttgart I performed
-  drive dynamic calculation.
+Carried out calculation of power train oscillations of Daimler light commercial
+vehicles using SimulationX and Simpack to manage NVH issues. Drove chassis
+optimization based on dynamic simulations for the Formula student racing team of
+the university of Stuttgart. Completed multiple complex engineering tasks within
+set deadlines. Collaborated with various cross-functional teams to streamline
+daily operations.
+
+* Executed a MATLAB program to analyze CAN traces and integrate evaluation in a
+  PDF document by utilizing LaTeX.
 
 &nbsp;
 
+## Programming Experience
+
+*(2020)*
+{: .left_time_stamp}
+
+### Jupyter
+
+ Utilized Python, Jupyter, and Pandas within a data sharing project with an OEM:
+
+* Developed the pipeline for customer data batches from OEM vehicles to Bosch’s
+  database.
+* Gathered data for common domain specific incidents to refine  requirements and
+  models.
+* Devised future plan to leverage an unsupervised machine learning algorithm on
+  the data.
+
+*(2018)*
+{: .left_time_stamp}
+
+### Pandas
+
+Structured a simulation quality framework in Python and Jupyter during corporate
+research project:
+
+* Used Pandas, Matplotlib and Scikit-learn for the visualization of a
+  statistical validation data.
+* Applied Bitbucket and Jenkins for code peer reviews and automated build/test
+  processes.
+* Acquired additional resources through the Bosch inner source hub and still do.
+
+*(2015)*
+{: .left_time_stamp}
+
+### NX NASTRAN
+
+Generated a FE model analyzer with MATLAB for quality tests of NVH models:
+
+* Analyzed script via the NASTRAN source of the model and deduced the common
+  volume elements and connectors.
+* Produced a Bill of Materials with images of the parts, listing density, mass,
+  and stiffness which led to create a visualization of the parts and the
+  connectors (springs, stiff couplings).
+
+*(2009)*
+{: .left_time_stamp}
+
+### VBA
+
+Formulated a depth-first search algorithm in Visual Basic in CATIA during a
+working student activity:
+
+* Examined the structure of a cable harness utilizing a (self made) depth-first
+  search algorithm.
+* Automatically created a technical drawing with all connectors and cable
+  lengths.
+
+*(2007)*
+{: .left_time_stamp}
+
+### ANSYS
+
+Combined electrodynamic and structural mechanic within an FE model in ANSYS for
+my study work:
+
+* Calculated the electromagnetic forces on the injector through the FE mesh.
+* Measured mechanical forces while moving the parts, remeshing the injector,
+  defining new initial conditions, and reiterating starting with the
+  electromagnetic forces.
+
 ## Education
 
-*(Pandemic 2020)*
+*(2021)*
+{: .left_time_stamp}
+
+### Machine Learning Engineer Nanodegree
+
+> Learn advanced machine learning techniques and algorithms and how to package
+> and deploy your models to a production environment. Gain practical experience
+> using Amazon SageMaker to deploy trained models to a web application and
+> evaluate the performance of your models. A/B test models and learn how to
+> update the models as you gather more data, an important skill in industry.
+> [[Udacity](https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009t)]
+
+I took a liking in the Udacity didactic and in scope of a Bosch/AS project I
+could advance within the field of machine learning. So I took this [nano
+degree](https://confirm.udacity.com/CGALRCZP) in the beginning of the year.
+
+The capstone project, the final test for the Nanodegree in which I created and
+trained an [CNN](https://en.wikipedia.org/wiki/Convolutional_neural_network) to
+detect dog breeds with >80% accuracy is hosted in a [github
+repository](https://github.com/schorschie/udacity_dog_breed).
+
+*(2020)*
 {: .left_time_stamp}
 
 ### Data Analyst Nanodegree
@@ -105,7 +225,7 @@ course is founded on two pillars, data analysis and results communication, both 
 the correct use of different hypothesis testing methods and profound usage of the plot
 capabilities of python.
 
-The project I made during the Udacity Nanodegree are hosted [github
+The projects I made during the Udacity Nanodegree are hosted on a [github
 repository](https://github.com/schorschie/udacity)
 
 *(2003 -- 2009)*

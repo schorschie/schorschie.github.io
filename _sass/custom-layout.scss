@@ -139,7 +139,7 @@
     position: relative;
     left: -150px;
     bottom: -42px;
-    @include media-query($on-palm) {
+    @include media-query($on-monitor) {
         text-align: right;
         left: 0px;
     }
