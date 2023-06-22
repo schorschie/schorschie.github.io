@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# ruby create_thumbnails.rb path
 
 require 'mini_magick'
 
