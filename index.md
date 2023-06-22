@@ -91,14 +91,11 @@ systems, brake systems, corporate research, and automotive steering.
 > Bosch Automotive Steering GmbH  
 > Schwäbisch Gmünd  
 
-Oversee calculation and mechanical design of rack pinion gears. Played a pivotal
-role in rack and ball nut gear dimensioning. Performed NVH calculations on
-steering columns. Served as a Task Force Leader to identify and promptly
-troubleshoot NVH problem in the industrial production of steering columns in
-Bremen.
-
-* Devised and deployed an FEM model analysis tool in line company needs.
-* Obtained the financial bonus for high performance
+* Calculation and mechanical design of rack pinion gears.
+* Ported ball nut gear dimensioning onto a new platform.
+* Performed NVH calculations on steering columns.
+* Served as a Task Force Leader to identify and promptly troubleshoot NVH
+  problem in the industrial production of steering columns in Bremen.
 
 *(2010 -- 2012)*
 {: .left_time_stamp}
@@ -109,13 +106,12 @@ Bremen.
 > Work Performance at Daimler AG  
 > Stuttgart  
 
-Carried out calculation of power train oscillations of Daimler light commercial
-vehicles using SimulationX and Simpack to manage NVH issues. Drove chassis
-optimization based on dynamic simulations for the Formula student racing team of
-the university of Stuttgart. Completed multiple complex engineering tasks within
-set deadlines. Collaborated with various cross-functional teams to streamline
-daily operations.
-
+* Carried out calculation of power train oscillations of Daimler light commercial
+  vehicles using SimulationX and Simpack to manage NVH issues.
+* Drove chassis optimization based on dynamic simulations for the Formula
+  student racing team of the university of Stuttgart.
+* Completed multiple complex engineering tasks within set deadlines.
+* Collaborated with various cross-functional teams to streamline daily operations.
 * Executed a MATLAB program to analyze CAN traces and integrate evaluation in a
   PDF document by utilizing LaTeX.
 
@@ -130,8 +126,8 @@ daily operations.
 
  Utilized Python, Jupyter, and Pandas within a data sharing project with an OEM:
 
-* Developed the pipeline for customer data batches from OEM vehicles to Bosch’s
-  database.
+* Developed the ETL process for customer data batches from OEM vehicles to
+  Bosch’s database.
 * Gathered data for common domain specific incidents to refine system
   requirements and models.
 * Utilized a machine learning algorithm to cluster the time variant data.
@@ -181,8 +177,8 @@ working student activity:
 
 ### ANSYS
 
-Combined electrodynamic and structural mechanic within an FE model in ANSYS for
-my study work:
+Using the APDL script language combined electrodynamic and structural mechanic
+within an FE model in ANSYS for my study work:
 
 * Calculated the electromagnetic forces on the injector through the FE mesh.
 * Measured mechanical forces while moving the parts, re-meshing the injector,
@@ -203,13 +199,12 @@ Science topics, with a large focus on hands-on knowledge and project work within
 my department, accompanied by Bosch [BCAI](https://www.bosch-ai.com/) mentors.
 
 The course is divided into two parts: Junior Expert and Senior Expert. Both
-parts consist of a classroom training phase and a project phase. The topics
-covered in the junior's classroom phase are:
+parts consist of a "classroom" training phase (online since Corona) and a
+project phase. The topics covered in the junior's classroom phase are:
 
 * Basics of Statistics
 * Statistical Learning & Gaussian Processes
 * Classical Machine Learning
-* Machine Learning Projects
 * Deep Learning
 * Advanced Deep Learning
 * Time Series Analysis

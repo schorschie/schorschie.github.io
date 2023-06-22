@@ -97,13 +97,15 @@ Modellvalidierdung formuliert und implementiert.
 ### Projektingenieur
 
 > MesH Engineering Team  
-> Work Performance at Daimler AG  
+> Dienstleister für die Daimler AG  
 > Stuttgart  
 
 * Bei Daimler berechnete ich als Dienstleister Triebstrangschwingungen mit
   SimulationX und Simpack.
 * Für das Rennteam der Uni-Stuttgart habe ich Fahrdynamik-Berechnungen für die
   Formula-Student mit Simpack durchgeführt.
+* Automatisierte Auswertung von CAN-traces aus Messfahrten und Kompilierung
+  aller Analysen in ein LaTeX Dokument.
 
 &nbsp;
 
@@ -116,12 +118,12 @@ Modellvalidierdung formuliert und implementiert.
 
 Verwendung von Python, Jupyter und Pandas im Rahmen eines Datenaustauschprojekts mit einem OEM:
 
-* Ich entwickelte die Pipeline für Kundendaten-Batches von OEM-Fahrzeugen zur
+* Ich entwickelte den ETL Prozess für Kundendaten von OEM-Fahrzeugen zur
   Bosch-Datenbank.
 * Die Daten wurden nach häufigen domänenspezifischen Vorfällen durchsucht, um
   Systemanforderungen und Simulationsmodelle zu verbessern.
-* Ich habe ein machine learning Algorithmus verwendet umd die zeitvarianten
-  Daten zu clustern.
+* Ich habe ein Machine Learning Algorithmus (Autoencoder) verwendet umd die
+  zeitvarianten Daten zu clustern.
 
 *(2018 -- 2019)*
 {: .left_time_stamp}
@@ -129,7 +131,7 @@ Verwendung von Python, Jupyter und Pandas im Rahmen eines Datenaustauschprojekts
 ### Python und Pandas
 
 Entwicklung eines Simulationsqualitäts-Framework in Python und Jupyter auf Basis
-der Arbeit von Oberkampf & Roy innerhalb eines Unternehmensforschungsprojekts:
+der Arbeit von Oberkampf & Roy innerhalb eines Vorausentwicklungsprojekts:
 
 * Verwendet Pandas, Matplotlib und Scikit-learn zur Visualisierung statistischer
   Validierungsdaten.
@@ -156,8 +158,8 @@ entwickelt:
 
 ### VBA
 
-Während einer Werkstudententätigkeit habe ich einen Tiefensuchalgorithmus in
-Visual Basic in CATIA implementiert. Der Algorithmus:
+Während einer Werkstudententätigkeit bei Tata Technologies habe ich einen
+Tiefensuchalgorithmus in Visual Basic in CATIA implementiert. Der Algorithmus:
 
 * untersuchte die Struktur eines Kabelbaums mithilfe einer (selbst erstellten)
   Tiefensuche.
@@ -170,16 +172,48 @@ Visual Basic in CATIA implementiert. Der Algorithmus:
 ### ANSYS
 
 Während meiner Studienarbeit programmierte ich eine kombinierte Elektrodynamik
-und Strukturmechanik-Simulation innerhalb eines FE-Modells in ANSYS:
+und Strukturmechanik-Simulation innerhalb eines FE-Modells in
+ANSYS in der eigenen APDL Skript-Sprache:
 
 * Zunächst berechnet die Simulation die elektromagnetischen Kräfte auf einen
   Injektor durch das FE-Netz.
 * Mithilfe der berechneten Kräfte wurde analytisch die neue Position des
-  Injektors bestimmt, das Modell neu vernetzt und die Berechung wiederholt.
+  Injektors bestimmt, das Modell neu vernetzt und die Berechnung wiederholt.
 
 &nbsp;
 
 ## Bildungsweg[⇧](#)
+
+*(2022 -- 2023)*
+{: .left_time_stamp}
+
+### Bosch Senior Data Scientist
+
+Der Bosch-interne 1,5-jährige Kurs vermittelte mir ein tiefes Expertenwissen zu
+Data-Science-Themen, mit einem großen Fokus auf praktisches Wissen und
+Projektarbeiten in meiner Abteilung, begleitet von Bosch BCAI-Mentoren.
+
+Der Kurs ist in zwei Teile gegliedert: Junior Expert und Senior Expert. Beide
+Teile bestehen jeweils aus "Vor-Ort" Vorlesungen (online seit Corona) und einer
+Projektphase. Die in der Junior-Phase der behandelten Themen sind:
+
+* Grundlagen der Statistik
+* Statistisches Lernen und Gaußsche Prozesse
+* Klassisches maschinelles Lernen
+* Deep Learning
+* Advanced Deep Learning
+* Zeitreihenanalyse
+
+Und in der Senior-Phase:
+
+* ML-Bereitstellung
+* Eingebettete KI
+* Validierung und Verifizierung / Erklärbare KI
+* Dateneffizienz
+* Option 1: Spezialisierung auf Sequenzmodelle
+* Option 2: Spezialisierung auf Computer Vision
+* Foundation-Modelle
+* Reinforcement Learning (optional)
 
 *(2021)*
 {: .left_time_stamp}
@@ -260,14 +294,14 @@ Matlab, mit dem Ziel, die Anzahl der Schaltabbrüche zu minimieren.
 > (heute: Verein für Menschen mit Körperbehinderung Nürnberg e.V.)  
 
 Während dem Zivildienst habe ich gelernt Verantwortung für meine Gemeinschaft,
-andere Menschen und mich selbst zu übernehmen. I half behinderten Kindern oder
+andere Menschen und mich selbst zu übernehmen. Ich half behinderten Kindern oder
 gebrechlichen Älteren in ihrem Alltag, auf ihrem Schulweg, beim Arztbesuch oder beim
-Einkauf, zuverlässig und pünktlich.
+Einkauf. Immer zuverlässig und pünktlich.
 
 *(bis 2002)*
 {: .left_time_stamp}
 
-### Schulzeit
+### Schulabschluss mit der Allgemeinen Hochschulreife
 
 > Wilhelm Löhe Schule  
 > Nürnberg  
