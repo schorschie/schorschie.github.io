@@ -234,7 +234,7 @@ And in the senior's classroom phase:
 
 I took a liking to the Udacity didactic, and as part of a Bosch/AS project, I
 could advance within the field of machine learning. So I completed this
-[nanodegree](https://confirm.udacity.com/CGALRCZP) at the beginning of the year.
+[Nanodegree](https://confirm.udacity.com/CGALRCZP) at the beginning of the year.
 
 The capstone project, the final test for the Nanodegree, involved creating and
 training a [CNN](https://en.wikipedia.org/wiki/Convolutional_neural_network) to
@@ -246,19 +246,21 @@ repository](https://github.com/schorschie/udacity_dog_breed).
 
 ### Data Analyst Nanodegree
 
-> This program prepares you for a career as a data analyst by helping you learn to organize
-> data, uncover patterns and insights, draw meaningful conclusions, and clearly communicate
-> critical findings. You’ll develop proficiency in Python and its data analysis libraries (Numpy,
-> pandas, Matplotlib) and SQL as you build a portfolio of projects to showcase in your job
-> search. [[Udacity](https://www.udacity.com/course/data-analyst-nanodegree--nd002)]
+> This program prepares you for a career as a data analyst by helping you learn
+> to organize data, uncover patterns and insights, draw meaningful conclusions,
+> and clearly communicate critical findings. You’ll develop proficiency in
+> Python and its data analysis libraries (Numpy, pandas, Matplotlib) and SQL as
+> you build a portfolio of projects to showcase in your job search.
+> [[Udacity](https://www.udacity.com/course/data-analyst-nanodegree--nd002)]
 
-During the COVID-19 crisis, while I was on short-time work, I invested my private time into the
-Udacity Data Analyst Nanodegree (and this website). I
-[completed](https://graduation.udacity.com/confirm/GMHQJMC3) the course in June. I learned how
-to use Jupyter Notebooks, Matplotlib, Seaborn, and most importantly, the Statsmodels toolbox. The
-course is founded on two pillars: data analysis and results communication, both mastered with
-the correct use of different hypothesis testing methods and profound usage of the plot
-capabilities of Python.
+During the COVID-19 crisis, while I was on short-time work, I invested my
+private time into the Udacity Data Analyst Nanodegree (and this website). I
+[completed](https://graduation.udacity.com/confirm/GMHQJMC3) the course in June.
+I learned how to use Jupyter Notebooks, Matplotlib, Seaborne, and most
+importantly, the Statsmodels toolbox. The course is founded on two pillars: data
+analysis and results communication, both mastered with the correct use of
+different hypothesis testing methods and profound usage of the plot capabilities
+of Python.
 
 The projects I completed during the Udacity Nanodegree are hosted in a [GitHub
 repository](https://github.com/schorschie/udacity).

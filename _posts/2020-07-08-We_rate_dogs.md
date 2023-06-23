@@ -56,7 +56,7 @@ Dog Rates. They mostly rate dogs within a "... out of ten scale", so for example
 But sometimes a dog receives only a top note, and on other times the nominator may be higher
 than 10, so for example 14/10.
 
-Therefore I normalized all values to be within (0, 1) and also aded a denominator of 10,
+Therefore I normalized all values to be within (0, 1) and also added a denominator of 10,
 wherever it was missing:
 
 ![Normalized grades of we rate dogs](/assets/images/dogs/normalized_grades.png){: .half-image }
