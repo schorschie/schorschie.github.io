@@ -50,7 +50,7 @@ The most valuable contributions from my side are:
 
 * Developed the ETL process for customer time series batches from the vehicle's
   CAN traces to Bosch's database while serving as a Data Engineer. The database
-  is currently 200 GB in size and growing.
+  is currently 1 TB in size and growing.
 * Developed a measurement analyzing tool and, most importantly, embedded it in a
   well-documented continuous integration environment so that every Bosch
   employee can contribute following the Bosch [Inner
@@ -117,7 +117,7 @@ systems, brake systems, corporate research, and automotive steering.
 
 &nbsp;
 
-## Programming Experience[⇧](#)
+## Programming Experience[⇧](#contents)
 
 *(since 2019)*
 {: .left_time_stamp}
@@ -187,7 +187,7 @@ within an FE model in ANSYS for my study work:
 
 &nbsp;
 
-## Education[⇧](#)
+## Education[⇧](#contents)
 
 *(2022-2023)*
 {: .left_time_stamp}

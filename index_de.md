@@ -45,7 +45,7 @@ Die wertvollsten Beiträge meinerseits sind:
 
 * Entwicklung eines ETL-Prozesses für zeitvariante Kundendaten, die aus
   Fahrzeugmessungen im Feld stammen. Diese Daten werden in einer Bosch Datenbank
-  gespeichert und erreichen mittlerweile über 200 GB.
+  gespeichert und erreichen mittlerweile über 1 TB.
 * Entwicklung eines Auswertungstools mit einer GUI, das aber so dokumentiert ist,
   dass es von jedem Bosch-Mitarbeiter gemäß unserer Bosch [Inner
   Source](https://innersourcecommons.org/) Philosophy weiterentwickelt werden
@@ -86,8 +86,6 @@ Modellvalidierung formuliert und implementiert.
 
 * Auslegung und Lebensdauerberechnung von Verzahnungen, Zahnstangen und
   Kugelgewindetrieben.
-* Auslegung und Lebensdauerberechnung von Verzahnungen, Zahnstangen und
-  Kugelgewindetrieben.
 * Durchführung computergestützter Modalanalysen an Lenksäulen im NVH-Team des
   CAE-Centers.
 * Leitung einer Task Force im ersten Quartal 2015, um Lösungen für NVH-Probleme
@@ -111,7 +109,7 @@ Modellvalidierung formuliert und implementiert.
 
 &nbsp;
 
-## Programmiererfahrung[⇧](#)
+## Programmiererfahrung[⇧](#inhalt)
 
 *(since 2019)*
 {: .left_time_stamp}
@@ -208,20 +206,20 @@ folgende Schritte:
 
 &nbsp;
 
-## Bildungsweg[⇧](#)
+## Bildungsweg[⇧](#inhalt)
 
 *(2022 -- 2023)*
 {: .left_time_stamp}
 
 ### Bosch Senior Data Scientist
 
-Als Bosch Mitarbeiter habe ich an einem internen 1,5-jährigen Kurs Senior Data
-Scientist teilgenommen, der mir ein umfassendes Expertenwissen in Data Science
-vermittelt hat. Der Kurs legte einen starken Fokus auf praktisches Wissen und
+Als Bosch Mitarbeiter nehme ich an einem internen 1,5-jährigen  Senior Data
+Scientist Kurs teil, der mir ein umfassendes Expertenwissen in Data Science
+vermittelt. Der Kurs legte einen starken Fokus auf praktisches Wissen und
 Projektarbeiten in meiner Abteilung, begleitet von Bosch
 [BCAI](https://www.bosch-ai.com/)-Mentoren.
 
-Der Kurs war in zwei Teile unterteilt: Junior Expert und Senior Expert. Beide
+Der Kurs ist in zwei Teile unterteilt: Junior Expert und Senior Expert. Beide
 Teile bestanden aus online Vorlesungen, sowie einer Projektphase. In der
 Junior-Phase wurden folgende Themen behandelt:
 
