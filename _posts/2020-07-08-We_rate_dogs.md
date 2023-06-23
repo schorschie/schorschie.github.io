@@ -34,7 +34,7 @@ amount of dogs were 'Floofers'.
 Here are two examples for 'Puppers', source Twitter, just click the images to
 link to the tweets:
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Meet Benji. He just turned 1. Has already given up on a traditional pupper physique. Just inhaled that thing. 9/10 <a href="https://t.co/sLUC4th3Zj">pic.twitter.com/sLUC4th3Zj</a></p>&mdash; WeRateDogs® (@dog_rates) <a href="https://twitter.com/dog_rates/status/739606147276148736?ref_src=twsrc%5Etfw">June 5, 2016</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Meet Benji. He just turned 1. Has already given up on a traditional pupper physique. Just inhaled that thing. 9/10 <a href="https://t.co/sLUC4th3Zj">pic.twitter.com/sLUC4th3Zj</a></p>&mdash; WeRateDogs® (@dog_rates) <a href="https://twitter.com/dog_rates/status/739606147276148736?ref_src=twsrc%5Etfw">June 5, 2016</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 [![A pupper](/assets/images/dogs/CkOb3FXW0AAUL_U.jpg){: .half-image }](https://twitter.com/dog_rates/status/739606147276148736?s=20)
 [![another pupper](/assets/images/dogs/ChpuRyvVAAARMoq.jpg){: .half-image }](https://twitter.com/dog_rates/status/728015554473250816?s=20)
@@ -56,7 +56,7 @@ Dog Rates. They mostly rate dogs within a "... out of ten scale", so for example
 But sometimes a dog receives only a top note, and on other times the nominator may be higher
 than 10, so for example 14/10.
 
-Therefore I normalized all values to be within (0, 1) and also aded a denominator of 10,
+Therefore I normalized all values to be within (0, 1) and also added a denominator of 10,
 wherever it was missing:
 
 ![Normalized grades of we rate dogs](/assets/images/dogs/normalized_grades.png){: .half-image }

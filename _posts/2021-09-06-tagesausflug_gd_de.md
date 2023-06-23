@@ -3,12 +3,12 @@ layout: post
 title: Tagesausflug nach Schwäbisch Gmünd
 date: 2023-06-22 17:41:04 +0200
 mathjax: false
-categories: turism, gmuend, schwaebisch, fun
+categories: tourism, Gmuend, schwaebisch, fun
 ref: tagesausflug_01
 lang: de
 ---
 
-Okay, vieleicht ist Tagesausflug ein bisschen übertrieben. Wenn man genüsslich
+Okay, vielleicht ist Tagesausflug ein bisschen übertrieben. Wenn man genüsslich
 ausschläft und zum Abendessen wieder daheim sein will, dann passt es aber.
 
 Die schönste Stauferstadt an der Rems bietet eine wunderbare Kulisse für einen
