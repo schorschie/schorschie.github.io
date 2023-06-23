@@ -5,14 +5,14 @@ lang: de
 ref: index
 ---
 
-![A portrait of me](/assets/lippe-m.jpg)
+![Ein Porträt von mir](/assets/lippe-m.jpg)
 
 &nbsp;
 
 > Hallo, mein Name ist Grzegorz und ich bin ein qualifizierter
 > Maschinenbau- und Software-Ingenieur. Ich entwickle und implementiere neue
 > Methoden für die Simulation mechanischer und regelungstechnischer Baugruppen.
-> Mein Aktuelles Projekt ist die Implementierung von Machine Learning auf
+> Mein aktuelles Projekt ist die Implementierung von Machine Learning auf
 > zeitvarianten Fahrzeugmessreihen.
 
 &nbsp;
@@ -32,26 +32,26 @@ ref: index
 
 ### Systemingenieur
 
-> Systems-Engineering  
+> Systems Engineering  
 > Bosch Automotive Steering GmbH  
 > Schwäbisch Gmünd  
 
 Ich bin Data Scientist in Ausbildung und unterstütze das Team bei der
 Ausarbeitung der "Operational Design Definition (ODD)" im Rahmen der Requirement
 Definition. Zudem verbessere ich die Fähigkeiten in der Softwareentwicklung
-durch das bereitstellen eines Continuous Integration Prozesses.
+durch das Bereitstellen eines Continuous Integration Prozesses.
 
-Die wertigsten Beiträge meinerseits sind:
+Die wertvollsten Beiträge meinerseits sind:
 
-* Entwicklung eines ETL Prozesses für zeitvariante Kundendaten, die aus
+* Entwicklung eines ETL-Prozesses für zeitvariante Kundendaten, die aus
   Fahrzeugmessungen im Feld stammen. Diese Daten werden in einer Bosch Datenbank
-  gespeichert und erreichen mittlerweile 200+ GB.
-* Entwicklung eines Auswerte-Tools mit einer GUI, aber in der Art, dass es gut
-  dokumentiert von jedem Bosch Mitarbeiter nach unserer Bosch [Inner
+  gespeichert und erreichen mittlerweile über 200 GB.
+* Entwicklung eines Auswertungstools mit einer GUI, das aber so dokumentiert ist,
+  dass es von jedem Bosch-Mitarbeiter gemäß unserer Bosch [Inner
   Source](https://innersourcecommons.org/) Philosophy weiterentwickelt werden
   kann.
-* In meinem ersten Data Science Projekt habe ich ein Neuronales Netz entwickelt,
-  dass zeitvariante Daten clustert.
+* In meinem ersten Data-Science-Projekt habe ich ein neuronales Netz entwickelt,
+  das zeitvariante Daten clustert.
 
 *(2017 -- 2020)*
 {: .left_time_stamp}
@@ -62,15 +62,15 @@ Die wertigsten Beiträge meinerseits sind:
 > Robert Bosch GmbH  
 > Renningen  
 
-In einem auf drei Jahre befristetem Vorausentwicklungsprojekt wurden wirksame
+In einem auf drei Jahre befristeten Vorausentwicklungsprojekt wurden wirksame
 Methoden/Prozesse für die simulationsbasierte Freigabe und statistische
-Modellvalidierdung formuliert und implementiert.
+Modellvalidierung formuliert und implementiert.
 
-* Während des Projekts koordinierte ich den Entwicklungsfortschritt mit dem
-  Forschungsmanagement des Unternehmens und berichtete alle zwei Monate
-  direkt an das Top-Management.
-* Ich erwarb umfassende Kenntnisse in agile Methoden sowie eine
-  Scrum-Master Schulung und war als Scrum-Master-Proxy tätig.
+* Während des Projekts habe ich den Entwicklungsfortschritt mit dem
+  Forschungsmanagement des Unternehmens koordiniert und alle zwei Monate
+  direkt an das Top-Management berichtet.
+* Ich erwarb umfassende Kenntnisse in agilen Methoden sowie eine
+  Scrum-Master-Schulung und war als Scrum-Master-Proxy tätig.
 * Aufbau einer Toolbox für ein Simulations- und Modellqualitäts-Framework, das
   derzeit im Inner Source Hub von Bosch eingesetzt wird.
 
@@ -86,10 +86,12 @@ Modellvalidierdung formuliert und implementiert.
 
 * Auslegung und Lebensdauerberechnung von Verzahnungen, Zahnstangen und
   Kugelgewindetrieben.
-* Ein zweiter Schwerpunkt meiner Tätigkeit war die computergestützte
-  Modalanalyse an Lenksäulen im NVH Team des CAE-Centers.
-* Im ersten Quartal 2015 habe ich eine Task Force geleitet, die Lösungen für NVH
-  Probleme bei der Industrialisierung eines Produktes aufgezeigt hat.
+* Auslegung und Lebensdauerberechnung von Verzahnungen, Zahnstangen und
+  Kugelgewindetrieben.
+* Durchführung computergestützter Modalanalysen an Lenksäulen im NVH-Team des
+  CAE-Centers.
+* Leitung einer Task Force im ersten Quartal 2015, um Lösungen für NVH-Probleme
+  bei der Industrialisierung eines Produktes zu erarbeiten.
 
 *(2010 -- 2012)*
 {: .left_time_stamp}
@@ -98,14 +100,14 @@ Modellvalidierdung formuliert und implementiert.
 
 > MesH Engineering Team  
 > Dienstleister für die Daimler AG  
-> Stuttgart  
+> Stuttgart
 
-* Bei Daimler berechnete ich als Dienstleister Triebstrangschwingungen mit
-  SimulationX und Simpack.
-* Für das Rennteam der Uni-Stuttgart habe ich Fahrdynamik-Berechnungen für die
-  Formula-Student mit Simpack durchgeführt.
-* Automatisierte Auswertung von CAN-traces aus Messfahrten und Kompilierung
-  aller Analysen in ein LaTeX Dokument.
+* Berechnung von Triebstrangschwingungen mit SimulationX und Simpack im Auftrag
+  der Daimler AG.
+* Durchführung von Fahrdynamik-Berechnungen für das Rennteam der Uni-Stuttgart
+  im Rahmen der Formula-Student mit Simpack.
+* Automatisierte Auswertung von CAN-Traces aus Messfahrten und Zusammenstellung
+  aller Analysen in einem LaTeX-Dokument.
 
 &nbsp;
 
@@ -116,28 +118,51 @@ Modellvalidierdung formuliert und implementiert.
 
 ### Python und Jupyter
 
-Verwendung von Python, Jupyter und Pandas im Rahmen eines Datenaustauschprojekts mit einem OEM:
+Im Rahmen eines Datenaustauschprojekts mit einem OEM habe ich Python, Jupyter
+und Pandas verwendet. Hier sind einige Details zu meinen Tätigkeiten:
 
-* Ich entwickelte den ETL Prozess für Kundendaten von OEM-Fahrzeugen zur
+* Entwicklung des ETL-Prozesses für Kundendaten von OEM-Fahrzeugen zur
   Bosch-Datenbank.
-* Die Daten wurden nach häufigen domänenspezifischen Vorfällen durchsucht, um
-  Systemanforderungen und Simulationsmodelle zu verbessern.
-* Ich habe ein Machine Learning Algorithmus (Autoencoder) verwendet umd die
-  zeitvarianten Daten zu clustern.
+* Durchsuchen der Daten nach häufigen domänenspezifischen Vorfällen, um
+  Systemanforderungen und Simulationsmodelle zu verbessern. Hierbei wurden
+  spezifische Ereignisse oder Muster identifiziert, die auf Probleme oder
+  Optimierungsmöglichkeiten hinweisen können.
+* Anwendung eines Machine Learning Algorithmus, nämlich eines Autoencoders, um
+  die zeitvarianten Daten zu clustern. Durch die Anwendung des Autoencoders
+  konnte ich ähnliche Muster und Strukturen in den Daten identifizieren und sie
+  in Cluster einteilen, was wiederum Einblicke und Erkenntnisse über die
+  operational design domain (ODD) der Fahrzeuge ermöglichte.
+
+Diese Arbeiten trugen dazu bei, die Datenanalyse und -verarbeitung im Rahmen des
+Datenaustauschprojekts zu verbessern und wichtige Informationen aus den
+Kundendaten zu gewinnen.
 
 *(2018 -- 2019)*
 {: .left_time_stamp}
 
 ### Python und Pandas
 
-Entwicklung eines Simulationsqualitäts-Framework in Python und Jupyter auf Basis
-der Arbeit von Oberkampf & Roy innerhalb eines Vorausentwicklungsprojekts:
+Im Rahmen eines Vorausentwicklungsprojekts habe ich ein
+Simulationsqualitäts-Framework entwickelt, das auf Python und Jupyter basierte
+und auf der Arbeit von Oberkampf & Roy aufbaute. Hier sind die Details meiner
+Tätigkeiten:
 
-* Verwendet Pandas, Matplotlib und Scikit-learn zur Visualisierung statistischer
-  Validierungsdaten.
+* Verwendung von Pandas, Matplotlib und Scikit-learn zur Visualisierung
+  statistischer Validierungsdaten.
 * Einsatz von Bitbucket und Jenkins für Code-Peer-Reviews und automatisierte
-  Build-/Testprozesse.
-* Akquise neuer Ressourcen über den Bosch Inner Source Hub.
+  Build-/Testprozesse. Durch die Nutzung von Versionskontrollsystemen wie
+  Bitbucket konnte ich meinen Code mit anderen Teammitgliedern überprüfen und
+  zusammenarbeiten. Jenkins wurde verwendet, um den Build- und Testprozess
+  automatisiert durchzuführen, um sicherzustellen, dass der Code fehlerfrei und
+  funktionsfähig ist.
+* Akquise neuer Ressourcen über den Bosch Inner Source Hub. Der Bosch Inner
+  Source Hub ist eine Plattform, auf der interne Entwickler Ressourcen,
+  Code-Snippets, Bibliotheken und Best Practices teilen können.
+
+Diese Arbeiten trugen dazu bei, die Qualität der Simulationen im
+Vorausentwicklungsprojekt zu verbessern, indem Validierungsdaten visualisiert
+wurden, automatisierte Prozesse zur Qualitätssicherung implementiert wurden und
+der Austausch von Ressourcen und Wissen gefördert wurde.
 
 *(2015)*
 {: .left_time_stamp}
@@ -149,7 +174,7 @@ entwickelt:
 
 * Das Skript hat die NASTRAN-Quelle des Modells analysiert und die gemeinsamen
   Volumenelemente und Anschlüsse abgeleitet.
-* Es Erstellte eine Stückliste mit Bildern der Teile und listete Dichte, Masse
+* Es erstellte eine Stückliste mit Bildern der Teile und listete Dichte, Masse
   und Steifigkeit auf, was zur Erstellung einer Visualisierung der Teile und der
   Anschlüsse (Federn, steife Kupplungen) führte.
 
@@ -158,27 +183,28 @@ entwickelt:
 
 ### VBA
 
-Während einer Werkstudententätigkeit bei Tata Technologies habe ich einen
+Während meiner Werkstudententätigkeit bei Tata Technologies habe ich einen
 Tiefensuchalgorithmus in Visual Basic in CATIA implementiert. Der Algorithmus:
 
-* untersuchte die Struktur eines Kabelbaums mithilfe einer (selbst erstellten)
-  Tiefensuche.
-* Nach dem Auslesen der Struktur wurde automatisch eine technische Zeichnung mit
-  allen Anschlüssen und Kabellängen erstellt.
+* analysierte die Struktur eines Kabelbaums mithilfe eines Tiefensuchverfahrens,
+  das ich selbst entwickelt habe.
+* Nachdem die Struktur ausgelesen wurde, wurde automatisch eine technische
+  Zeichnung erstellt, die alle Anschlüsse und Kabellängen enthält.
 
 *(2007)*
 {: .left_time_stamp}
 
 ### ANSYS
 
-Während meiner Studienarbeit programmierte ich eine kombinierte Elektrodynamik
-und Strukturmechanik-Simulation innerhalb eines FE-Modells in
-ANSYS in der eigenen APDL Skript-Sprache:
+Während meiner Studienarbeit habe ich eine kombinierte Simulation von
+Elektrodynamik und Strukturmechanik in einem FE-Modell in ANSYS entwickelt.
+Dabei verwendete ich die eigene APDL Skript-Sprache. Die Simulation umfasste
+folgende Schritte:
 
-* Zunächst berechnet die Simulation die elektromagnetischen Kräfte auf einen
-  Injektor durch das FE-Netz.
-* Mithilfe der berechneten Kräfte wurde analytisch die neue Position des
-  Injektors bestimmt, das Modell neu vernetzt und die Berechnung wiederholt.
+* Zunächst wurden die elektromagnetischen Kräfte auf einen Injektor durch das
+  FE-Netz berechnet.
+* Anhand der berechneten Kräfte wurde die neue Position des Injektors analytisch
+  bestimmt, das Modell neu vernetzt und die Berechnung erneut durchgeführt.
 
 &nbsp;
 
@@ -189,13 +215,15 @@ ANSYS in der eigenen APDL Skript-Sprache:
 
 ### Bosch Senior Data Scientist
 
-Der Bosch-interne 1,5-jährige Kurs vermittelte mir ein tiefes Expertenwissen zu
-Data-Science-Themen, mit einem großen Fokus auf praktisches Wissen und
-Projektarbeiten in meiner Abteilung, begleitet von Bosch BCAI-Mentoren.
+Als Bosch Mitarbeiter habe ich an einem internen 1,5-jährigen Kurs Senior Data
+Scientist teilgenommen, der mir ein umfassendes Expertenwissen in Data Science
+vermittelt hat. Der Kurs legte einen starken Fokus auf praktisches Wissen und
+Projektarbeiten in meiner Abteilung, begleitet von Bosch
+[BCAI](https://www.bosch-ai.com/)-Mentoren.
 
-Der Kurs ist in zwei Teile gegliedert: Junior Expert und Senior Expert. Beide
-Teile bestehen jeweils aus "Vor-Ort" Vorlesungen (online seit Corona) und einer
-Projektphase. Die in der Junior-Phase der behandelten Themen sind:
+Der Kurs war in zwei Teile unterteilt: Junior Expert und Senior Expert. Beide
+Teile bestanden aus online Vorlesungen, sowie einer Projektphase. In der
+Junior-Phase wurden folgende Themen behandelt:
 
 * Grundlagen der Statistik
 * Statistisches Lernen und Gaußsche Prozesse
@@ -204,7 +232,7 @@ Projektphase. Die in der Junior-Phase der behandelten Themen sind:
 * Advanced Deep Learning
 * Zeitreihenanalyse
 
-Und in der Senior-Phase:
+In der Senior-Phase wurden folgende Themen behandelt:
 
 * ML-Bereitstellung
 * Eingebettete KI
@@ -220,49 +248,43 @@ Und in der Senior-Phase:
 
 ### Machine Learning Engineer Nano-Degree
 
-> Erfahren Sie fortgeschrittene Techniken und Algorithmen für maschinelles
-> Lernen und wie Sie Ihre Modelle in einer Produktionsumgebung verpacken und
-> bereitstellen. Sammeln Sie praktische Erfahrungen mit Amazon SageMaker, um
-> geschulte Modelle in einer Webanwendung bereitzustellen und die Leistung Ihrer
-> Modelle zu bewerten. Testen Sie A / B-Modelle und lernen Sie, wie Sie die
-> Modelle aktualisieren, wenn Sie mehr Daten erfassen. Dies ist eine wichtige
-> Fähigkeit in der Industrie.
-> [[Udacity](https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009t),
-> maschinell übersetzt mit [google](https://translate.google.com)]
+Ich habe den Machine Learning Engineer Nano-Degree
+[absolviert](https://confirm.udacity.com/CGALRCZP), bei dem fortgeschrittene
+Techniken und Algorithmen für maschinelles Lernen vermittelt wurden. Der Fokus
+lag darauf, Modelle in einer Produktionsumgebung zu verpacken und
+bereitzustellen. Ich habe praktische Erfahrungen mit Amazon SageMaker gesammelt,
+um trainierte Modelle in Webanwendungen bereitzustellen und die Leistung zu
+bewerten. Zudem habe ich gelernt, A/B-Tests durchzuführen und Modelle zu
+aktualisieren, wenn zusätzliche Daten verfügbar sind. Diese Fähigkeiten sind in
+der Industrie von großer Bedeutung.
 
-In einem Projekt bei Bosch/AS kam es zu einem Bezug zum maschinellen Lernen und
-ich konnte die Gelegenheit nutzen um mich in diesem Feld zu bilden. Daher habe
-ich zu Beginn des Jahres diese Online Schulung
-[absolviert](https://confirm.udacity.com/CGALRCZP).
-
-Mein Abschlussprojekt für den Nanodegree, ein
-[CNN](https://de.wikipedia.org/wiki/Convolutional_Neural_Network) das
-Hunderassen mit >80% genauigkeit erkennt ist auf
-[github](https://github.com/schorschie/udacity_dog_breed) veröffentlicht.
+Mein Abschlussprojekt für den Nanodegree war ein CNN (Convolutional Neural
+Network), das Hunderassen mit einer Genauigkeit von über 80% erkennen kann. Das
+Projekt ist auf GitHub veröffentlicht und kann unter folgendem Link eingesehen
+werden: [GitHub-Link zum Projekt](https://github.com/schorschie/udacity_dog_breed).
 
 *(Frühjahr 2020)*
 {: .left_time_stamp}
 
 ### Data Analyst Nano-Degree
 
-Während der COVID-19 Pandemie war ich in Kurzarbeit. In meiner neu gewonnenen
-Freizeit habe ich diese Webseite geschrieben und investierte einen weiteren Teil
-in das Udacity Data Analyst Nano-Degree Programm.
+Während der COVID-19-Pandemie befand ich mich in Kurzarbeit, und um diese Zeit
+sinnvoll zu nutzen, entschied ich mich für das Udacity Data Analyst Nano-Degree
+Programm. Diese Schulung zielt darauf ab, auf eine Karriere als Datenanalyst
+vorzubereiten, indem sie dabei hilft, Daten zu organisieren, Muster und
+Erkenntnisse zu entdecken, aussagekräftige Schlussfolgerungen zu ziehen und die
+Ergebnisse klar zu kommunizieren. Der Kurs umfasst Kenntnisse in Python und den
+Datenanalysebibliotheken (wie Numpy, Pandas und Matplotlib) sowie in SQL. Im
+Rahmen des Programms habe ich auch ein Portfolio von Projekten erstellt.
 
-> Diese Schulung bereitet auf eine Karriere als Datenanalyst vor, indem es
-> hilft, Daten zu organisieren, Muster und Erkenntnisse aufzudecken,
-> aussagekräftige Schlussfolgerungen zu ziehen und kritische Ergebnisse klar zu
-> kommunizieren. Es werden Kenntnisse in Python und seinen
-> Datenanalysebibliotheken (Numpy, Pandas, Matplotlib) und SQL entwickelt,
-> und ein Portfolio von Projekten erstellt.
-> [[Udacity](https://www.udacity.com/course/data-analyst-nanodegree--nd002)]
-
-Ich habe den Kurs im Juni 2020
-[abgeschlossen](https://graduation.udacity.com/confirm/GMHQJMC3).
-Meine bereits vorhandenen Kenntnisse in Jupyter, matplotlib und der
-statmodels toolbox konnte ich ausbauen und auf die gelernten
-Hypothesen-Testmethoden anwenden. Die Udacity-Projekte kann man auf meinem
-[Github repository](https://github.com/schorschie/udacity) einsehen.
+Ich habe den Kurs im Juni 2020 erfolgreich
+[abgeschlossen](https://graduation.udacity.com/confirm/GMHQJMC3). Während des
+Kurses konnte ich meine bereits vorhandenen Kenntnisse in Jupyter, Matplotlib
+und der Statmodels-Toolbox weiter ausbauen und sie auf die gelernten Methoden
+für Hypothesentests anwenden. Die Projekte, die ich im Rahmen des
+Udacity-Programms durchgeführt habe, sind in meinem GitHub-Repository verfügbar
+und können unter folgendem Link eingesehen werden: [GitHub-Repository mit den
+Udacity-Projekten](https://github.com/schorschie/udacity).
 
 *(2003 -- 2009)*
 {: .left_time_stamp}
@@ -273,15 +295,16 @@ Hypothesen-Testmethoden anwenden. Die Udacity-Projekte kann man auf meinem
 > Universität Stuttgart  
 > Stuttgart  
 
-**Hauptfächer:**  Fahrzeugtechnik und Kfz-Mechatronik mit Fokus auf Fahrdynamik
-/ Simulation.
+**Hauptfächer:** Fahrzeugtechnik und Kfz-Mechatronik mit Fokus auf Fahrdynamik /
+Simulation.
 
 **Diplomarbeit:** Modellbildung und Simulation eines automatisierten
 Nutzfahrzeuggetriebes
 
-In meiner Diplomarbeit bei der Daimler AG simulierte ich ein nicht synchronisiertes
-16-stufiges Nutzfahrzeuggetriebe mit Vorgelegewellenbremse in SimulationX und
-Matlab, mit dem Ziel, die Anzahl der Schaltabbrüche zu minimieren.
+In meiner Diplomarbeit bei der Daimler AG simulierte ich ein nicht
+synchronisiertes 16-stufiges Nutzfahrzeuggetriebe mit Vorgelegewellenbremse in
+SimulationX und Matlab mit dem Ziel, die Anzahl der Schaltabbrüche zu
+minimieren.
 
 *(2002 -- 2003)*
 {: .left_time_stamp}
@@ -293,10 +316,10 @@ Matlab, mit dem Ziel, die Anzahl der Schaltabbrüche zu minimieren.
 > Nürnberg  
 > (heute: Verein für Menschen mit Körperbehinderung Nürnberg e.V.)  
 
-Während dem Zivildienst habe ich gelernt Verantwortung für meine Gemeinschaft,
-andere Menschen und mich selbst zu übernehmen. Ich half behinderten Kindern oder
-gebrechlichen Älteren in ihrem Alltag, auf ihrem Schulweg, beim Arztbesuch oder beim
-Einkauf. Immer zuverlässig und pünktlich.
+Während des Zivildienstes habe ich gelernt, Verantwortung für meine
+Gemeinschaft, andere Menschen und mich selbst zu übernehmen. Ich half
+behinderten Kindern oder gebrechlichen Älteren in ihrem Alltag, auf ihrem
+Schulweg, beim Arztbesuch oder beim Einkauf. Immer zuverlässig und pünktlich.
 
 *(bis 2002)*
 {: .left_time_stamp}
@@ -310,5 +333,5 @@ Einkauf. Immer zuverlässig und pünktlich.
 
 **Mündlich:** Deutsch (GK).
 
-Während der Schulzeit engagierte ich mich als Fotograph für die Schülerzeitung
+Während der Schulzeit engagierte ich mich als Fotograf für die Schülerzeitung
 sowie im Schulchor.

@@ -107,8 +107,6 @@ systems, brake systems, corporate research, and automotive steering.
 > Stuttgart
 
 * Carried out calculations of powertrain oscillations of Daimler light commercial
-
-
   vehicles using SimulationX and Simpack to manage NVH issues.
 * Drove chassis optimization based on dynamic simulations for the Formula
   student racing team of the University of Stuttgart.
@@ -235,7 +233,8 @@ And in the senior's classroom phase:
 > [[Udacity](https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009t)]
 
 I took a liking to the Udacity didactic, and as part of a Bosch/AS project, I
-could advance within the field of machine learning. So I completed this [nanodegree](https://confirm.udacity.com/CGALRCZP) at the beginning of the year.
+could advance within the field of machine learning. So I completed this
+[nanodegree](https://confirm.udacity.com/CGALRCZP) at the beginning of the year.
 
 The capstone project, the final test for the Nanodegree, involved creating and
 training a [CNN](https://en.wikipedia.org/wiki/Convolutional_neural_network) to
