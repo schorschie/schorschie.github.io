@@ -253,8 +253,7 @@ lag darauf, Modelle in einer Produktionsumgebung zu verpacken und
 bereitzustellen. Ich habe praktische Erfahrungen mit Amazon SageMaker gesammelt,
 um trainierte Modelle in Webanwendungen bereitzustellen und die Leistung zu
 bewerten. Zudem habe ich gelernt, A/B-Tests durchzuführen und Modelle zu
-aktualisieren, wenn zusätzliche Daten verfügbar sind. Diese Fähigkeiten sind in
-der Industrie von großer Bedeutung.
+aktualisieren, wenn zusätzliche Daten verfügbar sind.
 
 Mein Abschlussprojekt für den Nanodegree war ein CNN (Convolutional Neural
 Network), das Hunderassen mit einer Genauigkeit von über 80% erkennen kann. Das
