@@ -295,7 +295,7 @@ Udacity-Projekten](https://github.com/schorschie/udacity).
 Simulation.
 
 **Diplomarbeit:** Modellbildung und Simulation eines automatisierten
-Nutzfahrzeuggetriebes
+Nutzfahrzeuggetriebes.
 
 In meiner Diplomarbeit bei der Daimler AG simulierte ich ein nicht
 synchronisiertes 16-stufiges Nutzfahrzeuggetriebe mit Vorgelegewellenbremse in
