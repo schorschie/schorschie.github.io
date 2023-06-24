@@ -37,8 +37,8 @@ ref: index
 
 ### Systems Engineer
 
-> Systems Engineering
-> Bosch Automotive Steering GmbH
+> Systems Engineering  
+> Bosch Automotive Steering GmbH  
 > Schwäbisch Gmünd
 
 I'm currently the team's data scientist in training and provide the team with
@@ -63,8 +63,8 @@ The most valuable contributions from my side are:
 
 ### Development Engineer
 
-> Corporate Research
-> Robert Bosch GmbH
+> Corporate Research  
+> Robert Bosch GmbH  
 > Renningen
 
 Formulated and implemented effective methods/processes for simulation-based
@@ -87,8 +87,8 @@ systems, brake systems, corporate research, and automotive steering.
 
 ### Calculation Engineer
 
-> Computer Aided Engineering
-> Bosch Automotive Steering GmbH
+> Computer Aided Engineering  
+> Bosch Automotive Steering GmbH  
 > Schwäbisch Gmünd
 
 * Calculated and mechanically designed rack pinion gears.
