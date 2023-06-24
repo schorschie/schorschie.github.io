@@ -101,7 +101,7 @@ Modellvalidierung formuliert und implementiert.
 > Stuttgart
 
 * Berechnung von Triebstrangschwingungen mit SimulationX und Simpack im Auftrag
-  der Daimler AG.
+  der Daimler&nbsp;AG.
 * Durchführung von Fahrdynamik-Berechnungen für das Rennteam der Uni-Stuttgart
   im Rahmen der Formula-Student mit Simpack.
 * Automatisierte Auswertung von CAN-Traces aus Messfahrten und Zusammenstellung
