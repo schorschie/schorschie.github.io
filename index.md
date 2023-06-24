@@ -102,15 +102,14 @@ systems, brake systems, corporate research, and automotive steering.
 
 ### Project Engineer
 
-> MesH Engineering Team
-> Contract Engineer at Daimler AG
+> MesH Engineering Team  
+> Contract Engineer at Daimler AG  
 > Stuttgart
 
 * Carried out calculations of powertrain oscillations of Daimler light commercial
   vehicles using SimulationX and Simpack to manage NVH issues.
 * Drove chassis optimization based on dynamic simulations for the Formula
   student racing team of the University of Stuttgart.
-* Completed multiple complex engineering tasks within set deadlines.
 * Collaborated with various cross-functional teams to streamline daily operations.
 * Executed a MATLAB program to analyze CAN traces and integrate evaluation into a
   PDF document by utilizing LaTeX.
@@ -295,3 +294,17 @@ During my [civil service](https://en.wikipedia.org/wiki/Zivildienst), I learned
 to take responsibility for myself, people, and my community. I helped disabled
 children and frail elders by commuting them to school, for shopping, or to a
 doctor's appointment safely, reliably, and in a friendly way.
+
+*(until 2002)*
+{: .left_time_stamp}
+
+### School
+
+> Wilhelm Löhe School  
+> Nuremberg  
+
+**A-Levels:** Qualification for university entrance with the majors in mathematics,
+geography and chemistry.
+
+At school I engaged myself as a photographer at the schools gazette and the
+choir.
