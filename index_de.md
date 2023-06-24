@@ -182,12 +182,12 @@ entwickelt:
 ### VBA
 
 Während meiner Werkstudententätigkeit bei Tata Technologies habe ich einen
-Tiefensuchalgorithmus in Visual Basic in CATIA implementiert. Der Algorithmus:
+Tiefensuchalgorithmus in Visual Basic in CATIA implementiert. Der Algorithmus
 
 * analysierte die Struktur eines Kabelbaums mithilfe eines Tiefensuchverfahrens,
-  das ich selbst entwickelt habe.
-* Nachdem die Struktur ausgelesen wurde, wurde automatisch eine technische
-  Zeichnung erstellt, die alle Anschlüsse und Kabellängen enthält.
+  das ich selbst entwickelt habe
+* und nachdem die Struktur ausgelesen wurde, wurde automatisch eine technische
+  Zeichnung erstellt, die alle Anschlüsse, Steckertypen und Kabellängen enthält.
 
 *(2007)*
 {: .left_time_stamp}
