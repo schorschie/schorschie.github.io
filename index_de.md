@@ -267,8 +267,7 @@ werden: [GitHub-Link zum Projekt](https://github.com/schorschie/udacity_dog_bree
 
 Während der COVID-19-Pandemie befand ich mich in Kurzarbeit, und um diese Zeit
 sinnvoll zu nutzen, entschied ich mich für das Udacity Data Analyst Nano-Degree
-Programm. Diese Schulung zielt darauf ab, auf eine Karriere als Datenanalyst
-vorzubereiten, indem sie dabei hilft, Daten zu organisieren, Muster und
+Programm. Diese Schulung zielt darauf ab, Daten zu organisieren, Muster und
 Erkenntnisse zu entdecken, aussagekräftige Schlussfolgerungen zu ziehen und die
 Ergebnisse klar zu kommunizieren. Der Kurs umfasst Kenntnisse in Python und den
 Datenanalysebibliotheken (wie Numpy, Pandas und Matplotlib) sowie in SQL. Im
